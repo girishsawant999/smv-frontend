@@ -3,7 +3,9 @@ import React from "react";
 const Welcome = () => {
   return (
     <>
-      Welcome to SMV
+      <span className="text-gray-500">
+        Welcome to SMV
+      </span>
     </>
   );
 }
