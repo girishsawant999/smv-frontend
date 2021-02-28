@@ -1,12 +1,10 @@
-import React from "react";
+import React from 'react';
 
 const Welcome = () => {
   return (
     <>
-      <span className="text-gray-500">
-        Welcome to SMV
-      </span>
+      <span className="text-gray-500">Welcome to SMV</span>
     </>
   );
-}
+};
 export default Welcome;
