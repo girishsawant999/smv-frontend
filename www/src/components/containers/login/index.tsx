@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
 import Img from 'components/common/Img';
+import React, { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import IntlTelInput from 'react-intl-tel-input';
-import 'react-intl-tel-input/dist/main.css';
 
 Login.propTypes = {};
 
