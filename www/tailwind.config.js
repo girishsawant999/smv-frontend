@@ -1,7 +1,14 @@
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
-  theme: { extend: {} },
+  theme: {
+    extend: {
+      fontFamily: {
+        'manrope-extra-bold': ['Manrope-extra-bold'],
+        'manrope-extra-light': ['Manrope-extra-light']
+      }
+    }
+  },
   variants: {
     extend: {}
   },
