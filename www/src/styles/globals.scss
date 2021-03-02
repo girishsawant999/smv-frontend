@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Manrope-extra-light;
+  src: url('/fonts/Manrope-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family: Manrope-extra-bold;
+  src: url('/fonts/Manrope-ExtraBold.ttf');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'components/containers/login/styles.scss';
