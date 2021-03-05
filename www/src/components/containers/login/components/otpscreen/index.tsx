@@ -26,8 +26,8 @@ function OtpInputScreenComp({ pageState, setpageState }) {
         <Emotes
           src={
             inValid
-              ? '/assets/login/emote-thinking.png'
-              : '/assets/login/emote-smiling.png'
+              ? '/assets/images/emote-thinking.png'
+              : '/assets/images/emote-smiling.png'
           }
         />
 

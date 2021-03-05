@@ -12,7 +12,7 @@ function PhoneInputScreenComponent({ pageState, setpageState }) {
   return (
     <>
       <div className="popup-div flex flex-col items-center">
-        <Emotes src={'/assets/login/emote-smiling.png'} />
+        <Emotes src={'/assets/images/emote-smiling.png'} />
 
         <div className="title-div text-center">
           <h1 className="font-manrope-extra-bold">
