@@ -16,8 +16,20 @@ function OtpInputScreenComp({ pageState, setpageState }) {
   };
   return (
     <>
-      <div className="popup-div flex flex-col items-center">
-        <Emotes src={'/assets/login/emote-phone-input@2x.png'} />
+      <div className="popup-div relative flex flex-col items-center">
+        <div
+          className="back-button flex justify-center items-center"
+          onClick={() => setpageState('phone-input')}>
+          {'<'}
+        </div>
+
+        <Emotes
+          src={
+            inValid
+              ? '/assets/login/emote-thinking.png'
+              : '/assets/login/emote-smiling.png'
+          }
+        />
 
         <div className="desc-div text-center">
           <h1 className="font-manrope-extra-light">
@@ -48,7 +60,9 @@ function OtpInputScreenComp({ pageState, setpageState }) {
         <div className="otp-helper-sign-div">
           {inValid ? (
             <p className="font-manrope-extra-bold">
-              <a href="#" className="font-manrope-extra-bold underline">I haven’t recieved a code</a>
+              <a href="#" className="font-manrope-extra-bold underline">
+                I haven’t recieved a code
+              </a>
             </p>
           ) : (
             <p className="font-manrope-extra-light">Resend code in 0:20</p>
