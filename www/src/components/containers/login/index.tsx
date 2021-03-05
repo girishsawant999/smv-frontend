@@ -3,10 +3,12 @@ import React, { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 
+
 Login.propTypes = {};
 
 function Login(props) {
   const [pageState, setpageState] = useState('phone-input');
+  // @ts-ignore
   return (
     <div className="login-div">
       <div className="popup-div flex flex-col items-center">

@@ -4,6 +4,7 @@ import Image from 'next/image';
 Img.propTypes = {};
 
 function Img({ src, alt, className, style, width, height }) {
+  // @ts-ignore
   return <Image src={src} alt={alt} width={width} height={height} className={className} style={style} />;
 }
 
