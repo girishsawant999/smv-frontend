@@ -1,9 +1,10 @@
 import React from "react";
-import Img from "../../common/Img";
 import Image from 'next/image';
 import SearchIcon from '@material-ui/icons/Search';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import ExploreOutlinedIcon from '@material-ui/icons/ExploreOutlined';
+import ChatBubbleOutlineRoundedIcon from '@material-ui/icons/ChatBubbleOutlineRounded';
+import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import SlidingRectangle from "./SlidingRectangle";
 import Accordion from "./Accordion";
 import SlidingRectangle2 from "./SlidingRectangle-2";
@@ -226,45 +227,19 @@ function LandingPage(props) {
             </section>
 
 
-            {/*<section>*/}
-            {/*  <div className="mx-5 mt-14">*/}
-            {/*    <div className="text-xl font-manrope-extra-bold text-#1A181B leading-8">*/}
-            {/*      People love us*/}
-            {/*    </div>*/}
-            {/*    <div className="bg-#3CC39A bg-opacity-50 px-5 pt-5 mt-5 rounded-40px flex">*/}
-            {/*      <div className="bg-white rounded-20px p-5 w-3/5">*/}
-            {/*        <div className="font-manrope-regular font-bold leading-7 text-#4E4851 text-sm">Impressive service, after trying and failing numerous time at the official site, i thought i'll have to go another way.*/}
-            {/*        </div>*/}
-            {/*        <div className="mt-3 font-manrope-regular text-xs leading-6 font-bold ">RICHARD LORYCH</div>*/}
-            {/*        <div className="font-manrope-extra-light text-sm text-#9B939F">travelled to USA</div>*/}
-            {/*      </div>*/}
-            {/*      <div className="flex bg-pink-500 align-baseline">*/}
-            {/*        <div className="pl-3 mt-14 flex justify-center bg-blue-900 pt-7">*/}
-            {/*          <Image className=""*/}
-            {/*                 src={'/assets/landing/image-removebg (3)-2.png'}*/}
-            {/*                 alt="Background Image"*/}
-            {/*                 height="90"*/}
-            {/*                 width="70"*/}
-            {/*          />*/}
-            {/*        </div>*/}
-            {/*      </div>*/}
-            {/*    </div>*/}
-            {/*  </div>*/}
-            {/*</section>*/}
-
             <section>
               <div className="mx-5 mt-14 ">
-                <div className="text-xl font-manrope-extra-bold text-#1A181B leading-8">
+                <div className="text-xl font-manrope-extra-bold text-#1A181B leading-8 ">
                   People love us
                 </div>
-                <div className="bg-#3CC39A bg-opacity-50 px-5 pt-5  mt-5 rounded-40px flex-col">
+                <div className="bg-#3CC39A bg-opacity-50 p-5 mt-5 rounded-40px flex-col items-center">
                   <div className="flex">
                     <div className="relative bg-white rounded-20px p-5 w-3/5">
                       <div className="font-manrope-regular font-bold leading-7 text-#4E4851 text-sm">Impressive service, after trying and failing numerous time at the official site, i thought i'll have to go another way.
                       </div>
                       <div className="mt-3 font-manrope-regular text-xs leading-6 font-bold ">RICHARD LORYCH</div>
                       <div className="font-manrope-extra-light text-sm text-#9B939F">travelled to USA</div>
-                      <div className="arrow-right"></div>
+                      <div className="arrow-right"> </div>
                     </div>
                     <div className="flex align-baseline">
                       <div className="pl-3 mt-14 flex justify-center pt-7">
@@ -277,7 +252,7 @@ function LandingPage(props) {
                       </div>
                     </div>
                   </div>
-                  <div className="flex align-end my-10 pb-5">
+                  <div className="flex mt-10 justify-end">
                     <div className="flex align-baseline">
                       <div className="pl-9 mt-14 flex justify-center pt-7">
                         <Image className=""
@@ -293,7 +268,7 @@ function LandingPage(props) {
                       </div>
                       <div className="mt-3 font-manrope-regular text-xs leading-6 font-bold ">RICHARD LORYCH</div>
                       <div className="font-manrope-extra-light text-sm text-#9B939F">travelled to USA</div>
-                      <div className="arrow-left"></div>
+                      <div className="arrow-left"> </div>
                     </div>
                   </div>
                 </div>
@@ -325,20 +300,8 @@ function LandingPage(props) {
             </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
             <section>
-              <div className="m-5 mt-64">
+              <div className="m-5 mt-12 mb-32">
                 <div className="text-xl font-manrope-extra-bold text-#1A181B leading-8">
                   Frequently Asked Questions
                 </div>
@@ -359,6 +322,15 @@ function LandingPage(props) {
               </div>
             </section>
 
+            <div className="flex fixed bottom-5 w-full justify-center">
+              <div className="flex bg-#1A181B py-6 px-7 rounded-30px text-white text-xl">
+                <ExploreOutlinedIcon style={{color:'white',background:"none" ,fontSize:"32px", marginRight:"40px",boxShadow:"0px 50px 25px 1px #FFFFFF"}}/>
+                <PersonOutlineIcon style={{color:'white',fontSize:"32px",opacity:"40%"}}/>
+              </div>
+              <div className="flex bg-#1A181B py-6 px-7 ml-5 rounded-30px text-white">
+                <ChatBubbleOutlineRoundedIcon style={{color:'white',fontSize:"32px"}}/>
+              </div>
+            </div>
 
         </div>
     )

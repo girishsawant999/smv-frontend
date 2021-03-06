@@ -18,12 +18,12 @@ function Accordion({question, answer}){
                     {
                         selected ? <span className={" right-0 float-right font-bold"}><AddIcon/></span>
                             :
-                            <span className={" font-bold"}><RemoveIcon/></span>
+                            <span className={"font-bold"}><RemoveIcon/></span>
                     }
                 </p>
             </button>
 
-            <div className={selected  ? "hidden transition-all max-h-0 duration-700 " : "pb-4"}>
+            <div className={selected  ? "hidden transition-all max-h-0 duration-700" : "pb-4 mr-10"}>
                 <div className={"section-description"}>
                     <p>{answer}</p>
                 </div>
