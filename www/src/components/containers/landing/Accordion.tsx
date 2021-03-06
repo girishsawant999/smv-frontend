@@ -13,7 +13,7 @@ function Accordion({question, answer}){
     return(
         <div className="border-b-2">
             <button className="w-full relative border-none focus:outline-none" onClick={()=> setSelected(selected =>!selected)} >
-                <p className="section-subheading justify-between text-left flex py-4 ">
+                <p className="section-subheading justify-between text-left flex py-4">
                     {question}
                     {
                         selected ? <span className={" right-0 float-right font-bold"}><AddIcon/></span>

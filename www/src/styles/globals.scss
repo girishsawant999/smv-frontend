@@ -7,6 +7,14 @@
   font-family: Manrope-extra-bold;
   src: url('/fonts/Manrope-ExtraBold.ttf');
 }
+@font-face {
+  font-family: Manrope-regular;
+  src: url('/fonts/Manrope-Regular.ttf');
+}
+@font-face {
+  font-family: Manrope-semibold;
+  src: url('/fonts/Manrope-SemiBold.ttf');
+}
 
 @tailwind base;
 @tailwind components;
