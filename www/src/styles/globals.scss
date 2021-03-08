@@ -12,3 +12,10 @@
 @tailwind components;
 @tailwind utilities;
 @import 'components/containers/login/styles.scss';
+
+.react-tel-input {
+  .flag-dropdown {
+    background: #fff !important;
+    border: none !important;
+  }
+}

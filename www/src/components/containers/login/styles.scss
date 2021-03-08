@@ -17,7 +17,7 @@
       position: absolute;
       top: 20px;
       left: 20px;
-      color: #1A181B;
+      color: #1a181b;
     }
 
     .image-div {
@@ -27,26 +27,8 @@
       background: url('/assets/images/emote-bg.svg');
     }
 
-    .title-div {
-      margin: 0 20px 0 20px;
-      width: 375px;
-
-      h1 {
-        font-size: 20px;
-        line-height: 30px;
-        color: #1a181b;
-      }
-      p {
-        margin-top: 10px;
-        margin-bottom: 20px;
-        font-size: 16px;
-        line-height: 29px;
-        color: #4e4851;
-      }
-    }
-
     .desc-div {
-      margin: 0 20px 0 20px;
+      // margin: 0 20px 0 20px;
 
       h1 {
         font-size: 16px;
@@ -61,9 +43,6 @@
     }
 
     .phone-input-div {
-      margin: 0 20px 0 20px;
-      width: 375px;
-
       .react-tel-input {
         border: 1px solid #e6e4e7;
         border-radius: 20px;
@@ -83,7 +62,7 @@
     }
 
     .otp-input-div {
-      margin: 20px 20px 0 20px;
+      // margin: 20px 20px 0 20px;
 
       .four-input-div {
         width: 265px;
@@ -102,7 +81,7 @@
 
     .social-sign-div {
       margin-top: 40px;
-      width: 375px;
+      max-width: 375px;
       text-align: center;
 
       a {
@@ -115,7 +94,7 @@
 
     .otp-helper-sign-div {
       margin-top: 40px;
-      width: 375px;
+      max-width: 375px;
       text-align: center;
 
       p {
@@ -126,7 +105,7 @@
     }
 
     .disclaimer {
-      width: 375px;
+      max-width: 375px;
       margin: auto 20px 0 20px;
       text-align: center;
 
@@ -140,7 +119,8 @@
 
     .request-otp-btn {
       margin: 20px;
-      width: 375px;
+      max-width: 375px;
+      width: calc(100% - 40px);
 
       button {
         width: 100%;
@@ -154,8 +134,10 @@
       }
     }
     .verify-otp-btn {
-      margin: auto 20px 20px 20px;
-      width: 375px;
+      margin-top: auto;
+      margin-bottom: 20px;
+      max-width: 375px;
+      width: calc(100% - 40px);
 
       button {
         width: 100%;
