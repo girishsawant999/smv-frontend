@@ -15,17 +15,13 @@ function PhoneInputScreenComponent({ pageState, setpageState }) {
       <div className="popup-div flex flex-col items-center">
         <Emotes src={'emote-smiling.png'} />
 
-        <div className="mx-5 max-w-sm text-center">
-          <Typography
-            type="heading"
-            text="Awesome, Let’s get you in the <br />
-            system first!"
-          />
-          <Typography
-            type="subheading"
-            text="Enter your mobile number"
-            className="mt-2.5 mb-5"
-          />
+        <div className="mx-10 max-w-sm text-center">
+          <Typography type="heading2" >
+            Awesome, Let's get you in the system first!"
+          </Typography>
+          <Typography type="subheading4" className="mt-2.5 mb-5" >
+            Enter your mobile number
+          </Typography>
         </div>
 
         <div className="max-w-sm mx-5">
@@ -33,17 +29,17 @@ function PhoneInputScreenComponent({ pageState, setpageState }) {
         </div>
 
         <div className="social-sign-div">
-          <a href="#">
-            <Typography type="boldbody" text="or signup using a social account" />
+          <a href="#" className="underline">
+            <Typography type="heading6">
+              or signup using a social account
+            </Typography>
           </a>
         </div>
 
         <div className="disclaimer">
-          <Typography
-            type="lightbody"
-            text="By continuing you may receive an SMS for verification. Message and data
-            rates may apply."
-          />
+          <Typography type="content6" >
+            By continuing you may receive an SMS for verification. Message and data rates may apply.
+          </Typography>
         </div>
 
         <div className="request-otp-btn">
