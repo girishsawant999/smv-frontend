@@ -1,0 +1,34 @@
+.heading2 {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: #1a181b;
+  font-family: Manrope-extra-bold;
+}
+
+.heading6 {
+  font-size: 0.75rem;
+  color: #1a181b;
+  font-family: Manrope-extra-bold;
+}
+
+.subHeading4 {
+  font-size: 1rem;
+  line-height: 1.81rem;
+  color: #4e4851;
+  font-family: Manrope-extra-light;
+}
+
+.subHeading6 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #4e4851;
+  font-family: Manrope-extra-light;
+}
+
+.content6 {
+  font-family: Manrope-extra-light;
+  font-size: 0.75rem;
+  color: #9b939f;
+  line-height: 1.83;
+}
