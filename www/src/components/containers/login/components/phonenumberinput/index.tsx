@@ -5,6 +5,7 @@ import Emotes from 'components/common/emotes';
 import PhoneInput from 'components/common/phoneInput';
 import Typography from 'components/common/Typography';
 import Popover from 'components/common/Popover';
+import commonStyles from '../../login.module.css';
 
 PhoneInputScreenComponent.propTypes = {};
 
@@ -29,7 +30,7 @@ function PhoneInputScreenComponent({ pageState, setpageState }) {
         <PhoneInput />
       </div>
 
-      <div className="social-sign-div">
+      <div className={commonStyles.lowerdiv}>
         <a href="#" className="underline">
           <Typography type="heading6">
             or signup using a social account
@@ -37,13 +38,13 @@ function PhoneInputScreenComponent({ pageState, setpageState }) {
         </a>
       </div>
 
-      <div className="disclaimer">
+      <div className={commonStyles.disclaimer}>
         <Typography type="content6" >
           By continuing you may receive an SMS for verification. Message and data rates may apply.
         </Typography>
       </div>
 
-      <div className="request-otp-btn">
+      <div className={commonStyles.loginCommonBtn}>
         <Button
           label="Request OTP"
           onClick={requestOTP}

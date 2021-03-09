@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 
 import Emotes from 'components/common/emotes';
+import Button from 'components/common/Button';
 import PhoneInput from 'components/common/phoneInput';
 import Typography from 'components/common/Typography';
+import styles from './otpscreen.module.css';
+import commonStyles from '../../login.module.css';
 
 OtpInputScreenComp.propTypes = {};
 
@@ -19,7 +22,7 @@ function OtpInputScreenComp({ pageState, setpageState }) {
   return (
     <>
       <div
-        className="back-button flex justify-center items-center"
+        className={styles.backbutton + " flex justify-center items-center"}
         onClick={() => setpageState('phone-input')}>
         {'<'}
       </div>
@@ -44,36 +47,40 @@ function OtpInputScreenComp({ pageState, setpageState }) {
       </div>
 
       <div className="otp-input-div">
-        <div className="four-input-div flex justify-between">
+        <div className="w-64 flex justify-between">
           <input
+            className={styles.otpinput}
             type="text"
             name="otp-1"
             id="otp-1"
             maxLength={1}
             autoFocus={true}
           />
-          <input type="text" name="otp-2" id="otp-2" maxLength={1} />
-          <input type="text" name="otp-3" id="otp-3" maxLength={1} />
-          <input type="text" name="otp-4" id="otp-4" maxLength={1} />
+          <input className={styles.otpinput} type="text" name="otp-2" id="otp-2" maxLength={1} />
+          <input className={styles.otpinput} type="text" name="otp-3" id="otp-3" maxLength={1} />
+          <input className={styles.otpinput} type="text" name="otp-4" id="otp-4" maxLength={1} />
         </div>
       </div>
 
-      <div className="otp-helper-sign-div">
+      <div className={commonStyles.lowerdiv}>
         {inValid ? (
-          <p className="font-manrope-extra-bold">
+          <Typography type="heading6">
             <a href="#" className="font-manrope-extra-bold underline">
               I haven’t recieved a code
             </a>
-          </p>
+          </Typography>
         ) : (
-          <p className="font-manrope-extra-light">Resend code in 0:20</p>
+          <Typography type="subheading6">
+            <p className="font-manrope-extra-light">Resend code in 0:20</p>
+          </Typography>
         )}
       </div>
 
-      <div className="verify-otp-btn">
-        <button className="" onClick={verifyOTP}>
-          verify
-        </button>
+      <div className={commonStyles.loginCommonBtn}>
+        <Button
+          label="Verify"
+          onClick={verifyOTP}>
+        </Button>
       </div>
     </>
   );

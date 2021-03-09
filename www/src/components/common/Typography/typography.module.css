@@ -5,6 +5,12 @@
   font-family: Manrope-extra-bold;
 }
 
+.heading6 {
+  font-size: 0.75rem;
+  color: #1a181b;
+  font-family: Manrope-extra-bold;
+}
+
 .subHeading4 {
   font-size: 1rem;
   line-height: 1.81rem;
@@ -12,10 +18,12 @@
   font-family: Manrope-extra-light;
 }
 
-.heading6 {
+.subHeading6 {
   font-size: 0.75rem;
-  color: #1a181b;
-  font-family: Manrope-extra-bold;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #4e4851;
+  font-family: Manrope-extra-light;
 }
 
 .content6 {

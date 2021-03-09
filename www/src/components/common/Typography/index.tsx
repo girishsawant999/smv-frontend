@@ -10,6 +10,13 @@ function Typography({ type, text, className = '', ...props }) {
       </h1>
     );
 
+  if (type === 'heading6')
+    return (
+      <p className={className.concat(styles.heading6)}>
+        {props.children}
+      </p>
+    );
+
   if (type === 'subheading4')
     return (
       <p className={className.concat(styles.subHeading4)} >
@@ -17,9 +24,9 @@ function Typography({ type, text, className = '', ...props }) {
       </p>
     );
 
-  if (type === 'heading6')
+  if (type === 'subheading6')
     return (
-      <p className={className.concat(styles.heading6)}>
+      <p className={className.concat(styles.subHeading6)} >
         {props.children}
       </p>
     );
