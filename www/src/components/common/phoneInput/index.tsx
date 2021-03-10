@@ -5,7 +5,7 @@ import styles from './phoneInput.module.css';
 
 PhoneInputComp.propTypes = {};
 
-function PhoneInputComp(props) {
+function PhoneInputComp() {
   return (
     <PhoneInput
       inputClass={styles.inputClass}

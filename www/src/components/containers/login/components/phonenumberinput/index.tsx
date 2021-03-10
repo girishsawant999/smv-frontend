@@ -3,13 +3,18 @@ import React from 'react';
 import Button from 'components/common/Button';
 import Emotes from 'components/common/emotes';
 import PhoneInput from 'components/common/phoneInput';
-import Typography from 'components/common/Typography/index.tsx';
+import Typography from 'components/common/Typography/index';
 import Popover from 'components/common/Popover';
 import commonStyles from '../../login.module.css';
 
 PhoneInputScreenComponent.propTypes = {};
 
-function PhoneInputScreenComponent({ pageState, setpageState }) {
+type IPhoneInputScreenProps = {
+  pageState: string;
+  setpageState: (pageState: string) => void;
+}
+
+function PhoneInputScreenComponent({ pageState, setpageState }: IPhoneInputScreenProps) {
   const requestOTP = () => {
     setpageState('otp-screen');
   };
@@ -33,7 +38,7 @@ function PhoneInputScreenComponent({ pageState, setpageState }) {
       <div className={commonStyles.lowerdiv}>
         <a href="#" className="underline">
           <Typography type="heading6" variant="h6">
-            <a>or signup using a social account</a>
+            or signup using a social account
           </Typography>
         </a>
       </div>
@@ -46,10 +51,11 @@ function PhoneInputScreenComponent({ pageState, setpageState }) {
 
       <div className={commonStyles.loginCommonBtn}>
         <Button
-          label="Request OTP"
           onClick={requestOTP}
           className={'text-red-900'}
-        />
+        >
+          Request OTP
+        </Button>
       </div>
     </>
   );

@@ -7,8 +7,8 @@ import styles from './login.module.css';
 
 Login.propTypes = {};
 
-function Login(props) {
-  const [pageState, setpageState] = useState('phone-input');
+function Login() {
+  const [pageState, setpageState] = useState<string>('phone-input');
   return (
     <div className={styles.logindiv}>
       <Popover type="large">
