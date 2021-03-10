@@ -3,7 +3,7 @@ import React from 'react';
 import Button from 'components/common/Button';
 import Emotes from 'components/common/emotes';
 import PhoneInput from 'components/common/phoneInput';
-import Typography from 'components/common/Typography';
+import Typography from 'components/common/Typography/index.tsx';
 import Popover from 'components/common/Popover';
 import commonStyles from '../../login.module.css';
 
@@ -18,10 +18,10 @@ function PhoneInputScreenComponent({ pageState, setpageState }) {
       <Emotes src={'emote-smiling.png'} />
 
       <div className="mx-10 max-w-sm text-center">
-        <Typography type="heading2" >
+        <Typography type="heading2" variant="h1" className="x">
           Awesome, Let's get you in the system first!"
         </Typography>
-        <Typography type="subheading4" className="mt-2.5 mb-5" >
+        <Typography type="subHeading4" variant="h2" className="mt-2.5 mb-5" >
           Enter your mobile number
         </Typography>
       </div>
@@ -32,14 +32,14 @@ function PhoneInputScreenComponent({ pageState, setpageState }) {
 
       <div className={commonStyles.lowerdiv}>
         <a href="#" className="underline">
-          <Typography type="heading6">
-            or signup using a social account
+          <Typography type="heading6" variant="h6">
+            <a>or signup using a social account</a>
           </Typography>
         </a>
       </div>
 
       <div className={commonStyles.disclaimer}>
-        <Typography type="content6" >
+        <Typography type="content6" variant="p">
           By continuing you may receive an SMS for verification. Message and data rates may apply.
         </Typography>
       </div>

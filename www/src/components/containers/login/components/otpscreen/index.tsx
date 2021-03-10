@@ -36,7 +36,7 @@ function OtpInputScreenComp({ pageState, setpageState }) {
       />
 
       <div className="mx-10 mx-w-sm text-center">
-        <Typography type="subheading4">
+        <Typography type="subHeading4" variant="h1">
           Enter the 4 digit code sent to you at 9867069236.
           {inValid && (
             <span className="text-red-500">
@@ -64,14 +64,12 @@ function OtpInputScreenComp({ pageState, setpageState }) {
 
       <div className={commonStyles.lowerdiv}>
         {inValid ? (
-          <Typography type="heading6">
-            <a href="#" className="font-manrope-extra-bold underline">
+          <Typography type="heading6" variant="h6">
               I haven’t recieved a code
-            </a>
           </Typography>
         ) : (
-          <Typography type="subheading6">
-            <p className="font-manrope-extra-light">Resend code in 0:20</p>
+          <Typography type="subHeading6" variant="h6">
+            Resend code in 0:20
           </Typography>
         )}
       </div>
