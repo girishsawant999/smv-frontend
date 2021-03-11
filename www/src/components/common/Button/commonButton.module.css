@@ -7,5 +7,5 @@
   font-family: Manrope-extra-bold;
   color: #fff;
   font-size: 12px;
-  outline: none;
+  outline: none !important;
 }
