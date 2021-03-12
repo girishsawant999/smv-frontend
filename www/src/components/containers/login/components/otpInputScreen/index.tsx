@@ -12,18 +12,16 @@ type IOtpInputScreenProps = {
   setpageState: (pageState: string) => void;
 };
 
+const OTP_INPUTS = ['otp1', 'otp2', 'otp3', 'otp4'];
 function OtpInputScreenComp({ pageState, setpageState }: IOtpInputScreenProps) {
   const [inValid, setinValid] = useState(false);
 
   const verifyOTP = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     let otp = '';
-    otp
-      .concat(e.target.otp1.value)
-      .concat(e.target.otp2.value)
-      .concat(e.target.otp3.value)
-      .concat(e.target.otp4.value);
-
+    OTP_INPUTS.forEach((element) => {
+      otp.concat(e.target[element].value);
+    });
     if (!inValid) {
       setinValid(true);
       return;
@@ -57,35 +55,18 @@ function OtpInputScreenComp({ pageState, setpageState }: IOtpInputScreenProps) {
 
         <div className="otp-input-div mt-5">
           <div className="w-64 flex justify-between">
-            <input
-              className={styles.otpinput}
-              type="text"
-              name="otp1"
-              id="otp-1"
-              maxLength={1}
-              autoFocus={true}
-            />
-            <input
-              className={styles.otpinput}
-              type="text"
-              name="otp2"
-              id="otp-2"
-              maxLength={1}
-            />
-            <input
-              className={styles.otpinput}
-              type="text"
-              name="otp3"
-              id="otp-3"
-              maxLength={1}
-            />
-            <input
-              className={styles.otpinput}
-              type="text"
-              name="otp4"
-              id="otp-4"
-              maxLength={1}
-            />
+            {OTP_INPUTS.map((item) => {
+              return (
+                <input
+                  className={styles.otpinput}
+                  type="text"
+                  name={item}
+                  id={item}
+                  maxLength={1}
+                  autoFocus={true}
+                />
+              );
+            })}
           </div>
         </div>
 
