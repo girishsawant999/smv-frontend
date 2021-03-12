@@ -2,7 +2,7 @@ import Button from 'components/common/Button';
 import Emotes from 'components/common/emotes';
 import PhoneInput from 'components/common/phoneInput';
 import Typography from 'components/common/Typography/index';
-import React from 'react';
+import React, { useState } from 'react';
 import commonStyles from '../../login.module.css';
 
 PhoneInputScreenComponent.propTypes = {};
@@ -10,15 +10,24 @@ PhoneInputScreenComponent.propTypes = {};
 type IPhoneInputScreenProps = {
   pageState: string;
   setpageState: (pageState: string) => void;
+  phoneNumber: string;
+  setphoneNumber: (phoneNumber: string) => void;
 };
 
 function PhoneInputScreenComponent({
   pageState,
-  setpageState
+  setpageState,
+  phoneNumber,
+  setphoneNumber
 }: IPhoneInputScreenProps) {
   const requestOTP = (e: React.ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const _phoneNumber = e.target.phoneNumber.value.replace(/[^0-9]/g, '').slice(2);
+    if (!_phoneNumber) return;
+    setphoneNumber(_phoneNumber);
     setpageState('otp-screen');
   };
+
   return (
     <>
       <form

@@ -10,10 +10,15 @@ OtpInputScreenComp.propTypes = {};
 type IOtpInputScreenProps = {
   pageState: string;
   setpageState: (pageState: string) => void;
+  phoneNumber: string;
 };
 
 const OTP_INPUTS = ['otp1', 'otp2', 'otp3', 'otp4'];
-function OtpInputScreenComp({ pageState, setpageState }: IOtpInputScreenProps) {
+function OtpInputScreenComp({
+  pageState,
+  setpageState,
+  phoneNumber
+}: IOtpInputScreenProps) {
   const [inValid, setinValid] = useState(false);
 
   const verifyOTP = (e: React.ChangeEvent<HTMLFormElement>) => {
@@ -42,7 +47,7 @@ function OtpInputScreenComp({ pageState, setpageState }: IOtpInputScreenProps) {
 
         <div className="mx-10 max-w-sm text-center">
           <Typography type="subHeading4" variant="h1">
-            Enter the 4 digit code sent to you at 9867069236.
+            Enter the 4 digit code sent to you at {phoneNumber}.
             {inValid ? (
               <span className="text-red-500">
                 &nbsp;Did you enter the correct mobile number?
@@ -55,7 +60,7 @@ function OtpInputScreenComp({ pageState, setpageState }: IOtpInputScreenProps) {
 
         <div className="otp-input-div mt-5">
           <div className="w-64 flex justify-between">
-            {OTP_INPUTS.map((item) => {
+            {OTP_INPUTS.map((item, index) => {
               return (
                 <input
                   className={styles.otpinput}
@@ -63,7 +68,7 @@ function OtpInputScreenComp({ pageState, setpageState }: IOtpInputScreenProps) {
                   name={item}
                   id={item}
                   maxLength={1}
-                  autoFocus={true}
+                  autoFocus={index === 0}
                 />
               );
             })}
