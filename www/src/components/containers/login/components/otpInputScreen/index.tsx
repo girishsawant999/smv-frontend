@@ -3,6 +3,7 @@ import Emotes from 'components/common/emotes';
 import Typography from 'components/common/Typography';
 import React, { useState } from 'react';
 import commonStyles from '../../login.module.css';
+import BackButton from '../backButton';
 import styles from './otpscreen.module.css';
 
 OtpInputScreenComp.propTypes = {};
@@ -35,11 +36,7 @@ function OtpInputScreenComp({
   };
   return (
     <>
-      <div
-        className={styles.backbutton + ' flex justify-center items-center'}
-        onClick={() => setpageState('phone-input')}>
-        {'<'}
-      </div>
+      <BackButton onClick={() => setpageState('phone-input')} />
       <form
         onSubmit={verifyOTP}
         className="flex flex-col h-full items-center max-w-sm relative w-full">

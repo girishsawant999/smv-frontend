@@ -1,14 +1,4 @@
-.backbutton {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: #f5f4f5;
-    border-radius: 0.93rem;
-    position: absolute;
-    top: 1.25rem;
-    left: 1.25rem;
-    color: #1a181b;
-  }
-  .emailInput {
+.emailInput {
     font-family: Manrope-extra-light;
     max-width: 20rem;
     width: 100%;

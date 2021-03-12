@@ -1,8 +1,9 @@
 import Button from 'components/common/Button';
 import Emotes from 'components/common/emotes';
 import Typography from 'components/common/Typography';
-import React, { useState } from 'react';
+import React from 'react';
 import commonStyles from '../../login.module.css';
+import BackButton from '../backButton';
 import styles from './passwordInputScreen.module.css';
 
 PasswordInputScreen.propTypes = {};
@@ -20,11 +21,8 @@ function PasswordInputScreen({ pageState, setpageState }: IOtpInputScreenProps) 
   };
   return (
     <>
-      <div
-        className={styles.backbutton + ' flex justify-center items-center'}
-        onClick={() => setpageState('phone-input')}>
-        {'<'}
-      </div>
+      <BackButton onClick={() => setpageState('password-screen')} />
+      
       <form
         onSubmit={passwordSubmit}
         className="flex flex-col h-full items-center max-w-sm relative w-full">
