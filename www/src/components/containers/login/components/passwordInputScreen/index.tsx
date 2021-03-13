@@ -17,7 +17,7 @@ function PasswordInputScreen({ pageState, setpageState }: IOtpInputScreenProps) 
   const passwordSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     let password = e.target.password.value;
-    setpageState('phone-input');
+    setpageState('name-screen');
   };
   return (
     <>
@@ -29,7 +29,7 @@ function PasswordInputScreen({ pageState, setpageState }: IOtpInputScreenProps) 
         <Emotes
           src={'emote-shh/emote-shh.png'}
           srcSet={
-            'emote-shh/emote-shh.png, emote-shh/emote-shh@2x.png 2x, emote-shh/emote-shh@3x.png 3x'
+            'emote-shh/emote-shh, emote-shh/emote-shh@2x 2x, emote-shh/emote-shh@3x 3x'
           }
         />
 

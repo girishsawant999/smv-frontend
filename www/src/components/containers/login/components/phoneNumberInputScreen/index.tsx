@@ -2,7 +2,7 @@ import Button from 'components/common/Button';
 import Emotes from 'components/common/emotes';
 import PhoneInput from 'components/common/phoneInput';
 import Typography from 'components/common/Typography/index';
-import React, { useState } from 'react';
+import React from 'react';
 import commonStyles from '../../login.module.css';
 
 PhoneInputScreenComponent.propTypes = {};
@@ -33,7 +33,12 @@ function PhoneInputScreenComponent({
       <form
         onSubmit={requestOTP}
         className="flex flex-col h-full items-center max-w-sm relative w-full">
-        <Emotes src={'emote-smiling.png'} />
+        <Emotes
+          src={'emote-smiling/emote-smiling.png'}
+          srcSet={
+            'emote-smiling/emote-smiling, emote-smiling/emote-smiling@2x 2x, emote-smiling/emote-smiling@3x 3x'
+          }
+        />
 
         <div className="mx-10 max-w-sm text-center">
           <Typography type="heading2" variant="h1" className="x">

@@ -1,3 +1,4 @@
+import Img from 'components/common/img';
 import React from 'react';
 import styles from '../../login.module.css';
 
@@ -10,7 +11,7 @@ function BackButton({ onClick }: IBackButtonProps) {
     <button
       className={styles.backbutton + ' flex justify-center items-center'}
       onClick={onClick}>
-      {'<'}
+      <Img src="left-arrow.svg" alt="back" width="auto" height="auto" srcSet="" />
     </button>
   );
 }

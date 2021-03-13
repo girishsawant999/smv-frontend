@@ -23,7 +23,7 @@ function Img({ src, alt, className, width, height, srcSet }: IImgProps) {
       );
   return (
     <Image
-      src={baseLocation + src}
+      src={_srcSet ? '' : baseLocation + src}
       alt={alt}
       width={width}
       height={height}

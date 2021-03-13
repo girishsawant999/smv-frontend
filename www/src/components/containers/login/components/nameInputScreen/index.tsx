@@ -4,52 +4,70 @@ import Typography from 'components/common/Typography';
 import React from 'react';
 import commonStyles from '../../login.module.css';
 import BackButton from '../backButton';
-import styles from './passwordInputScreen.module.css';
+import styles from './nameInput.module.css';
 
-PasswordInputScreen.propTypes = {};
+NameInputScreen.propTypes = {};
 
-type IOtpInputScreenProps = {
+type INameInputScreenProps = {
   pageState: string;
   setpageState: (pageState: string) => void;
+  setfirstName: (pageState: string) => void;
 };
 
-function PasswordInputScreen({ pageState, setpageState }: IOtpInputScreenProps) {
-  const passwordSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
+function NameInputScreen({
+  pageState,
+  setpageState,
+  setfirstName
+}: INameInputScreenProps) {
+  const nameSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let password = e.target.password.value;
-    setpageState('phone-input');
+    let name = e.target.first.value + ' ' + e.target.last.value;
+    setfirstName(e.target.first.value);
+    setpageState('welcome-screen');
   };
   return (
     <>
       <BackButton onClick={() => setpageState('password-screen')} />
-      
+
       <form
-        onSubmit={passwordSubmit}
+        onSubmit={nameSubmit}
         className="flex flex-col h-full items-center max-w-sm relative w-full">
-        <Emotes src={'emote-shh/emote-shh.png'} />
+        <Emotes
+          src={'emote-smiling/emote-smiling.png'}
+          srcSet={
+            'emote-smiling/emote-smiling, emote-smiling/emote-smiling@2x 2x, emote-smiling/emote-smiling@3x 3x'
+          }
+        />
 
         <div className="mx-10 max-w-sm text-center">
           <Typography type="subHeading4" variant="h1">
-            Choose your account password
+            What’s your name?
           </Typography>
         </div>
 
         <div className="mt-5">
           <div className="w-64 flex justify-between">
             <input
-              className={styles.passwordInput}
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Make it secure & unique"
+              className={'mr-3.5 '.concat(styles.nameInput)}
+              type="text"
+              name="first"
+              id="first"
+              placeholder="First"
               autoFocus={true}
+            />
+            <input
+              className={styles.nameInput}
+              type="text"
+              name="last"
+              id="last"
+              placeholder="Last"
             />
           </div>
         </div>
 
         <div className={commonStyles.loginCommonBtn}>
           <Button type="submit" onClick={() => null}>
-            Next
+            Done
           </Button>
         </div>
       </form>
@@ -57,4 +75,4 @@ function PasswordInputScreen({ pageState, setpageState }: IOtpInputScreenProps) 
   );
 }
 
-export default PasswordInputScreen;
+export default NameInputScreen;

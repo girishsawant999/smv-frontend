@@ -26,7 +26,12 @@ function OtpInputScreenComp({ pageState, setpageState }: IOtpInputScreenProps) {
       <form
         onSubmit={emailSubmit}
         className="flex flex-col h-full items-center max-w-sm relative w-full">
-        <Emotes src={'emote-smiling.png'} />
+        <Emotes
+          src={'emote-smiling/emote-smiling.png'}
+          srcSet={
+            'emote-smiling/emote-smiling, emote-smiling/emote-smiling@2x 2x, emote-smiling/emote-smiling@3x 3x'
+          }
+        />
 
         <div className="mx-10 max-w-sm text-center">
           <Typography type="subHeading4" variant="h1">
