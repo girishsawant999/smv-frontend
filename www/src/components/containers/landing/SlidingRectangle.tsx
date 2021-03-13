@@ -20,3 +20,4 @@ function SlidingRectangle(props){
 }
 
 export default SlidingRectangle
+

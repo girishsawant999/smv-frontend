@@ -5,6 +5,7 @@ Img.propTypes = {};
 
 const baseLocation = "/assets/images/";
 function Img({ src, alt, className, style, width, height }) {
+  //@ts-ignore
   return <Image src={baseLocation + src} alt={alt} width={width} height={height} className={className} style={style} />;
 
 }
