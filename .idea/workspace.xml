@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fefcd5a8-a27b-438b-9c98-3d5b0accf4f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api-mocks/country/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/chevron-left-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/country/country.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/country/country@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/country/country@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/common/paragraph/Paragraph.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/Accordion.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/AdditionalDocList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/AdditionalDocListSubSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/AddonInfo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/AddonService.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/AllPacks.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/CountryImage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/CountryInfo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/DocumentList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/FAQ.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/ImportantInformation.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/PackInfo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/pages/country/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-mocks/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-mocks/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-mocks/countries/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-mocks/countries/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/styles/globals.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1pcdcR9oKx6g8pCUQadNAFdS6TY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api-mocks/country" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/www/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api-mocks/country" />
+      <recent name="$PROJECT_DIR$/www/public/assets/images" />
+      <recent name="$PROJECT_DIR$/www/public/assets/images/country_main_image" />
+      <recent name="$PROJECT_DIR$/www/src/pages" />
+      <recent name="$PROJECT_DIR$/www/src/components/containers" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fefcd5a8-a27b-438b-9c98-3d5b0accf4f1" name="Default Changelist" comment="" />
+      <created>1615486392613</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615486392613</updated>
+      <workItem from="1615486398675" duration="3994000" />
+      <workItem from="1615560933351" duration="1884000" />
+      <workItem from="1615576819680" duration="167000" />
+      <workItem from="1615577745275" duration="3306000" />
+      <workItem from="1615583141563" duration="4000" />
+      <workItem from="1615622296284" duration="11649000" />
+      <workItem from="1615694879080" duration="1190000" />
+      <workItem from="1615706756092" duration="302000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="529" y="262" width="297" height="224" key="#ESLint" timestamp="1615630709119">
+      <screen x="0" y="27" width="1366" height="687" />
+    </state>
+    <state x="529" y="262" width="297" height="224" key="#ESLint/0.27.1366.687@0.27.1366.687" timestamp="1615630709119" />
+    <state x="141" y="28" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615629271124">
+      <screen x="0" y="27" width="1366" height="687" />
+    </state>
+    <state x="141" y="28" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.687@0.27.1366.687" timestamp="1615629271124" />
+    <state x="377" y="172" width="602" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615578801111">
+      <screen x="0" y="27" width="1366" height="687" />
+    </state>
+    <state x="377" y="172" width="602" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.687@0.27.1366.687" timestamp="1615578801111" />
+    <state width="1343" height="155" key="GridCell.Tab.0.bottom" timestamp="1615522583737">
+      <screen x="0" y="27" width="1366" height="687" />
+    </state>
+    <state width="1343" height="155" key="GridCell.Tab.0.bottom/0.27.1366.687@0.27.1366.687" timestamp="1615522583737" />
+    <state width="1343" height="155" key="GridCell.Tab.0.center" timestamp="1615522583735">
+      <screen x="0" y="27" width="1366" height="687" />
+    </state>
+    <state width="1343" height="155" key="GridCell.Tab.0.center/0.27.1366.687@0.27.1366.687" timestamp="1615522583735" />
+    <state width="1343" height="155" key="GridCell.Tab.0.left" timestamp="1615522583734">
+      <screen x="0" y="27" width="1366" height="687" />
+    </state>
+    <state width="1343" height="155" key="GridCell.Tab.0.left/0.27.1366.687@0.27.1366.687" timestamp="1615522583734" />
+    <state width="1343" height="155" key="GridCell.Tab.0.right" timestamp="1615522583736">
+      <screen x="0" y="27" width="1366" height="687" />
+    </state>
+    <state width="1343" height="155" key="GridCell.Tab.0.right/0.27.1366.687@0.27.1366.687" timestamp="1615522583736" />
+    <state x="172" y="27" width="1012" height="687" key="SettingsEditor" timestamp="1615579085391">
+      <screen x="0" y="27" width="1366" height="687" />
+    </state>
+    <state x="172" y="27" width="1012" height="687" key="SettingsEditor/0.27.1366.687@0.27.1366.687" timestamp="1615579085391" />
+  </component>
+</project>
