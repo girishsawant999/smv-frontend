@@ -8,6 +8,16 @@
   src: url('/fonts/Manrope-ExtraBold.ttf');
 }
 
+@font-face {
+  font-family: Manrope-semi-bold;
+  src: url('/fonts/Manrope-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: Manrope-regular;
+  src: url('/fonts/Manrope-Regular.ttf');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,3 +28,4 @@
     border: none !important;
   }
 }
+@import 'components/containers/country/styles.scss';
