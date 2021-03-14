@@ -5,55 +5,50 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ExploreOutlinedIcon from '@material-ui/icons/ExploreOutlined';
 import ChatBubbleOutlineRoundedIcon from '@material-ui/icons/ChatBubbleOutlineRounded';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
-import SlidingRectangle from "./SlidingRectangle";
 import Accordion from "./Accordion";
-import SlidingRectangle2 from "./SlidingRectangle-2";
 import CustomerReviewBox from "./CustomerReviewBox";
 import ImageList from "./ProcessDisplay";
 import DisplayBlogPost from "./BlogPost";
+import CountriesVisaDetailSlider from "./DisplayCountryVisaDetail";
 
-const rect=[1,2]
 
 function LandingPage(props) {
-    const rectangle = [
-      {"imageLink":'/assets/landing/Bitmap-20.png',"country":"Portugal","time":"5-6 working days"},
-      {"imageLink":'/assets/landing/Bitmap-21.png',"country":"Russia","time":"7-8 working days"},
-      {"imageLink":'/assets/landing/Bitmap-22.png',"country":"Srilanka","time":"5-6 working days"}
+    const CountryVisaDetailSlow = [
+      {imageLink:'/assets/landing/Bitmap-20.png',country:"Portugal",time:"5-6 working days"},
+      {imageLink:'/assets/landing/Bitmap-21.png',country:"Russia",time:"7-8 working days"},
+      {imageLink:'/assets/landing/Bitmap-22.png',country:"Srilanka",time:"5-6 working days"}
     ]
 
-    const listsRectangle=[
-      <SlidingRectangle rectangleLink={rectangle[0].imageLink} countryName={rectangle[0].country} time={rectangle[0].time}/>,
-      <SlidingRectangle rectangleLink={rectangle[1].imageLink} countryName={rectangle[1].country} time={rectangle[1].time}/>,
-      <SlidingRectangle rectangleLink={rectangle[2].imageLink} countryName={rectangle[2].country} time={rectangle[2].time}/>,
-      <SlidingRectangle rectangleLink={rectangle[0].imageLink} countryName={rectangle[0].country} time={rectangle[0].time}/>
-      ]
+    const CountryVisaDetailFast = [
+      {imageLink:'/assets/landing/Bitmap-20.png',country:"Portugal",time:"5-6 working days"},
+      {imageLink:'/assets/landing/Bitmap-21.png',country:"Russia",time:"7-8 working days"},
+      {imageLink:'/assets/landing/Bitmap-22.png',country:"Srilanka",time:"5-6 working days"}
+    ]
 
-    const rectangle2 = [
-      {rectangleLink:'/assets/landing/kristian-egelund-uaQvRXa8izg-unsplash-2.png',statement:"How to extend your visa if you are stranded due to COVID-19",date:"Jan 1,2021"},
-      {rectangleLink:'/assets/landing/kristian-egelund-uaQvRXa8izg-unsplash-3.png',statement:"How to extend your visa if you are stranded due to COVID-19",date:"Jan 1,2021"}
+    const BlogArray= [
+      {imageLink: '/assets/landing/kristian-egelund-uaQvRXa8izg-unsplash-2.png',statement:"How to extend your visa if you are stranded due to COVID-19",date:"Jan 1,2021"},
+      {imageLink:'/assets/landing/kristian-egelund-uaQvRXa8izg-unsplash-3.png',statement:"How to extend your visa if you are stranded due to COVID-19",date:"Jan 1,2021"}
       ]
-    // const listRectangle2=[
-    //   <SlidingRectangle2 rectangleLink={rectangle2[0].imageLink} statement={rectangle2[0].statement} date={rectangle2[0].date}/>,
-    //   <SlidingRectangle2 rectangleLink={rectangle2[1].imageLink} statement={rectangle2[1].statement} date={rectangle2[1].date}/>
-    // ]
+    
 
-    const customer_review=[{comment:" service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
-                            gender:'male',
-                            country:"travelled to USA",
-                            name:"RICHARD LORYCH"},
-                            {comment:"Impressive service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
-                              gender:'female',
-                              country:"travelled to USA",
-                              name:"RICHARD LORYCH"},
-                            {comment:"pressive service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
-                              gender:'female',
-                              country:"travelled to USA",
-                              name:"RICHARD LORYCH"},
-                            {comment:"pressive service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
-                              gender:'male',
-                              country:"travelled to USA",
-                              name:"RICHARD LORYCH"}
-                            ]
+    const customer_review=[
+        {comment:" service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
+          gender:'male',
+          country:"travelled to USA",
+          name:"RICHARD LORYCH"},
+        {comment:"Impressive service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
+          gender:'female',
+          country:"travelled to USA",
+          name:"RICHARD LORYCH"},
+        {comment:"pressive service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
+          gender:'female',
+          country:"travelled to USA",
+          name:"RICHARD LORYCH"},
+        {comment:"pressive service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
+          gender:'male',
+          country:"travelled to USA",
+          name:"RICHARD LORYCH"}
+          ]
 
 
 
@@ -89,8 +84,8 @@ function LandingPage(props) {
                         <ArrowForwardIcon className="ml-2 mt-1" />
                     </div>
                 </div>
-                <div className="mt-5 -ml-3 flex overflow-x-auto">
-                    {listsRectangle}
+                <div >
+                    <CountriesVisaDetailSlider countryList = {CountryVisaDetailSlow} uniqueKey = {2000} />
                 </div>
             </section>
 
@@ -103,8 +98,8 @@ function LandingPage(props) {
                         <ArrowForwardIcon className="ml-2 mt-1" />
                     </div>
                 </div>
-                <div className="mt-5 -ml-3 flex overflow-x-auto">
-                     {listsRectangle}
+                <div>
+                  <CountriesVisaDetailSlider countryList = {CountryVisaDetailFast} uniqueKey = {3000}  />
                 </div>
             </section>
 
@@ -115,7 +110,10 @@ function LandingPage(props) {
                 </h1>
                 <div className="relative bg-#3CC39A bg-opacity-20 rounded-3xl flex-col pt-6 mt-5 overflow-hidden">
                     <div className="flex text-2xl italic font-extrabold text-#3CC39A justify-center">
-                        BOOKINGS FOR VISA
+                        <marquee width="100%" direction="left">
+                            BOOKINGS FOR VISA
+                        </marquee>
+
                     </div>
                     <div className="mx-5 mt-5 leading-7 text-sm text-center font-manrope-extra-light font-extrabold px-4">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et sed do F.A.S.T
@@ -162,7 +160,11 @@ function LandingPage(props) {
                                     width="140"
                                 />
                             </div>
-                            <div className="mt-8 flex text-3xl italic font-extrabold text-#74C2F1 justify-center">FAST</div>
+                            <div className="mt-8 flex text-3xl italic font-extrabold text-#74C2F1 justify-center">
+                                <marquee width="100%" direction="left">
+                                   FAST
+                                </marquee>
+                            </div>
                         </div>
                         <div className="bg-#FF8199 w-11/12 h-96 mt-4 pt-7 rounded-30px bg-opacity-20">
                             <div className="flex justify-center pl-3 pt-16">
@@ -174,14 +176,18 @@ function LandingPage(props) {
                                 />
                             </div>
                             <div className="mt-16 flex text-3xl italic font-extrabold text-#FF8199 justify-center">
-                                SIMPLE
+                                <marquee width="100%" direction="left">
+                                  SIMPLE
+                                </marquee>
                             </div>
                         </div>
                     </div>
                     <div className="flex-col w-1/2">
                         <div className="bg-#9977FF w-11/12 h-96 pt-7 rounded-30px bg-opacity-20">
                             <div className="mt-5 flex text-3xl italic font-extrabold text-#9977FF justify-center">
-                                AWESOME
+                                <marquee width="100%" direction="left">
+                                   AWESOME
+                                </marquee>
                             </div>
                             <div className="pl-3 mt-14 flex justify-center">
                                 <Image className=""
@@ -192,11 +198,13 @@ function LandingPage(props) {
                                 />
                             </div>
                         </div>
-                        <div className="bg-#FFB600 w-11/12 h-64 mt-4 pt-6 rounded-30px bg-opacity-20 overflow-x-hidden">
+                        <div className="bg-#FFB600 w-11/12 h-64 mt-4 pt-6 rounded-30px bg-opacity-20">
                             <div className="mt-3 flex text-3xl italic font-extrabold text-#FFB600 justify-center">
-                                TRUSTWORTHY
+                                <marquee width="100%" direction="left">
+                                    TRUSTWORTHY
+                                </marquee>
                             </div>
-                            <div className="pl-8 mt-8 flex justify-center">
+                            <div className="pl-8 mt-6 flex justify-center">
                                 <Image
                                   src={'/assets/landing/Thumb_up-1.png'}
                                   alt="Background Image"
@@ -219,8 +227,8 @@ function LandingPage(props) {
                           <ArrowForwardIcon className="ml-2 mt-1" />
                         </div>
                     </div>
-                    <div className="flex -ml-5 overflow-auto">
-                        <DisplayBlogPost blogList = {rectangle2} />
+                    <div>
+                        <DisplayBlogPost blogList = {BlogArray} />
                     </div>
                 </div>
             </section>
@@ -309,7 +317,6 @@ function LandingPage(props) {
         </div>
     )
 }
-
 
 
 export default LandingPage

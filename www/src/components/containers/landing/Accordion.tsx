@@ -11,7 +11,7 @@ Accordion.prototype={
 function Accordion({question, answer}){
     const[selected, setSelected] = useState(true);
     return(
-        <div className="border-b-2">
+        <div className="border-b-2 ">
             <button className="w-full relative border-none focus:outline-none" onClick={()=> setSelected(selected =>!selected)} >
                 <p className="section-subheading justify-between text-left flex py-4">
                     {question}
@@ -23,7 +23,7 @@ function Accordion({question, answer}){
                 </p>
             </button>
 
-            <div className={selected  ? "hidden transition-all max-h-0 duration-700" : "pb-4 mr-10"}>
+            <div className={selected  ? "hidden transition-all max-h-0 duration-700" : "font-manrope-extra-light font-light leading-8 pb-4 mr-10"}>
                 <div className={"section-description"}>
                     <p>{answer}</p>
                 </div>

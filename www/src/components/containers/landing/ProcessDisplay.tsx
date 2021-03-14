@@ -74,6 +74,7 @@ function getStatement(buttonIndex){
 
 
 function ImageList(){
+
     const [buttonIndex, setButtonIndex] = useState(1)
 
     function nextButton(){

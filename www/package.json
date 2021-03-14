@@ -29,7 +29,8 @@
     "react-dom": "^17.0.1",
     "react-phone-input-2": "^2.13.9",
     "sass": "^1.32.8",
-    "tailwindcss": "^2.0.3"
+    "tailwindcss": "^2.0.3",
+    "uuidv4": "^6.2.6"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
