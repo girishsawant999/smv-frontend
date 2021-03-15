@@ -20,30 +20,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fefcd5a8-a27b-438b-9c98-3d5b0accf4f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api-mocks/country/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/images/chevron-left-1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/images/country/country.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/images/country/country@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/images/country/country@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/common/paragraph/Paragraph.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/Accordion.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/AdditionalDocList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/AdditionalDocListSubSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/AddonInfo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/AddonService.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/AllPacks.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/CountryImage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/CountryInfo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/DocumentList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/FAQ.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/ImportantInformation.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/PackInfo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/pages/country/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-mocks/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-mocks/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-mocks/countries/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-mocks/countries/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/styles/globals.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/Group 7@2x-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.11/group-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.11/group-2@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.11/group-2@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.11/group.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.11/group@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.11/group@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.12/bitmap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.12/bitmap@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.12/bitmap@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.12/bitmap_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.12/bitmap_2@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.12/bitmap_2@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/additionalDocList/AdditionalDocListSubSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/additionalDocList/additionalDocList.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/processDisplay/processDisplay.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-mocks/country/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-mocks/country/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/common/Typography/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/common/Typography/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/common/Typography/typography.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/common/Typography/typography.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/common/paragraph/Paragraph.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/Accordion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/Accordion.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/AdditionalDocList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/additionalDocList/AdditionalDocList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/AdditionalDocListSubSection.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/AddonInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/AddonInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/AddonService.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/AddonService.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/AllPacks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/AllPacks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/CountryImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/CountryImage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/CountryInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/CountryInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/DocumentList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/DocumentList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/ImportantInformation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/ImportantInformation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/PackInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/PackInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/pages/country/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/pages/country/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +71,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/api-mocks/country" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/www/public/assets" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -73,18 +83,34 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/www/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/www/src/components/containers/country/additionalDocList" />
+      <recent name="$PROJECT_DIR$/www/src/components/containers/country/processDisplay" />
+      <recent name="$PROJECT_DIR$/www/public/assets/landing" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/www/public/assets" />
+      <recent name="$PROJECT_DIR$/www/src/components/containers/country" />
+      <recent name="$PROJECT_DIR$/www/public/assets/images/country" />
       <recent name="$PROJECT_DIR$/api-mocks/country" />
       <recent name="$PROJECT_DIR$/www/public/assets/images" />
-      <recent name="$PROJECT_DIR$/www/public/assets/images/country_main_image" />
-      <recent name="$PROJECT_DIR$/www/src/pages" />
-      <recent name="$PROJECT_DIR$/www/src/components/containers" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/api-mocks/country/index.js" working-dir="$PROJECT_DIR$/api-mocks/country">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.index.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -101,7 +127,9 @@
       <workItem from="1615583141563" duration="4000" />
       <workItem from="1615622296284" duration="11649000" />
       <workItem from="1615694879080" duration="1190000" />
-      <workItem from="1615706756092" duration="302000" />
+      <workItem from="1615706756092" duration="1258000" />
+      <workItem from="1615728323004" duration="11965000" />
+      <workItem from="1615789749926" duration="10523000" />
     </task>
     <servers />
   </component>
@@ -133,25 +161,33 @@
       <screen x="0" y="27" width="1366" height="687" />
     </state>
     <state x="377" y="172" width="602" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.687@0.27.1366.687" timestamp="1615578801111" />
-    <state width="1343" height="155" key="GridCell.Tab.0.bottom" timestamp="1615522583737">
+    <state x="418" y="223" width="519" height="301" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1615744457519">
       <screen x="0" y="27" width="1366" height="687" />
     </state>
-    <state width="1343" height="155" key="GridCell.Tab.0.bottom/0.27.1366.687@0.27.1366.687" timestamp="1615522583737" />
-    <state width="1343" height="155" key="GridCell.Tab.0.center" timestamp="1615522583735">
+    <state x="418" y="223" width="519" height="301" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.27.1366.687@0.27.1366.687" timestamp="1615744457519" />
+    <state width="1343" height="155" key="GridCell.Tab.0.bottom" timestamp="1615751241252">
       <screen x="0" y="27" width="1366" height="687" />
     </state>
-    <state width="1343" height="155" key="GridCell.Tab.0.center/0.27.1366.687@0.27.1366.687" timestamp="1615522583735" />
-    <state width="1343" height="155" key="GridCell.Tab.0.left" timestamp="1615522583734">
+    <state width="1343" height="155" key="GridCell.Tab.0.bottom/0.27.1366.687@0.27.1366.687" timestamp="1615751241252" />
+    <state width="1343" height="155" key="GridCell.Tab.0.center" timestamp="1615751241251">
       <screen x="0" y="27" width="1366" height="687" />
     </state>
-    <state width="1343" height="155" key="GridCell.Tab.0.left/0.27.1366.687@0.27.1366.687" timestamp="1615522583734" />
-    <state width="1343" height="155" key="GridCell.Tab.0.right" timestamp="1615522583736">
+    <state width="1343" height="155" key="GridCell.Tab.0.center/0.27.1366.687@0.27.1366.687" timestamp="1615751241251" />
+    <state width="1343" height="155" key="GridCell.Tab.0.left" timestamp="1615751241250">
       <screen x="0" y="27" width="1366" height="687" />
     </state>
-    <state width="1343" height="155" key="GridCell.Tab.0.right/0.27.1366.687@0.27.1366.687" timestamp="1615522583736" />
+    <state width="1343" height="155" key="GridCell.Tab.0.left/0.27.1366.687@0.27.1366.687" timestamp="1615751241250" />
+    <state width="1343" height="155" key="GridCell.Tab.0.right" timestamp="1615751241252">
+      <screen x="0" y="27" width="1366" height="687" />
+    </state>
+    <state width="1343" height="155" key="GridCell.Tab.0.right/0.27.1366.687@0.27.1366.687" timestamp="1615751241252" />
     <state x="172" y="27" width="1012" height="687" key="SettingsEditor" timestamp="1615579085391">
       <screen x="0" y="27" width="1366" height="687" />
     </state>
     <state x="172" y="27" width="1012" height="687" key="SettingsEditor/0.27.1366.687@0.27.1366.687" timestamp="1615579085391" />
+    <state x="346" y="35" width="672" height="678" key="search.everywhere.popup" timestamp="1615795484487">
+      <screen x="0" y="27" width="1366" height="687" />
+    </state>
+    <state x="346" y="35" width="672" height="678" key="search.everywhere.popup/0.27.1366.687@0.27.1366.687" timestamp="1615795484487" />
   </component>
 </project>

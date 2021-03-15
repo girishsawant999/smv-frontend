@@ -1,0 +1,14 @@
+.slider{
+    transition: 1.2s;
+}
+.slider1{
+    transition-timing-function: ease;
+    transition: 1.2s;
+    transform: translateX(130%);
+}
+.slider2 {
+
+}
+.slider3{
+
+}

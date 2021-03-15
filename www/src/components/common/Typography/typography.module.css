@@ -32,3 +32,49 @@
   color: #9b939f;
   line-height: 1.83;
 }
+
+
+
+.headingExtraBold24px{
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: #1A181B;
+    font-family: Manrope-extra-bold;
+}
+.headingExtraBold18px{
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: #1a181b;
+    font-family: Manrope-extra-bold;
+}
+.headingSemiBold16px {
+    font-size: 1rem;
+    line-height: 1.81rem;
+    color: #4e4851;
+    font-family: Manrope-semi-bold;
+}
+
+.contentSemiBold12px{
+    font-family: Manrope-semi-bold;
+    font-size: .75rem;
+    line-height: 1.125rem;
+    color: #4e4851;
+}
+.contentRegular14px{
+    font-family: Manrope-regular;
+    font-size: 0.875rem;
+    line-height: 1.786rem;
+    color: #9B939F;
+}
+.contentSemiBold14px{
+    font-family: Manrope-semi-bold;
+    font-size: 0.875rem;
+    line-height: 1.786rem;
+    color: #4e4851;
+}
+.contentExtraBold20px{
+    font-family: Manrope-extra-bold;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: #1A181B;
+}

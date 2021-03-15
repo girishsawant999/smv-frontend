@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Paragraph from '../../common/paragraph/Paragraph';
+import { InferGetServerSidePropsType } from 'next';
+import { getServerSideProps } from '../../../pages/country';
+import Typography from '../../common/Typography';
 
-function CountryInfo({data}:any){
+function CountryInfo({data}:InferGetServerSidePropsType<typeof getServerSideProps>){
     const[name, setName] = useState("country name");
     const[prcessingTime, setProcessingTime] = useState("calculating days...");
     const[description, setDescription] = useState("country description");
@@ -16,13 +18,15 @@ function CountryInfo({data}:any){
 
     return(
         <div className="country-info-div m-5">
-            <h1 className="country-info-heading">
+            <Typography type="headingExtraBold24px" variant="h1">
                 {name}
-            </h1>
-            <h3 className="country-info-subheading">
+            </Typography>
+            <Typography type="headingSemiBold16px" variant="h3">
                 {prcessingTime}
-            </h3>
-              <Paragraph>{description}</Paragraph>
+            </Typography>
+            <Typography type="contentRegular14px" variant="h3">
+                {description}
+            </Typography>
         </div>
     )
 }

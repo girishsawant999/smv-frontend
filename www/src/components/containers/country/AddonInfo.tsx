@@ -1,42 +1,43 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import Typography from '../../common/Typography';
 
-AddonInfo.prototype={
-    days: PropTypes.string,
-    info: PropTypes.string,
-    price: PropTypes.string,
-    oldPrice: PropTypes.string,
-    description: PropTypes.string
+type IAddonInfoProps={
+    info: string;
+    detail: string;
+    price: string;
+    oldPrice: string;
+    description: string;
 }
 
-function AddonInfo({info, detail, price, oldPrice, description}){
+function AddonInfo({info, detail, price, oldPrice, description}: IAddonInfoProps){
     const [checked, setChecked] = useState(false);
     return(
         <div className="relative addon-info-div m-5 p-5 flex-col">
-            <p className="addon-info-plan">
+            <Typography type="headingSemiBold16px" variant="h4">
                 {info}
-            </p>
+            </Typography>
             <div className="checkbox-btn absolute top-5 right-5">
                 <label className="container">
                     <input type="checkbox" checked={checked} onChange={()=>{setChecked(checked => !checked)}}/>
                     <span className="checkmark"> </span>
                 </label>
             </div>
-            <h3 className="addon-info-detail mr-10">
+            <Typography type="contentRegular14px" variant="p" className="mr-2.5">
                 {detail}
-            </h3>
+            </Typography>
             <div className="flex items-end">
-                <p className="addon-info-plan-price">
+                <Typography type="contentExtraBold20px" variant="p">
                     {price}
-                </p>
-                <p className="addon-info-plan-old-price line-through">
+                </Typography>
+                <Typography type="contentRegular14px" variant="p" className="line-through ml-2.5">
                     {oldPrice}
-                </p>
+                </Typography>
             </div>
             <div className="divider"></div>
-            <p className="addon-info-plan-description">
+            <Typography type="contentSemiBold12px" variant="p">
                 {description}
-            </p>
+            </Typography>
         </div>
     )
 }

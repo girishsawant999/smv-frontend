@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 function CountryImage(){
     return(
@@ -8,13 +7,14 @@ function CountryImage(){
                 {/*<SaveAltIcon className="header-image-right-icon"/>*/}
                 {/*<ChevronLeftIcon className="header-image-left-icon"/>*/}
             </div>
-            <Image
-                src="/assets/images/country/country.png"
-                alt="Picture of the author"
-                width={ 375 }
-                height={ 300 }
-                layout="responsive"
-            />
+            <picture>
+                <source
+                    srcSet="/assets/images/country/country.png 1x,
+                            /assets/images/country/country@2x.png 2x,
+                            /assets/images/country/country@3x.png 3x"
+                />
+              <img src="/assets/images/country/country.png" alt="Country" width="100%"/>
+            </picture>
         </div>
     )
 }

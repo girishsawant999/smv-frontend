@@ -24,7 +24,15 @@ type StyleType = "heading1"
                  | "content5"
                  | "content6"
                  | "content7"
-                 | "content8" ;
+                 | "content8"
+                 |"headingExtraBold18px"
+                 |"headingExtraBold24px"
+                 |"headingSemiBold16px"
+                 |"subHeading4fw600"
+                 |"contentSemiBold12px"
+                 |"contentRegular14px"
+                 |"contentSemiBold14px"
+                 |"contentExtraBold20px";
 
 type variantType = "h1"
                     | "h2"

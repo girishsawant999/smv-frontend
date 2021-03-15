@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import AddonInfo from './AddonInfo';
-import PackInfo from './PackInfo';
+import { InferGetServerSidePropsType } from 'next';
+import { getServerSideProps } from '../../../pages/country';
+import Typography from '../../common/Typography';
 
-function AddonService({data}:any){
+type IAddonServiceProps={
+  info: string;
+  detail: string;
+  price: string;
+  oldPrice: string;
+  description: string;
+}
+
+function AddonService({data}:InferGetServerSidePropsType<typeof getServerSideProps>){
     const[packs, setPacks] = useState([]);
     useEffect(()=>{
         data = data.data.addonService;
@@ -10,9 +20,11 @@ function AddonService({data}:any){
     },[])
     return(
         <div className="add-on-service-div m-5">
-            <div className="section-heading">Add-on services</div>
+            <Typography type="headingExtraBold18px" variant="h3">
+                Add-on services
+            </Typography>
             {
-                packs.map((packsItem, index) => {
+                packs.map((packsItem:IAddonServiceProps, index) => {
                     return (
                         <AddonInfo
                             key={index}

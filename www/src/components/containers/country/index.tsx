@@ -4,14 +4,19 @@ import AllPacks from './AllPacks';
 import AddonService from './AddonService';
 import ImportantInformation from './ImportantInformation';
 import DocumentList from './DocumentList';
-import AdditionalDocList from './AdditionalDocList';
+import AdditionalDocList from './additionalDocList/AdditionalDocList';
 import FAQ from './FAQ';
 import CountryInfo from './CountryInfo';
 import CountryImage from './CountryImage';
+import { InferGetServerSidePropsType } from 'next';
+import { getServerSideProps } from '../../../pages/country';
+import ImageList from './processDisplay/ProcessDisplay';
 
-function CountryPage({ data }:any) {
+function CountryPage({ data }:InferGetServerSidePropsType<typeof getServerSideProps>) {
     return (
         <div className="main-div flex-col">
+
+            {/*<ImageList/>*/}
 
             {/*Header image section*/}
             <CountryImage/>

@@ -6,7 +6,6 @@ import { GetServerSideProps } from 'next'
 
 CountryPageMain.propTypes = {};
 
-
 // type Data = { name : string }
 
 export const getServerSideProps:GetServerSideProps = async () => {

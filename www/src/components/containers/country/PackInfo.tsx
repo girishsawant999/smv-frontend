@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import Typography from '../../common/Typography';
 
-
-PackInfo.prototype={
-    days: PropTypes.string,
-    price: PropTypes.string,
-    oldPrice: PropTypes.string,
-    description: PropTypes.string
+type IPackInfoProps={
+    days: string;
+    price: string;
+    oldPrice: string;
+    description: string;
 }
 
-function PackInfo({days, price, oldPrice, description}){
+function PackInfo({days, price, oldPrice, description}:IPackInfoProps){
     const [checked, setChecked] = useState(true);
     return(
         <div className="relative country-pack-info-plan m-5 p-5 flex-col">
-            <h3 className="country-pack-info-plan-days">
+            <Typography type="headingSemiBold16px" variant="h4">
                 {days}
-            </h3>
+            </Typography>
             <div className="radio-btn absolute right-5 top-5">
                 <div className="container" onClick={()=>setChecked(checked => !checked)}>
                     <input type="radio" checked={checked} name="radio" onChange={()=>setChecked(checked => !checked)}/>
@@ -23,17 +22,17 @@ function PackInfo({days, price, oldPrice, description}){
                 </div>
             </div>
             <div className="flex items-end">
-                <p className="country-pack-info-plan-price">
+                <Typography type="contentExtraBold20px" variant="p">
                     {price}
-                </p>
-                <p className="country-pack-info-plan-old-price line-through">
+                </Typography>
+                <Typography type="contentRegular14px" variant="p" className="line-through ml-2.5">
                     {oldPrice}
-                </p>
+                </Typography>
             </div>
             <div className="divider"> </div>
-            <p className="country-pack-info-plan-description">
+            <Typography type="contentSemiBold12px" variant="p">
                 {description}
-            </p>
+            </Typography>
         </div>
     )
 }

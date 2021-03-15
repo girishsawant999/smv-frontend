@@ -12,88 +12,90 @@ router.get('/country', (req, res) => {
       },
       packInfo: [
         {
-          days:"60 days  tourist visa",
-          price:"Rs 6300",
-          oldPrice:"Rs 7310",
-          description:"Insurance available"
+          days: '60 days  tourist visa',
+          price: 'Rs 6300',
+          oldPrice: 'Rs 7310',
+          description: 'Insurance available'
         },
         {
-          days:"90 days  tourist visa",
-          price:"Rs 7300",
-          oldPrice:"Rs 8310",
-          description:"Insurance available"
+          days: '90 days  tourist visa',
+          price: 'Rs 7300',
+          oldPrice: 'Rs 8310',
+          description: 'Insurance available'
         }
       ],
       addonService: [
         {
-          info:"Flight bookings for two",
-          detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
-          price:"Rs 6300",
-          oldPrice:"Rs 7310",
-          description:"Insurance available"
+          info: 'Flight bookings for two',
+          detail:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+          price: 'Rs 6300',
+          oldPrice: 'Rs 7310',
+          description: 'Insurance available'
         },
         {
-          info:"Hotel bookings for V",
-          detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
-          price:"Rs 8300",
-          oldPrice:"Rs 9310",
-          description:"One-way & return available, unlimited iterations"
+          info: 'Hotel bookings for V',
+          detail:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+          price: 'Rs 8300',
+          oldPrice: 'Rs 9310',
+          description: 'One-way & return available, unlimited iterations'
         }
       ],
-      importantInfo:[
-        "Medical insurance is compulsory for travel to the Australia",
-        "Effective January 31, 2020, PCR test has to be done 72 hours prior to arrival in Dubai",
-        "All the optional Dubai visa related services would be available at an additional cost. Get in touch with our travel experts who will assist you with your booking"
+      importantInfo: [
+        'Medical insurance is compulsory for travel to the Australia',
+        'Effective January 31, 2020, PCR test has to be done 72 hours prior to arrival in Dubai',
+        'All the optional Dubai visa related services would be available at an additional cost. Get in touch with our travel experts who will assist you with your booking'
       ],
-      documentList:[
-        "Original passport and old passports, if any",
-        "Copy of the first, last page, observation page (if any) and all used and unused pages of current passport should be notarized and submitted along with the documents. If an old passport is being submitted, then copies of all used pages have to be submitted as well.",
-        "Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages",
-        "Confirmed return air tickets"
+      documentList: [
+        'Original passport and old passports, if any',
+        'Copy of the first, last page, observation page (if any) and all used and unused pages of current passport should be notarized and submitted along with the documents. If an old passport is being submitted, then copies of all used pages have to be submitted as well.',
+        'Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages',
+        'Confirmed return air tickets'
       ],
-      additionalDocList:[
+      additionalDocList: [
         {
-          condition:"If the applicant is employed",
-          list:[
-            "Original passport and old passports, if any",
-            "Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages"
+          condition: 'If the applicant is employed',
+          list: [
+            'Original passport and old passports, if any',
+            'Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages'
           ]
         },
         {
-          condition:"If the applicant is a company owner or self-employed",
-          list:[
-            "Original passport and old passports, if any",
-            "Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages"
+          condition: 'If the applicant is a company owner or self-employed',
+          list: [
+            'Original passport and old passports, if any',
+            'Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages'
           ]
         },
         {
-          condition:"If the applicant has a family in Australia",
-          list:[
-            "Original passport and old passports, if any",
-            "Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages"
+          condition: 'If the applicant has a family in Australia',
+          list: [
+            'Original passport and old passports, if any',
+            'Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages'
           ]
         },
         {
-          condition:"If the applicant is Student",
-          list:[
-            "Original passport and old passports, if any",
-            "Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages"
+          condition: 'If the applicant is Student',
+          list: [
+            'Original passport and old passports, if any',
+            'Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages'
           ]
         },
         {
-          condition:"If the applicant is intending to stay more than 3 months",
-          list:[
-            "Original passport and old passports, if any",
-            "Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages"
+          condition: 'If the applicant is intending to stay more than 3 months',
+          list: [
+            'Original passport and old passports, if any',
+            'Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages'
           ]
         },
         {
-          condition:"If the applicant age is more than 75",
-          list:[
-            "Original passport and old passports, if any",
-            "Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages"
+          condition: 'If the applicant age is more than 75',
+          list: [
+            'Original passport and old passports, if any',
+            'Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages'
           ]
-        },
+        }
       ]
     }
   };

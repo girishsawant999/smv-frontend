@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { InferGetServerSidePropsType } from 'next';
+import { getServerSideProps } from '../../../pages/country';
+import Typography from '../../common/Typography';
 
-function ImportantInformation({data}){
+function ImportantInformation({data}:InferGetServerSidePropsType<typeof getServerSideProps>){
     const[list, setList] = useState([]);
     useEffect(()=>{
         data = data.data.importantInfo;
@@ -8,11 +11,14 @@ function ImportantInformation({data}){
     },[])
     return(
         <div className="imp-info-div m-5">
-            <div className="section-heading">Important information</div>
+            <Typography type="headingExtraBold18px" variant="h3">Important information</Typography>
             <div className="list-items">
                 <ul className="">
                     {
-                        list.map((listItem, index) => <li key={index}>{listItem}</li>)
+                        list.map((listItem, index) => <li key={index}>
+                            <Typography type="contentRegular14px" variant="p">{listItem}</Typography>
+                        </li>
+                        )
                     }
                 </ul>
             </div>

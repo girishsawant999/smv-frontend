@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
 
-Accordion.prototype={
-    question: PropTypes.string,
-    answer: PropTypes.string
+type IAccordionProps={
+    question: string;
+    answer: string;
 }
 
-function Accordion({question, answer}){
+function Accordion({question, answer}:IAccordionProps){
     const[selected, setSelected] = useState(0);
     return(
         <div className="border-b-2">
