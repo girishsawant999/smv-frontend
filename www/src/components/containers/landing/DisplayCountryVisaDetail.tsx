@@ -7,15 +7,17 @@ function countryLayout(item:any){
     console.log(item.imageLink.imageLink_1x + ' 1x, ' + item.imageLink.imageLink_2x + ' 2x, ' + item.imageLink.imageLink_3x + ' 3x')
     return(
         <div key={uuid()} className="ml-3">
+          <div className="relative h-56 w-44 mb-2">
             <picture>
-                {/*<source srcSet="/assets/landing/country_greece_images/bitmap.png 1x,*/}
-                {/*                /assets/landing/country_greece_images/bitmap@2x.png 2x,*/}
-                {/*                /assets/landing/country_greece_images/bitmap@3x.png 3x"*/}
-                {/*/>*/}
-                <source srcSet={item.imageLink.imageLink_1x + ' 1x, ' + item.imageLink.imageLink_2x + ' 2x, ' + item.imageLink.imageLink_3x + ' 3x'}
-                />
-                <img src={item.imageLink.imageLink_3x} alt="Country"  width="300px"/>
+                  {/*<source srcSet="/assets/landing/country_greece_images/bitmap.png 1x,*/}
+                  {/*                /assets/landing/country_greece_images/bitmap@2x.png 2x,*/}
+                  {/*                /assets/landing/country_greece_images/bitmap@3x.png 3x"*/}
+                  {/*/>*/}
+                  <source srcSet={item.imageLink.imageLink_1x + ' 1x, ' + item.imageLink.imageLink_2x + ' 2x, ' + item.imageLink.imageLink_3x + ' 3x'}
+                  />
+                  <img src={item.imageLink.imageLink_3x} alt="Country" />
             </picture>
+          </div>
             {/*<Image*/}
             {/*        src={item.imageLink.imageLink_1x}*/}
             {/*        alt="Background Image"*/}
