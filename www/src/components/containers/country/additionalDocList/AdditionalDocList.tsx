@@ -5,8 +5,8 @@ import { getServerSideProps } from '../../../../pages/country';
 import Typography from '../../../common/Typography';
 
 type IAdditionDocListProps = {
-  condition:string;
-  list:Array<string>;
+      condition:string;
+      list:Array<string>;
 }
 
 function AdditionalDocList({ data }:InferGetServerSidePropsType<typeof getServerSideProps>){
@@ -16,8 +16,7 @@ function AdditionalDocList({ data }:InferGetServerSidePropsType<typeof getServer
         setList(data);
     },[])
     return(
-        <div className="additional-doc-list-div m-5">
-            {/*<div className="section-heading">Addtional Document List</div>*/}
+        <div className="m-5">
             <Typography type="headingExtraBold18px" variant="h3">Addtional Document List</Typography>
             {
                 list.map((listItem:IAdditionDocListProps , index)=> {

@@ -1,5 +1,6 @@
 import React from 'react';
 import Typography from '../../../common/Typography';
+import styles from './additionalDocList.module.css';
 
 type IAdditionDocListSubSectionProps = {
     item:{
@@ -10,12 +11,12 @@ type IAdditionDocListSubSectionProps = {
 
 function AdditionalDocListSubSection({ item }:IAdditionDocListSubSectionProps){
     return(
-        <div className="additional-doc-list-item-div">
+        <div className="">
             <Typography type="headingSemiBold16px" variant="h4">{item.condition}</Typography>
             <div className="list-items">
-                <ul className="">
+                <ul className={styles.ul}>
                     {
-                        item.list.map((item, index)=> <li key={index}>
+                        item.list.map((item, index)=> <li key={index} className={styles.li}>
                             <Typography type="contentRegular14px" variant="p">{item}</Typography>
                         </li>)
                     }

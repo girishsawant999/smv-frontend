@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import PackInfo from './PackInfo';
+import PackInfo from '../packInfo/PackInfo';
 import { InferGetServerSidePropsType } from 'next';
-import { getServerSideProps } from '../../../pages/country';
-import Typography from '../../common/Typography';
+import { getServerSideProps } from '../../../../pages/country';
+import Typography from '../../../common/Typography';
+import styles from './allPacks.module.css';
 
 type IPackInfoProps={
-  days: string;
-  price: string;
-  oldPrice: string;
-  description: string;
+    days: string;
+    price: string;
+    oldPrice: string;
+    description: string;
 }
 
 function AllPacks({data}:InferGetServerSidePropsType<typeof getServerSideProps>){
@@ -19,10 +20,10 @@ function AllPacks({data}:InferGetServerSidePropsType<typeof getServerSideProps>)
         setPacks(data);
     },[])
     return(
-        <div className="country-pack-info-div m-5">
-            <div className="country-pack-info-top flex items-end justify-between mb-2">
+        <div className="m-5">
+            <div className=" flex items-end justify-between mb-2">
                 <Typography type="headingExtraBold18px" variant="h3">All packs</Typography>
-                <h4 className="country-pack-show-all-btn">show relevant packs</h4>
+                <h4 className={styles.country_pack_show_all_btn}>show relevant packs</h4>
             </div>
             <Typography type="contentSemiBold14px" variant="p">
                 All our packs are inclusive of consultation fees, service charges & other taxes

@@ -1,10 +1,11 @@
 import React from 'react';
-import Accordion from './Accordion';
+import Accordion from '../accordian/Accordion';
+import Typography from "../../../common/Typography";
 
 function FAQ(){
     return(
-        <div className="faq-div p-4">
-            <div className="section-heading">Frequently Asked Questions</div>
+        <div className="p-4">
+            <Typography type="headingExtraBold18px" variant="h3">Frequently Asked Questions</Typography>
             <Accordion
                 question={"Once I apply, when I will receive my visa?"}
                 answer={"An e-Visa is an official document permitting entry into and travel within a certain country. The e-Visa is an alternative to visas issued at the ports of entry or visiting an embassy/consulate to obtain traditional paper visas"}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import Typography from '../../common/Typography';
+import Typography from '../../../common/Typography';
+import styles from './addonInfo.module.css';
 
 type IAddonInfoProps={
     info: string;
@@ -13,17 +13,17 @@ type IAddonInfoProps={
 function AddonInfo({info, detail, price, oldPrice, description}: IAddonInfoProps){
     const [checked, setChecked] = useState(false);
     return(
-        <div className="relative addon-info-div m-5 p-5 flex-col">
+        <div className={styles.addon_info_div+ " relative m-5 p-5 flex-col"}>
             <Typography type="headingSemiBold16px" variant="h4">
                 {info}
             </Typography>
-            <div className="checkbox-btn absolute top-5 right-5">
-                <label className="container">
+            <div className={styles.checkbox_btn + " absolute top-5 right-5"}>
+                <label className={styles.container}>
                     <input type="checkbox" checked={checked} onChange={()=>{setChecked(checked => !checked)}}/>
-                    <span className="checkmark"> </span>
+                    <span className={styles.checkmark}> </span>
                 </label>
             </div>
-            <Typography type="contentRegular14px" variant="p" className="mr-2.5">
+            <Typography type="contentRegular14px" variant="p" className="mr-5">
                 {detail}
             </Typography>
             <div className="flex items-end">
@@ -34,7 +34,7 @@ function AddonInfo({info, detail, price, oldPrice, description}: IAddonInfoProps
                     {oldPrice}
                 </Typography>
             </div>
-            <div className="divider"></div>
+            <div className={styles.divider}></div>
             <Typography type="contentSemiBold12px" variant="p">
                 {description}
             </Typography>

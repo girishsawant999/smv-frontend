@@ -6,10 +6,10 @@ function getImage(buttonIndex:any){
     if(buttonIndex === 1){
         return(
             <Image className=""
-                   src={'/assets/landing/Group 7@2x-1.png'}
-                   alt="Background Image"
-                   height="206"
-                   width="330"
+                src={'/assets/landing/Group 7@2x-1.png'}
+                alt="Background Image"
+                height="206"
+                width="330"
             />
         )
     }
@@ -19,18 +19,18 @@ function getImage(buttonIndex:any){
             <div className="flex">
                 <div>
                     <Image className=""
-                           src={'/assets/landing/slider.2.11/group-2@2x.png'}
-                           alt="Background Image"
-                           height="200"
-                           width="175"
+                       src={'/assets/landing/slider.2.11/group-2@2x.png'}
+                       alt="Background Image"
+                       height="200"
+                       width="175"
                     />
                 </div>
                 <div>
                     <Image className=""
-                           src={'/assets/landing/slider.2.11/group@2x.png'}
-                           alt="Background Image"
-                           height="200"
-                           width="175"
+                       src={'/assets/landing/slider.2.11/group@2x.png'}
+                       alt="Background Image"
+                       height="200"
+                       width="175"
                     />
                 </div>
             </div>
@@ -42,18 +42,18 @@ function getImage(buttonIndex:any){
             <div className="flex">
                 <div>
                     <Image className=""
-                           src={'/assets/landing/slider.2.12/bitmap@2x.png'}
-                           alt="Background Image"
-                           height="200"
-                           width="175"
+                       src={'/assets/landing/slider.2.12/bitmap@2x.png'}
+                       alt="Background Image"
+                       height="200"
+                       width="175"
                     />
                 </div>
                 <div>
                     <Image className=""
-                           src={'/assets/landing/slider.2.12/bitmap_2@2x.png'}
-                           alt="Background Image"
-                           height="200"
-                           width="175"
+                       src={'/assets/landing/slider.2.12/bitmap_2@2x.png'}
+                       alt="Background Image"
+                       height="200"
+                       width="175"
                     />
                 </div>
           </div>

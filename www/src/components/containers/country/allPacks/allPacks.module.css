@@ -1,0 +1,9 @@
+.country_pack_show_all_btn{
+    font-family: Manrope-extra-bold;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 1.5;
+    text-decoration: underline;
+    color: #1A181B;
+}

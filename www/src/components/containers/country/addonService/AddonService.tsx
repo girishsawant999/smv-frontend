@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import AddonInfo from './AddonInfo';
+import AddonInfo from '../addonInfo/AddonInfo';
 import { InferGetServerSidePropsType } from 'next';
-import { getServerSideProps } from '../../../pages/country';
-import Typography from '../../common/Typography';
+import { getServerSideProps } from '../../../../pages/country';
+import Typography from '../../../common/Typography';
 
 type IAddonServiceProps={
-  info: string;
-  detail: string;
-  price: string;
-  oldPrice: string;
-  description: string;
+      info: string;
+      detail: string;
+      price: string;
+      oldPrice: string;
+      description: string;
 }
 
 function AddonService({data}:InferGetServerSidePropsType<typeof getServerSideProps>){
@@ -19,7 +19,7 @@ function AddonService({data}:InferGetServerSidePropsType<typeof getServerSidePro
         setPacks(data);
     },[])
     return(
-        <div className="add-on-service-div m-5">
+        <div className="m-5">
             <Typography type="headingExtraBold18px" variant="h3">
                 Add-on services
             </Typography>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Typography from '../../common/Typography';
+import Typography from '../../../common/Typography';
+import styles from "./packInfo.module.css";
 
 type IPackInfoProps={
     days: string;
@@ -11,14 +12,14 @@ type IPackInfoProps={
 function PackInfo({days, price, oldPrice, description}:IPackInfoProps){
     const [checked, setChecked] = useState(true);
     return(
-        <div className="relative country-pack-info-plan m-5 p-5 flex-col">
+        <div className={styles.country_pack_info_plan+" relative m-5 p-5 flex-col"}>
             <Typography type="headingSemiBold16px" variant="h4">
                 {days}
             </Typography>
-            <div className="radio-btn absolute right-5 top-5">
-                <div className="container" onClick={()=>setChecked(checked => !checked)}>
+            <div className={styles.radio_btn+ " absolute right-5 top-5"}>
+                <div className={styles.container} onClick={()=>setChecked(checked => !checked)}>
                     <input type="radio" checked={checked} name="radio" onChange={()=>setChecked(checked => !checked)}/>
-                    <span className="checkmark"> </span>
+                    <span className={styles.checkmark}> </span>
                 </div>
             </div>
             <div className="flex items-end">
@@ -29,7 +30,7 @@ function PackInfo({days, price, oldPrice, description}:IPackInfoProps){
                     {oldPrice}
                 </Typography>
             </div>
-            <div className="divider"> </div>
+            <div className={styles.divider}> </div>
             <Typography type="contentSemiBold12px" variant="p">
                 {description}
             </Typography>

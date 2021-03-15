@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { InferGetServerSidePropsType } from 'next';
-import { getServerSideProps } from '../../../pages/country';
-import Typography from '../../common/Typography';
+import { getServerSideProps } from '../../../../pages/country';
+import Typography from '../../../common/Typography';
+import styles from './documentList.module.css';
 
 function DocumentList({ data }:InferGetServerSidePropsType<typeof getServerSideProps>){
     const[list, setList] = useState([]);
@@ -10,14 +11,13 @@ function DocumentList({ data }:InferGetServerSidePropsType<typeof getServerSideP
         setList(data);
     },[])
     return(
-        <div className="doc-list-div m-5">
-            {/*<div className="section-heading">Document List</div>*/}
+        <div className="m-5">
             <Typography type="headingExtraBold18px" variant="h3">Document List</Typography>
-            <div className="list-items">
-                <ul className="">
+            <div className="">
+                <ul className={styles.ul}>
                     {
-                      list.map((listItem, index) => <li key={index}>
-                        <Typography type="contentRegular14px" variant="p">{listItem}</Typography>
+                      list.map((listItem, index) => <li key={index} className={styles.li}>
+                            <Typography type="contentRegular14px" variant="p">{listItem}</Typography>
                       </li>
                       )
                     }

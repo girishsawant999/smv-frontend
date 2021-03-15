@@ -1,16 +1,16 @@
 import React from 'react';
 CountryPage.propTypes = {};
-import AllPacks from './AllPacks';
-import AddonService from './AddonService';
-import ImportantInformation from './ImportantInformation';
-import DocumentList from './DocumentList';
+import AllPacks from './allPacks/AllPacks';
+import AddonService from './addonService/AddonService';
+import ImportantInformation from './importantInformation/ImportantInformation';
+import DocumentList from './documentList/DocumentList';
 import AdditionalDocList from './additionalDocList/AdditionalDocList';
-import FAQ from './FAQ';
-import CountryInfo from './CountryInfo';
-import CountryImage from './CountryImage';
+import FAQ from './faq/FAQ';
+import CountryInfo from './countryInfo/CountryInfo';
+import CountryImage from './countryImage/CountryImage';
 import { InferGetServerSidePropsType } from 'next';
 import { getServerSideProps } from '../../../pages/country';
-import ImageList from './processDisplay/ProcessDisplay';
+import Button from "../../common/Button";
 
 function CountryPage({ data }:InferGetServerSidePropsType<typeof getServerSideProps>) {
     return (
@@ -43,8 +43,8 @@ function CountryPage({ data }:InferGetServerSidePropsType<typeof getServerSidePr
             <FAQ/>
 
             {/*Start button*/}
-            <div className="start-process-btn m-5">
-                <button className="">Start my visa process</button>
+            <div className="flex justify-center m-5">
+                <Button onClick={()=>{}} className="justify-center">Start my visa process</Button>
             </div>
         </div>
     );

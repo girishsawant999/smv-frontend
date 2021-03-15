@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { InferGetServerSidePropsType } from 'next';
-import { getServerSideProps } from '../../../pages/country';
-import Typography from '../../common/Typography';
+import { getServerSideProps } from '../../../../pages/country';
+import Typography from '../../../common/Typography';
+import styles from './importantInformation.module.css';
 
 function ImportantInformation({data}:InferGetServerSidePropsType<typeof getServerSideProps>){
     const[list, setList] = useState([]);
@@ -10,12 +11,12 @@ function ImportantInformation({data}:InferGetServerSidePropsType<typeof getServe
         setList(data);
     },[])
     return(
-        <div className="imp-info-div m-5">
+        <div className="m-5">
             <Typography type="headingExtraBold18px" variant="h3">Important information</Typography>
-            <div className="list-items">
-                <ul className="">
+            <div className="">
+                <ul className={styles.ul}>
                     {
-                        list.map((listItem, index) => <li key={index}>
+                        list.map((listItem, index) => <li key={index}  className={styles.li}>
                             <Typography type="contentRegular14px" variant="p">{listItem}</Typography>
                         </li>
                         )

@@ -20,40 +20,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fefcd5a8-a27b-438b-9c98-3d5b0accf4f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/Group 7@2x-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.11/group-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.11/group-2@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.11/group-2@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.11/group.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.11/group@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.11/group@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.12/bitmap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.12/bitmap@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.12/bitmap@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.12/bitmap_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.12/bitmap_2@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/public/assets/landing/slider.2.12/bitmap_2@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/additionalDocList/AdditionalDocListSubSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/additionalDocList/additionalDocList.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/processDisplay/processDisplay.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/chevron-left/chevron-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/chevron-left/chevron-left@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/chevron-left/chevron-left@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/minus/path.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/minus/path@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/minus/path@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/plus/plus-square.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/plus/plus-square@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/plus/plus-square@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/share/share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/share/share@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/public/assets/images/share/share@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/addonInfo/addonInfo.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/allPacks/allPacks.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/countryImage/CountryImage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/countryInfo/countryInfo.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/documentList/documentList.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/importantInformation/importantInformation.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/src/components/containers/country/packInfo/packInfo.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-mocks/country/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-mocks/country/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/components/common/Typography/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/common/Typography/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/components/common/Typography/typography.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/common/Typography/typography.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/components/common/paragraph/Paragraph.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/Accordion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/Accordion.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/AdditionalDocList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/additionalDocList/AdditionalDocList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/AdditionalDocListSubSection.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/AddonInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/AddonInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/AddonService.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/AddonService.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/AllPacks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/AllPacks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/CountryImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/CountryImage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/CountryInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/CountryInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/DocumentList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/DocumentList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/ImportantInformation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/ImportantInformation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/PackInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/PackInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/public/assets/images/chevron-left-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/Accordion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/accordian/Accordion.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/AddonInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/addonInfo/AddonInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/AddonService.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/addonService/AddonService.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/AllPacks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/allPacks/AllPacks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/CountryImage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/CountryInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/countryInfo/CountryInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/DocumentList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/documentList/DocumentList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/FAQ.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/faq/FAQ.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/ImportantInformation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/importantInformation/ImportantInformation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/PackInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/packInfo/PackInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/additionalDocList/AdditionalDocList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/additionalDocList/AdditionalDocList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/additionalDocList/AdditionalDocListSubSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/additionalDocList/AdditionalDocListSubSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/additionalDocList/additionalDocList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/additionalDocList/additionalDocList.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/pages/country/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/pages/country/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/processDisplay/ProcessDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/components/containers/country/processDisplay/ProcessDisplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/components/containers/country/styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +75,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/www/public/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/www/public/assets/images/minus" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -90,16 +94,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/www/src/components/containers/country/additionalDocList" />
-      <recent name="$PROJECT_DIR$/www/src/components/containers/country/processDisplay" />
-      <recent name="$PROJECT_DIR$/www/public/assets/landing" />
+      <recent name="$PROJECT_DIR$/www/src/components/containers/country/accordian" />
+      <recent name="$PROJECT_DIR$/www/src/components/containers/country/faq" />
+      <recent name="$PROJECT_DIR$/www/src/components/containers/country/importantInformation" />
+      <recent name="$PROJECT_DIR$/www/src/components/containers/country/documentList" />
+      <recent name="$PROJECT_DIR$/www/src/components/containers/country/countryImage" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/www/public/assets" />
-      <recent name="$PROJECT_DIR$/www/src/components/containers/country" />
-      <recent name="$PROJECT_DIR$/www/public/assets/images/country" />
-      <recent name="$PROJECT_DIR$/api-mocks/country" />
+      <recent name="$PROJECT_DIR$/www/public/assets/images/minus" />
+      <recent name="$PROJECT_DIR$/www/public/assets/images/plus" />
+      <recent name="$PROJECT_DIR$/www/public/assets/images/chevron-left" />
       <recent name="$PROJECT_DIR$/www/public/assets/images" />
+      <recent name="$PROJECT_DIR$/www/public/assets/images/country" />
     </key>
   </component>
   <component name="RunManager">
@@ -157,10 +163,10 @@
       <screen x="0" y="27" width="1366" height="687" />
     </state>
     <state x="141" y="28" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.687@0.27.1366.687" timestamp="1615629271124" />
-    <state x="377" y="172" width="602" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615578801111">
+    <state x="377" y="172" width="602" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615811360291">
       <screen x="0" y="27" width="1366" height="687" />
     </state>
-    <state x="377" y="172" width="602" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.687@0.27.1366.687" timestamp="1615578801111" />
+    <state x="377" y="172" width="602" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.687@0.27.1366.687" timestamp="1615811360291" />
     <state x="418" y="223" width="519" height="301" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1615744457519">
       <screen x="0" y="27" width="1366" height="687" />
     </state>
@@ -185,6 +191,10 @@
       <screen x="0" y="27" width="1366" height="687" />
     </state>
     <state x="172" y="27" width="1012" height="687" key="SettingsEditor/0.27.1366.687@0.27.1366.687" timestamp="1615579085391" />
+    <state x="373" y="80" width="620" height="580" key="find.popup" timestamp="1615811363850">
+      <screen x="0" y="27" width="1366" height="687" />
+    </state>
+    <state x="373" y="80" width="620" height="580" key="find.popup/0.27.1366.687@0.27.1366.687" timestamp="1615811363850" />
     <state x="346" y="35" width="672" height="678" key="search.everywhere.popup" timestamp="1615795484487">
       <screen x="0" y="27" width="1366" height="687" />
     </state>
