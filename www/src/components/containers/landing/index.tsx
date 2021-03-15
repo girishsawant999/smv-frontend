@@ -60,7 +60,7 @@ function LandingPage({ data }:any) {
                         <ArrowForwardIcon className="ml-2 mt-1" />
                     </div>
                 </div>
-                <div>
+                <div className="overflow-x-scroll">
                   <CountriesVisaDetailSlider countryList = {data.data.CountryVisaDetailFast}  />
                 </div>
             </section>
