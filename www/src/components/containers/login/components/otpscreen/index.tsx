@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 
 import Emotes from 'components/common/emotes';
 import Button from 'components/common/Button';
-import PhoneInput from 'components/common/phoneInput';
 import Typography from 'components/common/Typography';
 import styles from './otpscreen.module.css';
 import commonStyles from '../../login.module.css';
 
 OtpInputScreenComp.propTypes = {};
 
-function OtpInputScreenComp({ pageState, setpageState }) {
+type IOtpInputScreenProps = {
+  pageState: string;
+  setpageState: (pageState: string) => void;
+}
+
+function OtpInputScreenComp({ pageState, setpageState }: IOtpInputScreenProps) {
   const [inValid, setinValid] = useState(false);
 
   const verifyOTP = () => {
@@ -36,13 +40,16 @@ function OtpInputScreenComp({ pageState, setpageState }) {
       />
 
       <div className="mx-10 mx-w-sm text-center">
-        <Typography type="subheading4">
-          Enter the 4 digit code sent to you at 9867069236.
-          {inValid && (
-            <span className="text-red-500">
-              &nbsp;Did you enter the correct mobile number?
-            </span>
-          )}
+        <Typography type="subHeading4" variant="h1">
+            Enter the 4 digit code sent to you at 9867069236.
+            {inValid ? (
+              <span className="text-red-500">
+                &nbsp;Did you enter the correct mobile number?
+              </span>
+            ) : (
+              <>
+              </>
+            )}
         </Typography>
       </div>
 
@@ -64,22 +71,19 @@ function OtpInputScreenComp({ pageState, setpageState }) {
 
       <div className={commonStyles.lowerdiv}>
         {inValid ? (
-          <Typography type="heading6">
-            <a href="#" className="font-manrope-extra-bold underline">
+          <Typography type="heading6" variant="h6">
               I haven’t recieved a code
-            </a>
           </Typography>
         ) : (
-          <Typography type="subheading6">
-            <p className="font-manrope-extra-light">Resend code in 0:20</p>
+          <Typography type="subHeading6" variant="h6">
+            Resend code in 0:20
           </Typography>
         )}
       </div>
 
       <div className={commonStyles.loginCommonBtn}>
-        <Button
-          label="Verify"
-          onClick={verifyOTP}>
+        <Button onClick={verifyOTP}>
+            Verify
         </Button>
       </div>
     </>

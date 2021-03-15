@@ -3,7 +3,7 @@ import React from 'react';
 
 LoginMain.propTypes = {};
 
-function LoginMain(props) {
+function LoginMain() {
   return <Login />;
 }
 

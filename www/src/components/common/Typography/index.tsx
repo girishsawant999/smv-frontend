@@ -1,48 +1,57 @@
 import React from 'react';
 import styles from './typography.module.css';
 
-function Typography({ type, text, className = '', ...props }) {
+type StyleType = "heading1"
+                 | "heading2"
+                 | "heading3"
+                 | "heading4"
+                 | "heading5"
+                 | "heading6"
+                 | "heading7"
+                 | "heading8"
+                 | "subHeading1"
+                 | "subHeading2"
+                 | "subHeading3"
+                 | "subHeading4"
+                 | "subHeading5"
+                 | "subHeading6"
+                 | "subHeading7"
+                 | "subHeading8"
+                 | "content1"
+                 | "content2"
+                 | "content3"
+                 | "content4"
+                 | "content5"
+                 | "content6"
+                 | "content7"
+                 | "content8" ;
+
+type variantType = "h1"
+                    | "h2"
+                    | "h3"
+                    | "h4"
+                    | "h5"
+                    | "h6"
+                    | "p"
+
+            
+
+
+type ITypographyProps = {
+  type: StyleType;
+  className?: string;
+  variant: variantType;
+  children: React.ReactChild | React.ReactChildren | React.ReactChild[] | React.ReactChildren[] ;
+}
+const Typography = ({ type, className = '', variant, children }: ITypographyProps) => {
+
+  const Component = variant;
   className = className.concat(' ');
-  if (type === 'heading2')
-    return (
-      <h1 className={className.concat(styles.heading2)} >
-        {props.children}
-      </h1>
-    );
-
-  if (type === 'heading6')
-    return (
-      <p className={className.concat(styles.heading6)}>
-        {props.children}
-      </p>
-    );
-
-  if (type === 'subheading4')
-    return (
-      <p className={className.concat(styles.subHeading4)} >
-        {props.children}
-      </p>
-    );
-
-  if (type === 'subheading6')
-    return (
-      <p className={className.concat(styles.subHeading6)} >
-        {props.children}
-      </p>
-    );
-
-  if (type === 'content6')
-    return (
-      <p
-        className={className.concat(styles.content6)}>
-        {props.children}
-      </p>
-    );
 
   return (
-    <span className={className.concat(styles.span)}>
-      {props.children}
-    </span>
+      <Component className={className.concat(styles[type])} >
+        {children}
+      </Component>
   );
 }
 

@@ -12,57 +12,19 @@ import DisplayBlogPost from "./BlogPost";
 import CountriesVisaDetailSlider from "./DisplayCountryVisaDetail";
 
 
-function LandingPage(props) {
-    const CountryVisaDetailSlow = [
-      {imageLink:'/assets/landing/Bitmap-20.png',country:"Portugal",time:"5-6 working days"},
-      {imageLink:'/assets/landing/Bitmap-21.png',country:"Russia",time:"7-8 working days"},
-      {imageLink:'/assets/landing/Bitmap-22.png',country:"Srilanka",time:"5-6 working days"}
-    ]
-
-    const CountryVisaDetailFast = [
-      {imageLink:'/assets/landing/Bitmap-20.png',country:"Portugal",time:"5-6 working days"},
-      {imageLink:'/assets/landing/Bitmap-21.png',country:"Russia",time:"7-8 working days"},
-      {imageLink:'/assets/landing/Bitmap-22.png',country:"Srilanka",time:"5-6 working days"}
-    ]
-
-    const BlogArray= [
-      {imageLink: '/assets/landing/kristian-egelund-uaQvRXa8izg-unsplash-2.png',statement:"How to extend your visa if you are stranded due to COVID-19",date:"Jan 1,2021"},
-      {imageLink:'/assets/landing/kristian-egelund-uaQvRXa8izg-unsplash-3.png',statement:"How to extend your visa if you are stranded due to COVID-19",date:"Jan 1,2021"}
-      ]
-    
-
-    const customer_review=[
-        {comment:" service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
-          gender:'male',
-          country:"travelled to USA",
-          name:"RICHARD LORYCH"},
-        {comment:"Impressive service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
-          gender:'female',
-          country:"travelled to USA",
-          name:"RICHARD LORYCH"},
-        {comment:"pressive service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
-          gender:'female',
-          country:"travelled to USA",
-          name:"RICHARD LORYCH"},
-        {comment:"pressive service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
-          gender:'male',
-          country:"travelled to USA",
-          name:"RICHARD LORYCH"}
-          ]
-
-
-
+function LandingPage({ data }:any) {
 
     return (
         <div className="bg-#FFFFFF flex-col items-center ">
             <section>
-                <Image
-                src={'/assets/landing/cover_images/agustin-diaz-gargiulo-7F65HDP0-E0-unsplash@2x.png'}
-                alt="Background Image"
-                layout="responsive"
-                height="478"
-                width="375"
-                />
+                <picture>
+                    <source srcSet='/assets/landing/cover_images/cover1@3x.png 3x,
+                                    /assets/landing/cover_images/cover1@2x.png 2x,
+                                    /assets/landing/cover_images/cover1@1x.png 1x'
+                    />
+                    <img src="/assets/landing/cover_images/cover1@2x.png" alt="Country" width="100%" />
+                </picture>
+
                 <div className="flex relative bottom-8 justify-between bg-white mx-16 rounded-2xl shadow ">
                     <input className="w-3/4 pl-10 py-5 text-sm rounded-3xl focus:outline-none
                     focus:placeholder-transparent font-light leading-6 placeholder-#4E4851"
@@ -84,8 +46,8 @@ function LandingPage(props) {
                         <ArrowForwardIcon className="ml-2 mt-1" />
                     </div>
                 </div>
-                <div >
-                    <CountriesVisaDetailSlider countryList = {CountryVisaDetailSlow} uniqueKey = {2000} />
+                <div className="overflow-x-scroll">
+                    <CountriesVisaDetailSlider countryList = {data.data.CountryVisaDetailSlow} />
                 </div>
             </section>
 
@@ -99,7 +61,7 @@ function LandingPage(props) {
                     </div>
                 </div>
                 <div>
-                  <CountriesVisaDetailSlider countryList = {CountryVisaDetailFast} uniqueKey = {3000}  />
+                  <CountriesVisaDetailSlider countryList = {data.data.CountryVisaDetailFast}  />
                 </div>
             </section>
 
@@ -228,7 +190,7 @@ function LandingPage(props) {
                         </div>
                     </div>
                     <div>
-                        <DisplayBlogPost blogList = {BlogArray} />
+                        <DisplayBlogPost blogList = {data.data.BlogArray} />
                     </div>
                 </div>
             </section>
@@ -251,7 +213,7 @@ function LandingPage(props) {
                     </div>
                     <div className="bg-#3CC39A bg-opacity-50 h-165 px-5 pb-5 mt-5 rounded-40px flex-col items-center overflow-y-auto">
                         <div className="flex">
-                          <CustomerReviewBox customer_review_list = {customer_review} />
+                          <CustomerReviewBox customer_review_list = {data.data.Customer_review} />
                         </div>
                     </div>
                 </div>

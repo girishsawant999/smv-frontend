@@ -3,11 +3,18 @@ import Image from 'next/image';
 
 Img.propTypes = {};
 
-const baseLocation = "/assets/images/";
-function Img({ src, alt, className, style, width, height }) {
-  //@ts-ignore
-  return <Image src={baseLocation + src} alt={alt} width={width} height={height} className={className} style={style} />;
-
+type IImgProps = {
+  src: string;
+  alt: string;
+  className?: string;
+  width: string;
+  height: string;
 }
 
-export default Img;
+const baseLocation = "/assets/images/";
+
+function Img({ src, alt, className, width, height }: IImgProps) {
+  return <Image src={baseLocation + src} alt={alt} width={width} height={height} className={className} />;
+}
+
+export default Img
