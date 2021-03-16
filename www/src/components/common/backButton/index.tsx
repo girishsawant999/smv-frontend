@@ -1,6 +1,6 @@
 import Img from 'components/common/img';
 import React from 'react';
-import styles from '../../login.module.css';
+import styles from './backButton.module.css';
 
 type IBackButtonProps = {
   onClick: () => void;

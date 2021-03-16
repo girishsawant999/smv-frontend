@@ -3,7 +3,7 @@ import Emotes from 'components/common/emotes';
 import Typography from 'components/common/Typography';
 import React from 'react';
 import commonStyles from '../../login.module.css';
-import BackButton from '../backButton';
+import BackButton from 'components/common/backButton';
 import styles from './emailInputScreen.module.css';
 
 OtpInputScreenComp.propTypes = {};

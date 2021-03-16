@@ -22,13 +22,3 @@
   position: absolute;
   bottom: 10px;
 }
-.backbutton {
-  width: 40px;
-  height: 40px;
-  background-color: #f5f4f5;
-  border-radius: 15px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: #1a181b;
-}
