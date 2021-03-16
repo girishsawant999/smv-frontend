@@ -11,7 +11,7 @@ function BackButton({ onClick }: IBackButtonProps) {
     <button
       className={styles.backbutton + ' flex justify-center items-center'}
       onClick={onClick}>
-      <Img src="left-arrow.svg" alt="back" width="auto" height="auto" srcSet="" />
+      <Img alt="back" width="auto" height="auto" srcSet="left-arrow.svg" />
     </button>
   );
 }

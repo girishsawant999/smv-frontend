@@ -20,9 +20,8 @@ function WelcomeScreen({ setpageState, firstName }: IWelcomeScreenProps) {
     <>
       <div className="h-full w-full max-w-sm mx-4 flex flex-col items-center justify-center">
         <Emotes
-          src={'emote-welcome/emote-welcome.png'}
           srcSet={
-            'emote-welcome/emote-welcome, emote-welcome/emote-welcome@2x 2x, emote-welcome/emote-welcome@3x 3x'
+            'emote-welcome/emote-welcome.png, emote-welcome/emote-welcome@2x.png 2x, emote-welcome/emote-welcome@3x.png 3x'
           }
         />
 
