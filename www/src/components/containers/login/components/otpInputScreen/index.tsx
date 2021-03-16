@@ -36,7 +36,7 @@ function OtpInputScreenComp({
   };
   return (
     <>
-      <BackButton onClick={() => setpageState('phone-input')} />
+      <BackButton onClick={() => setpageState('phone-input')} className="absolute" />
       <form
         onSubmit={verifyOTP}
         className="flex flex-col h-full items-center max-w-sm relative w-full">

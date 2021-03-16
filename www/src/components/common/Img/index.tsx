@@ -13,13 +13,17 @@ type IImgProps = {
 const baseLocation = '/assets/images/';
 function Img({ alt, className, width, height, srcSet }: IImgProps) {
   let _srcSet = '';
-  srcSet &&
-    srcSet
-      .split(',')
-      .forEach(
-        (src: string) =>
-          (_srcSet = _srcSet.concat(baseLocation).concat(src.trim()).concat(', '))
-      );
+  if (!srcSet.includes('http')) {
+    srcSet &&
+      srcSet
+        .split(',')
+        .forEach(
+          (src: string) =>
+            (_srcSet = _srcSet.concat(baseLocation).concat(src.trim()).concat(', '))
+        );
+  } else {
+    _srcSet = srcSet;
+  }
   return (
     <picture>
       <source srcSet={_srcSet} />

@@ -27,7 +27,7 @@ function NameInputScreen({
   };
   return (
     <>
-      <BackButton onClick={() => setpageState('password-screen')} />
+      <BackButton onClick={() => setpageState('password-screen')}  className="absolute"/>
 
       <form
         onSubmit={nameSubmit}

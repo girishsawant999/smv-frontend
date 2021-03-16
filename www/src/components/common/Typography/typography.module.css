@@ -17,6 +17,12 @@
   color: #4e4851;
   font-family: Manrope-extra-light;
 }
+.subHeading5 {
+  font-size: 0.875rem;
+  line-height: 1.81rem;
+  color: #4e4851;
+  font-family: Manrope-extra-light;
+}
 
 .subHeading6 {
   font-size: 0.75rem;
@@ -31,4 +37,8 @@
   font-size: 0.75rem;
   color: #9b939f;
   line-height: 1.83;
+}
+
+.bold {
+  font-family: Manrope-extra-bold;
 }

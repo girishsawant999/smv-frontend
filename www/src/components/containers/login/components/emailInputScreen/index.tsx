@@ -21,7 +21,7 @@ function OtpInputScreenComp({ pageState, setpageState }: IOtpInputScreenProps) {
   };
   return (
     <>
-      <BackButton onClick={() => setpageState('phone-input')} />
+      <BackButton onClick={() => setpageState('phone-input')}  className="absolute"/>
 
       <form
         onSubmit={emailSubmit}

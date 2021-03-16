@@ -21,7 +21,7 @@ function PasswordInputScreen({ pageState, setpageState }: IOtpInputScreenProps) 
   };
   return (
     <>
-      <BackButton onClick={() => setpageState('email-screen')} />
+      <BackButton onClick={() => setpageState('email-screen')} className="absolute"/>
 
       <form
         onSubmit={passwordSubmit}

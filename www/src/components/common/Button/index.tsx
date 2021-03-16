@@ -16,7 +16,7 @@ function Button({
 }: IButtonProps) {
   return (
     <button
-      className={className.concat(' ').concat(styles.button)}
+      className={className.concat(' focus:outline-none ').concat(styles.button)}
       type={type}
       onClick={onClick}>
       {children}
