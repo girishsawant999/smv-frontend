@@ -1,19 +1,31 @@
 import React from 'react';
-import Image from 'next/image';
 
 Img.propTypes = {};
 
 type IImgProps = {
-  src: string;
   alt: string;
   className?: string;
   width: string;
   height: string;
-}
+  srcSet: string;
+};
 
-const baseLocation = "/assets/images/";
-function Img({ src, alt, className, width, height }: IImgProps) {
-  return <Image src={baseLocation + src} alt={alt} width={width} height={height} className={className} />;
+const baseLocation = '/assets/images/';
+function Img({ alt, className, width, height, srcSet }: IImgProps) {
+  let _srcSet = '';
+  srcSet &&
+    srcSet
+      .split(',')
+      .forEach(
+        (src: string) =>
+          (_srcSet = _srcSet.concat(baseLocation).concat(src.trim()).concat(', '))
+      );
+  return (
+    <picture>
+      <source srcSet={_srcSet} />
+      <img className={className} width={width} height={height} alt={alt} />
+    </picture>
+  );
 }
 
 export default Img;
