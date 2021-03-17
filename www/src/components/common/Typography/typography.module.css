@@ -5,6 +5,13 @@
   font-family: Manrope-extra-bold;
 }
 
+.heading3 {
+  font-size: 1rem;
+  line-height: 1.875rem;
+  color: #1a181b;
+  font-family: Manrope-extra-bold;
+}
+
 .heading6 {
   font-size: 0.75rem;
   color: #1a181b;
@@ -37,8 +44,4 @@
   font-size: 0.75rem;
   color: #9b939f;
   line-height: 1.83;
-}
-
-.bold {
-  font-family: Manrope-extra-bold;
 }

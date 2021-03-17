@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import CountryList from './components/CountryList';
 import SearchInput from './components/SearchInputComp';
-import SearchResultCountryList from './components/SearchResultCountryList';
 
 const countries = [
   {
@@ -81,7 +80,7 @@ function SearchMain({}: ISearchMain) {
         </div>
       ) : (
         <div className="">
-          <SearchResultCountryList countries={countries} />
+          <CountryList countries={countries} isResultPage={true} />
         </div>
       )}
     </>

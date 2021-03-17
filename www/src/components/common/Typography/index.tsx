@@ -51,12 +51,7 @@ const Typography = ({
   className = className.concat(' ');
 
   return (
-    <Component
-      className={className
-        .concat(styles[type])
-        .concat(bold ? ' ' + styles.bold : '')}>
-      {children}
-    </Component>
+    <Component className={className.concat(styles[type])}>{children}</Component>
   );
 };
 

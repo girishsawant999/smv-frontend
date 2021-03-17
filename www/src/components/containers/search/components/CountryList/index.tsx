@@ -9,17 +9,23 @@ type CountryObject = {
 };
 
 type ICountryList = {
-  title: string;
+  title?: string;
+  isResultPage?: Boolean;
   countries: Array<CountryObject>;
 };
 
-function CountryList({ title, countries }: ICountryList) {
+function CountryList({ title = '', countries, isResultPage = false }: ICountryList) {
   return (
     <div className="ml-5 py-2">
-      <Typography type="heading2" variant="h2">
-        {title}
-      </Typography>
-      <div className="flex flex-col my-5 max-h-96 flex-wrap overflow-x-auto ">
+      {title && (
+        <Typography type="heading2" variant="h2">
+          {title}
+        </Typography>
+      )}
+      <div
+        className={'flex flex-col my-5 '.concat(
+          isResultPage ? '' : 'max-h-96 flex-wrap overflow-x-auto '
+        )}>
         {countries.map((country, index) => {
           return (
             <div key={index} className=" flex items-center w-64 my-3 mx-2">
@@ -31,7 +37,7 @@ function CountryList({ title, countries }: ICountryList) {
                 className="rounded-2xl"
               />
               <div className="ml-4">
-                <Typography type="subHeading4" variant="h4" bold={true}>
+                <Typography type="heading3" variant="h2">
                   {country.title}
                 </Typography>
                 <Typography type="subHeading5" variant="p">
