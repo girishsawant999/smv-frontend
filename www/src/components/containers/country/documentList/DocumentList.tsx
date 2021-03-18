@@ -11,7 +11,7 @@ function DocumentList({ data }:InferGetServerSidePropsType<typeof getServerSideP
         setList(data);
     },[])
     return(
-        <div className="m-5">
+        <section className="m-5">
             <Typography type="headingExtraBold18px" variant="h3">Document List</Typography>
             <div>
                 <ul className={styles.ul}>
@@ -23,7 +23,7 @@ function DocumentList({ data }:InferGetServerSidePropsType<typeof getServerSideP
                     }
                 </ul>
             </div>
-        </div>
+        </section>
     )
 }
 

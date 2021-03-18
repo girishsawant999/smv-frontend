@@ -16,7 +16,7 @@ function CountryInfo({data}:InferGetServerSidePropsType<typeof getServerSideProp
     },[])
 
     return(
-        <div className="m-5">
+        <section className="m-5">
             <Typography type="headingExtraBold24px" variant="h1" className="mb-1">
                 {name}
             </Typography>
@@ -26,7 +26,7 @@ function CountryInfo({data}:InferGetServerSidePropsType<typeof getServerSideProp
             <Typography type="contentRegular14px" variant="h3">
                 {description}
             </Typography>
-        </div>
+        </section>
     )
 }
 export default CountryInfo

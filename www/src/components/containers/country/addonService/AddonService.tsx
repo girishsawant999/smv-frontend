@@ -19,7 +19,7 @@ function AddonService({data}:InferGetServerSidePropsType<typeof getServerSidePro
         setPacks(data);
     },[])
     return(
-        <div className="m-5">
+        <section className="m-5">
             <Typography type="headingExtraBold18px" variant="h3">
                 Add-on services
             </Typography>
@@ -37,7 +37,7 @@ function AddonService({data}:InferGetServerSidePropsType<typeof getServerSidePro
                     )
                 })
             }
-        </div>
+        </section>
     )
 }
 export default AddonService

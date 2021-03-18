@@ -16,14 +16,14 @@ function AdditionalDocList({ data }:InferGetServerSidePropsType<typeof getServer
         setList(data);
     },[])
     return(
-        <div className="m-5">
+        <section className="m-5">
             <Typography type="headingExtraBold18px" variant="h3">Addtional Document List</Typography>
             {
                 list.map((listItem:IAdditionDocListProps , index)=> {
                   return <AdditionalDocListSubSection key={index} item={listItem}/>
                 })
             }
-        </div>
+        </section>
     )
 }
 export default AdditionalDocList

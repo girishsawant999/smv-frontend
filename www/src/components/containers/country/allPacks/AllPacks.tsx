@@ -20,7 +20,7 @@ function AllPacks({data}:InferGetServerSidePropsType<typeof getServerSideProps>)
         setPacks(data);
     },[])
     return(
-        <div className="m-5">
+        <section className="m-5">
             <div className=" flex items-end justify-between mb-2">
                 <Typography type="headingExtraBold18px" variant="h3">All packs</Typography>
                 <h4 className={styles.country_pack_show_all_btn}>show relevant packs</h4>
@@ -41,7 +41,7 @@ function AllPacks({data}:InferGetServerSidePropsType<typeof getServerSideProps>)
                     )
                 })
             }
-        </div>
+        </section>
     )
 }
 export default AllPacks

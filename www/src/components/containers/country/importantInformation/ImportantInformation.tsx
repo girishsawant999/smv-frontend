@@ -11,7 +11,7 @@ function ImportantInformation({data}:InferGetServerSidePropsType<typeof getServe
         setList(data);
     },[])
     return(
-        <div className="m-5">
+        <section className="m-5">
             <Typography type="headingExtraBold18px" variant="h3">Important information</Typography>
             <div>
                 <ul className={styles.ul}>
@@ -23,7 +23,7 @@ function ImportantInformation({data}:InferGetServerSidePropsType<typeof getServe
                     }
                 </ul>
             </div>
-        </div>
+        </section>
     )
 }
 export default ImportantInformation
