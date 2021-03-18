@@ -3,7 +3,7 @@ import Typography from 'components/common/Typography';
 import React from 'react';
 
 type CountryObject = {
-  imageUrl: string;
+  imageUrl: Array<string>;
   title: string;
   description: string;
 };
@@ -31,6 +31,8 @@ function CountryList({ title = '', countries, isResultPage = false }: ICountryLi
             <div key={index} className=" flex items-center w-64 my-3 mx-2">
               <Img
                 srcSet={country.imageUrl}
+                isFromAssets={false}
+                placeHolderBg={'#f5f4f5'}
                 alt="city"
                 width="72px"
                 height="89px"

@@ -10,9 +10,13 @@ type IBackButtonProps = {
 function BackButton({ onClick, className = '' }: IBackButtonProps) {
   return (
     <button
-      className={styles.backbutton + ' flex justify-center items-center focus:outline-none ' + className}
+      className={
+        styles.backbutton +
+        ' flex justify-center items-center focus:outline-none ' +
+        className
+      }
       onClick={onClick}>
-      <Img alt="back" width="auto" height="auto" srcSet="left-arrow.svg" />
+      <Img alt="back" width="auto" height="auto" srcSet={['left-arrow.svg']} />
     </button>
   );
 }

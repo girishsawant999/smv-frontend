@@ -4,59 +4,59 @@ import SearchInput from './components/SearchInputComp';
 
 const countries = [
   {
-    imageUrl: 'https://source.unsplash.com/72x89/?portugal',
+    imageUrl: ['https://source.unsplash.com/72x89/?portugal'],
     title: 'Portugal',
     description: '5-6 working days'
   },
   {
-    imageUrl: 'https://source.unsplash.com/72x89/?Russia',
+    imageUrl: ['https://source.unsplash.com/72x89/?Russia'],
     title: 'Russia',
     description: '7-8 working days'
   },
   {
-    imageUrl: 'https://source.unsplash.com/72x89/?Japan',
+    imageUrl: ['https://source.unsplash.com/72x89/?Japan'],
     title: 'Japan',
     description: '7-8 working days'
   },
   {
-    imageUrl: 'https://source.unsplash.com/72x89/?NewYork',
+    imageUrl: ['https://source.unsplash.com/72x89/?NewYork'],
     title: 'NewYork',
     description: '4-6 working days'
   },
   {
-    imageUrl: 'https://source.unsplash.com/72x89/?Switzerland',
+    imageUrl: ['https://source.unsplash.com/72x89/?Switzerland'],
     title: 'Switzerland',
     description: '10-12 working days'
   },
   {
-    imageUrl: 'https://source.unsplash.com/72x89/?Russia',
+    imageUrl: ['https://source.unsplash.com/72x89/?Russia'],
     title: 'Russia',
     description: '7-8 working days'
   },
   {
-    imageUrl: 'https://source.unsplash.com/72x89/?NewYork',
+    imageUrl: ['https://source.unsplash.com/72x89/?NewYork'],
     title: 'NewYork',
     description: '4-6 working days'
   },
   {
-    imageUrl: 'https://source.unsplash.com/72x89/?portugal',
+    imageUrl: ['https://source.unsplash.com/72x89/?portugal'],
     title: 'Portugal',
     description: '5-6 working days'
   },
   {
-    imageUrl: 'https://source.unsplash.com/72x89/?Russia',
+    imageUrl: ['https://source.unsplash.com/72x89/?Russia'],
     title: 'Russia',
     description: '7-8 working days'
   },
   {
-    imageUrl: 'https://source.unsplash.com/72x89/?NewYork',
+    imageUrl: ['https://source.unsplash.com/72x89/?NewYork'],
     title: 'NewYork',
     description: '4-6 working days'
   }
 ];
 
 type CountryObject = {
-  imageUrl: string;
+  imageUrl: Array<string>;
   title: string;
   description: string;
 };

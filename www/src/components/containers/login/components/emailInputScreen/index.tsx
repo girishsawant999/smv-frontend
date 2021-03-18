@@ -21,15 +21,17 @@ function OtpInputScreenComp({ pageState, setpageState }: IOtpInputScreenProps) {
   };
   return (
     <>
-      <BackButton onClick={() => setpageState('phone-input')}  className="absolute"/>
+      <BackButton onClick={() => setpageState('phone-input')} className="absolute" />
 
       <form
         onSubmit={emailSubmit}
         className="flex flex-col h-full items-center max-w-sm relative w-full">
         <Emotes
-          srcSet={
-            'emote-smiling/emote-smiling.png, emote-smiling/emote-smiling@2x.png 2x, emote-smiling/emote-smiling@3x.png 3x'
-          }
+          srcSet={[
+            'emote-smiling/emote-smiling.png',
+            'emote-smiling/emote-smiling@2x.png 2x',
+            'emote-smiling/emote-smiling@3x.png 3x'
+          ]}
         />
 
         <div className="mx-10 max-w-sm text-center">
