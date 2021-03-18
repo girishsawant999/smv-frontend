@@ -1,4 +1,5 @@
 import React from 'react';
+import Typography from 'components/common/Typography/index';
 import styles from './commonButton.module.css';
 
 type IButtonProps = {
@@ -15,12 +16,14 @@ function Button({
   type = 'button'
 }: IButtonProps) {
   return (
-    <button
-      className={className.concat(' ').concat(styles.button)}
-      type={type}
-      onClick={onClick}>
-      {children}
-    </button>
+      <Typography weight="extra-bold" variant="span" size="12" className="text-white">
+        <button
+          className={className.concat(' ').concat(styles.button)}
+          type={type}
+          onClick={onClick}>
+          {children}
+        </button>
+      </Typography>
   );
 }
 
