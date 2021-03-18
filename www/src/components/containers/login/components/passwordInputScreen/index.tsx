@@ -21,15 +21,20 @@ function PasswordInputScreen({ pageState, setpageState }: IOtpInputScreenProps) 
   };
   return (
     <>
-      <BackButton onClick={() => setpageState('email-screen')} />
+      <BackButton
+        onClick={() => setpageState('email-screen')}
+        className="absolute"
+      />
 
       <form
         onSubmit={passwordSubmit}
         className="flex flex-col h-full items-center max-w-sm relative w-full">
         <Emotes
-          srcSet={
-            'emote-shh/emote-shh.png, emote-shh/emote-shh@2x.png 2x, emote-shh/emote-shh@3x.png 3x'
-          }
+          srcSet={[
+            'emote-shh/emote-shh.png',
+            'emote-shh/emote-shh@2x.png 2x',
+            'emote-shh/emote-shh@3x.png 3x'
+          ]}
         />
 
         <div className="mx-10 max-w-sm text-center">

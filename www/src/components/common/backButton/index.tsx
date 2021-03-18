@@ -9,9 +9,11 @@ type IBackButtonProps = {
 function BackButton({ onClick }: IBackButtonProps) {
   return (
     <button
-      className={styles.backbutton + ' flex justify-center items-center'}
+      className={
+        styles.backbutton +
+        ' flex justify-center items-center focus:outline-none ' }
       onClick={onClick}>
-      <Img alt="back" width="auto" height="auto" srcSet="left-arrow.svg" />
+      <Img alt="back" width="auto" height="auto" srcSet={['left-arrow.svg']} />
     </button>
   );
 }

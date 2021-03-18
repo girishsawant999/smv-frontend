@@ -43,8 +43,16 @@ function OtpInputScreenComp({
         <Emotes
           srcSet={
             inValid
-              ? 'emote-thinking/emote-thinking.png, emote-thinking/emote-thinking@2x.png 2x, emote-thinking/emote-thinking@3x.png 3x'
-              : 'emote-smiling/emote-smiling.png, emote-smiling/emote-smiling@2x.png 2x, emote-smiling/emote-smiling@3x.png 3x'
+              ? [
+                  'emote-thinking/emote-thinking.png',
+                  'emote-thinking/emote-thinking@2x.png 2x',
+                  'emote-thinking/emote-thinking@3x.png 3x'
+                ]
+              : [
+                  'emote-smiling/emote-smiling.png',
+                  'emote-smiling/emote-smiling@2x.png 2x',
+                  'emote-smiling/emote-smiling@3x.png 3x'
+                ]
           }
         />
 

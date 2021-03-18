@@ -8,8 +8,10 @@ type IImgProps = {
   className?: string;
   width?: string;
   height?: string;
-  srcSet: string;
+  srcSet: Array<string>;
+  isFromAssets?: Boolean;
   type?: string;
+  placeHolderBg?: String;
 };
 
 const baseLocation = '/assets/images/';
@@ -19,26 +21,31 @@ function Img({
   width = 'auto',
   height = 'auto',
   srcSet,
-  type = 'image/png'
+  type = 'image/png',
+  isFromAssets = true,
+  placeHolderBg = 'transparent'
 }: IImgProps) {
-  let _srcSet = '';
-  srcSet &&
-    srcSet
-      .split(',')
-      .forEach(
-        (src: string) =>
-          (_srcSet = _srcSet.concat(baseLocation).concat(src.trim()).concat(', '))
-      );
+  let _srcSet = srcSet;
+  if (isFromAssets) {
+    _srcSet = _srcSet.map((src) => baseLocation.concat(src.trim()));
+  }
+
+  const Styles = {
+    imgBackground: { background: placeHolderBg }
+  };
+
   return (
-    <LazyLoad offset={100} once>
-      <picture>
-        <source type={type} srcSet={_srcSet} />
+    <LazyLoad offset={100} height={100} width={100} once>
+      <picture style={Styles.imgBackground}>
+        <source type={type} srcSet={_srcSet.join(', ')} />
         <img
           className={className}
           width={width}
           height={height}
           alt={alt}
-          srcSet={_srcSet}
+          src={_srcSet[0]}
+          srcSet={_srcSet.join(', ')}
+          style={Styles.imgBackground}
         />
       </picture>
     </LazyLoad>
