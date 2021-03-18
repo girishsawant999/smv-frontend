@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 Img.propTypes = {};
 
@@ -25,10 +26,12 @@ function Img({ alt, className, width, height, srcSet }: IImgProps) {
     _srcSet = srcSet;
   }
   return (
-    <picture>
-      <source srcSet={_srcSet} />
-      <img className={className} width={width} height={height} alt={alt} />
-    </picture>
+    <LazyLoad offset={100} once>
+      <picture>
+        <source srcSet={_srcSet} />
+        <img className={className} width={width} height={height} alt={alt} />
+      </picture>
+    </LazyLoad>
   );
 }
 

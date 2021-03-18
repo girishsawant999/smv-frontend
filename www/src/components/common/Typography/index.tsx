@@ -45,7 +45,6 @@ const Typography = ({
   className = '',
   variant,
   children,
-  bold = false
 }: ITypographyProps) => {
   const Component = variant;
   className = className.concat(' ');
