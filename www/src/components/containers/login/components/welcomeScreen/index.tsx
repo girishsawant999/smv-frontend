@@ -26,7 +26,7 @@ function WelcomeScreen({ setpageState, firstName }: IWelcomeScreenProps) {
         />
 
         <div className="mx-10 max-w-sm text-center">
-          <Typography type="heading2" variant="h1">
+          <Typography weight="extra-bold" variant="h1" size="20">
             Hey {firstName} <br /> Glad to have you here.
           </Typography>
         </div>

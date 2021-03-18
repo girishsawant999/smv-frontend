@@ -40,10 +40,10 @@ function PhoneInputScreenComponent({
         />
 
         <div className="mx-10 max-w-sm text-center">
-          <Typography type="heading2" variant="h1" className="x">
+          <Typography weight="extra-bold" variant="h1" size="20" className="x">
             Awesome, Let's get you in the system first!"
           </Typography>
-          <Typography type="subHeading4" variant="h2" className="mt-2.5 mb-5">
+          <Typography weight="semi-bold" variant="h2" size="16" className="mt-2.5 mb-5">
             Enter your mobile number
           </Typography>
         </div>
@@ -54,14 +54,14 @@ function PhoneInputScreenComponent({
 
         <div className={commonStyles.lowerdiv}>
           <a href="#" className="underline">
-            <Typography type="heading6" variant="h6">
+            <Typography weight="extra-bold" variant="h6" size="12">
               or signup using a social account
             </Typography>
           </a>
         </div>
 
         <div className={commonStyles.disclaimer}>
-          <Typography type="content6" variant="p">
+          <Typography type="content" weight="regular" variant="p" size="12">
             By continuing you may receive an SMS for verification. Message and data
             rates may apply.
           </Typography>

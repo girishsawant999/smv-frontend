@@ -49,7 +49,7 @@ function OtpInputScreenComp({
         />
 
         <div className="mx-10 max-w-sm text-center">
-          <Typography type="subHeading4" variant="h1">
+          <Typography weight="semi-bold" variant="h1" size="16">
             Enter the 4 digit code sent to you at {phoneNumber}.
             {inValid ? (
               <span className="text-red-500">
@@ -80,11 +80,11 @@ function OtpInputScreenComp({
 
         <div className={commonStyles.lowerdiv}>
           {inValid ? (
-            <Typography type="heading6" variant="h6" className="underline">
+            <Typography weight="extra-bold" variant="h6" size="12" className="underline">
               I haven’t recieved a code
             </Typography>
           ) : (
-            <Typography type="subHeading6" variant="h6">
+            <Typography weight="semi-bold" variant="h6" size="12">
               Resend code in 0:20
             </Typography>
           )}

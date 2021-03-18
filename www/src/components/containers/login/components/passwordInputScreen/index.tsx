@@ -33,7 +33,7 @@ function PasswordInputScreen({ pageState, setpageState }: IOtpInputScreenProps) 
         />
 
         <div className="mx-10 max-w-sm text-center">
-          <Typography type="subHeading4" variant="h1">
+          <Typography weight="semi-bold" variant="h1" size="16">
             Choose your account password
           </Typography>
         </div>
