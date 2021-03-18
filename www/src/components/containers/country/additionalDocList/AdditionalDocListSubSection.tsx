@@ -11,7 +11,7 @@ type IAdditionDocListSubSectionProps = {
 
 function AdditionalDocListSubSection({ item }:IAdditionDocListSubSectionProps){
     return(
-        <div className="">
+        <div>
             <Typography type="headingSemiBold16px" variant="h4">{item.condition}</Typography>
             <div className="list-items">
                 <ul className={styles.ul}>

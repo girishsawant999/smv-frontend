@@ -11,6 +11,7 @@ import CountryImage from './countryImage/CountryImage';
 import { InferGetServerSidePropsType } from 'next';
 import { getServerSideProps } from '../../../pages/country';
 import Button from "../../common/Button";
+import ImageList from './processDisplay/ProcessDisplay';
 
 function CountryPage({ data }:InferGetServerSidePropsType<typeof getServerSideProps>) {
     return (

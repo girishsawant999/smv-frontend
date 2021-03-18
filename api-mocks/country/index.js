@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-router.get('/country', (req, res) => {
+router.get('/info', (req, res) => {
   const response = {
     success: true,
     data: {

@@ -13,7 +13,7 @@ function DocumentList({ data }:InferGetServerSidePropsType<typeof getServerSideP
     return(
         <div className="m-5">
             <Typography type="headingExtraBold18px" variant="h3">Document List</Typography>
-            <div className="">
+            <div>
                 <ul className={styles.ul}>
                     {
                       list.map((listItem, index) => <li key={index} className={styles.li}>

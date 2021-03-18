@@ -30,7 +30,7 @@ function PackInfo({days, price, oldPrice, description}:IPackInfoProps){
                     {oldPrice}
                 </Typography>
             </div>
-            <div className={styles.divider}> </div>
+            <div className={styles.divider}></div>
             <Typography type="contentSemiBold12px" variant="p">
                 {description}
             </Typography>

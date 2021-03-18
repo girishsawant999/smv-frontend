@@ -4,21 +4,16 @@ import CountryPage from 'components/containers/country';
 import { InferGetServerSidePropsType } from 'next';
 import { GetServerSideProps } from 'next'
 
-CountryPageMain.propTypes = {};
-
-// type Data = { name : string }
-
 export const getServerSideProps:GetServerSideProps = async () => {
-  const res = await fetch('http://localhost:44444/api/v1/ums/country/country')
-  const data = await res.json()
-  console.log(data);
-  return {
-    props: {
-      data,
-    },
-  }
+    const res = await fetch('http://localhost:44444/api/v1/ums/country/info')
+    const data = await res.json()
+    console.log(data);
+    return {
+        props: {
+            data,
+        },
+    }
 }
-
 
 function CountryPageMain({data}: InferGetServerSidePropsType<typeof getServerSideProps>) {
     return (

@@ -15,13 +15,12 @@ function CountryInfo({data}:InferGetServerSidePropsType<typeof getServerSideProp
         setDescription(data.description);
     },[])
 
-
     return(
         <div className="m-5">
-            <Typography type="headingExtraBold24px" variant="h1">
+            <Typography type="headingExtraBold24px" variant="h1" className="mb-1">
                 {name}
             </Typography>
-            <Typography type="headingSemiBold16px" variant="h3">
+            <Typography type="headingSemiBold16px" variant="h3" className="mb-2.5">
                 {prcessingTime}
             </Typography>
             <Typography type="contentRegular14px" variant="h3">

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Typography from "../../../common/Typography";
+import Icon from '../../../common/Icon';
 
 type IAccordionProps={
     question: string;
@@ -14,26 +15,12 @@ function Accordion({question, answer}:IAccordionProps){
                 <Typography type="headingSemiBold16px" variant="p" className="justify-between text-left flex py-4 mr-10 w-4/5">
                     {question}
                 </Typography>
-                <div className="w-10 h-10 bg-gray-200 flex justify-center items-center bg-opacity-40 rounded-2xl cursor-pointer mr-5">
+                <div className="min-w-10 h-10 bg-gray-200 flex justify-center items-center bg-opacity-40 rounded-2xl cursor-pointer mr-5">
                     {
                         !selected ?
-                            <picture>
-                                <source
-                                    srcSet="/assets/images/plus/plus-square.png 1x,
-                                            /assets/images/plus/plus-square@2x.png 2x,
-                                            /assets/images/plus/plus-square@3x.png 3x"
-                                />
-                                <img src="/assets/images/plus/plus-square.png" alt="Plus"/>
-                            </picture>
+                            <Icon src={"plus/plus-square.svg"} alt={"expand button"}/>
                             :
-                            <picture>
-                                <source
-                                    srcSet="/assets/images/minus/path.png 1x,
-                                            /assets/images/plus/path@2x.png 2x,
-                                            /assets/images/plus/path@3x.png 3x"
-                                />
-                                <img src="/assets/images/minus/path.png" alt="Minus"/>
-                            </picture>
+                            <Icon src={"minus/path.svg"} alt={"collapse button"}/>
                     }
 
                 </div>
