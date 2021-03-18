@@ -6,13 +6,21 @@ Img.propTypes = {};
 type IImgProps = {
   alt: string;
   className?: string;
-  width: string;
-  height: string;
+  width?: string;
+  height?: string;
   srcSet: string;
+  type?: string;
 };
 
 const baseLocation = '/assets/images/';
-function Img({ alt, className, width, height, srcSet }: IImgProps) {
+function Img({
+  alt,
+  className = '',
+  width = 'auto',
+  height = 'auto',
+  srcSet,
+  type = 'image/png'
+}: IImgProps) {
   let _srcSet = '';
   srcSet &&
     srcSet
@@ -24,8 +32,14 @@ function Img({ alt, className, width, height, srcSet }: IImgProps) {
   return (
     <LazyLoad offset={100} once>
       <picture>
-        <source srcSet={_srcSet} />
-        <img className={className} width={width} height={height} alt={alt} />
+        <source type={type} srcSet={_srcSet} />
+        <img
+          className={className}
+          width={width}
+          height={height}
+          alt={alt}
+          srcSet={_srcSet}
+        />
       </picture>
     </LazyLoad>
   );
