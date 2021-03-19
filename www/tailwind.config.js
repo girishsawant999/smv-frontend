@@ -4,8 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'manrope-extra-bold': ['Manrope-extra-bold'],
-        'manrope-extra-light': ['Manrope-extra-light']
+        'manrope': ['Manrope'],
       }
     }
   },

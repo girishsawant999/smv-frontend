@@ -1,28 +1,24 @@
-.heading2 {
-  font-size: 1.25rem;
-  line-height: 1.875rem;
-  color: #1a181b;
-  font-family: Manrope-extra-bold;
+/* Styling for line-height */
+.heading {
+  line-height: 1.5;
+}
+.content {
+  line-height: 1.8;
 }
 
-.heading3 {
-  font-size: 1rem;
-  line-height: 1.875rem;
+/* Styling for weight */
+.extra-bold {
+  font-weight: 800;
   color: #1a181b;
-  font-family: Manrope-extra-bold;
 }
 
-.heading6 {
-  font-size: 0.75rem;
-  color: #1a181b;
-  font-family: Manrope-extra-bold;
-}
-
-.subHeading4 {
-  font-size: 1rem;
-  line-height: 1.81rem;
+.semi-bold {
+  font-weight: 600;
   color: #4e4851;
-  font-family: Manrope-extra-light;
+}
+.regular {
+  font-weight: 400;
+  color: #9b939f;
 }
 .subHeading5 {
   font-size: 0.875rem;
@@ -31,17 +27,31 @@
   font-family: Manrope-extra-light;
 }
 
-.subHeading6 {
+/* Styling for size */
+.size-24 {
+  font-size: 1.25rem;
+}
+.size-20 {
+  font-size: 1.25rem;
+}
+.size-18 {
+  font-size: 1.125rem;
+}
+.size-16 {
+  font-size: 1rem;
+}
+.size-14 {
+  font-size: 0.875rem;
+}
+.size-12 {
   font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #4e4851;
-  font-family: Manrope-extra-light;
+}
+.size-10 {
+  font-size: 0.625rem;
 }
 
-.content6 {
-  font-family: Manrope-extra-light;
-  font-size: 0.75rem;
-  color: #9b939f;
-  line-height: 1.83;
+/* Styling for font */
+.primary {
+  font-family: Manrope;
 }
+

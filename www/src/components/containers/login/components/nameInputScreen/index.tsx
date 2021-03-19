@@ -44,7 +44,7 @@ function NameInputScreen({
         />
 
         <div className="mx-10 max-w-sm text-center">
-          <Typography type="subHeading4" variant="h1">
+          <Typography weight="semi-bold" variant="h1" size="16">
             What’s your name?
           </Typography>
         </div>
