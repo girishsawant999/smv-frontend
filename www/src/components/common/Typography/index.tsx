@@ -24,7 +24,11 @@ type StyleType = "heading1"
                  | "content5"
                  | "content6"
                  | "content7"
-                 | "content8" ;
+                 | "content8"
+                 | "content9"
+                 | "content10"
+                 | "content11"
+                 | "content12";
 
 type variantType = "h1"
                     | "h2"

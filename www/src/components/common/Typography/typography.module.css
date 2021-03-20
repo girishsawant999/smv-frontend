@@ -18,6 +18,12 @@
   font-family: Manrope-extra-light;
 }
 
+.subHeading5 {
+  font-size: 1rem;
+  line-height: 1.81rem;
+  color: #4e4851;
+  font-family: Manrope-semibold;
+}
 .subHeading6 {
   font-size: 0.75rem;
   font-weight: 600;
@@ -31,4 +37,44 @@
   font-size: 0.75rem;
   color: #9b939f;
   line-height: 1.83;
+}
+
+.content7{
+  font-family: Manrope-extra-light;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.79rem;
+  color: #4e4851;
+}
+.content8{
+  font-size: 0.875rem;
+  line-height: 1.56rem;
+  color: #9b939f;
+  font-family: Manrope-extra-light;
+}
+.content9{
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  color: #9b939f;
+  font-family: Manrope-extra-light;
+}
+.content10{
+  font-size: 0.625rem;
+  line-height: 1rem;
+  color: #4e4851;
+  font-family: Manrope-semibold;
+}
+.content11{
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  color: #4e4851;
+  font-family: Manrope-semibold;
+}
+
+.content12{
+  font-family: Manrope-semibold;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.79rem;
+  color: #4e4851;
 }

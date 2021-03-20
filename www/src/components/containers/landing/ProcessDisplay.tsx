@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-function getImage(buttonIndex){
+function getImage(buttonIndex:number){
     if(buttonIndex === 1){
         return(
             <Image className=""
                    src={'/assets/landing/Group 7@2x-1.png'}
                    alt="Background Image"
-                   height="206"
-                   width="330"
+                   height="176"
+                   width="293"
             />
         )
     }
@@ -20,16 +20,16 @@ function getImage(buttonIndex){
                     <Image className=""
                            src={'/assets/landing/slider.2.11/group-2@2x.png'}
                            alt="Background Image"
-                           height="200"
-                           width="175"
+                           height="160"
+                           width="165"
                     />
                 </div>
                 <div>
                     <Image className=""
                            src={'/assets/landing/slider.2.11/group@2x.png'}
                            alt="Background Image"
-                           height="200"
-                           width="175"
+                           height="152"
+                           width="140"
                     />
                 </div>
             </div>
@@ -43,16 +43,16 @@ function getImage(buttonIndex){
                     <Image className=""
                            src={'/assets/landing/slider.2.12/bitmap@2x.png'}
                            alt="Background Image"
-                           height="200"
-                           width="175"
+                           height="113"
+                           width="101"
                     />
                 </div>
                 <div>
                     <Image className=""
                            src={'/assets/landing/slider.2.12/bitmap_2@2x.png'}
                            alt="Background Image"
-                           height="200"
-                           width="175"
+                           height="138"
+                           width="120"
                     />
                 </div>
           </div>
@@ -60,7 +60,7 @@ function getImage(buttonIndex){
     }
 }
 
-function getStatement(buttonIndex){
+function getStatement(buttonIndex:number){
     if (buttonIndex == 1){
         return("Add Co-Travellers & Upload Docs")
     }
