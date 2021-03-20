@@ -4,8 +4,7 @@
   height: 60px;
   background: #1a181b;
   border-radius: 20px;
-  font-family: Manrope-extra-bold;
   color: #fff;
-  font-size: 12px;
   outline: none;
+  font-weight: inherit;
 }

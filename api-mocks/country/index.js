@@ -10,14 +10,16 @@ router.get('/info', (req, res) => {
         description:
           'Planning a holiday to Australia with you friends and family? Be at ease, and get your Australia Visa with stamp my visa. The process is extremely simple and hassle-free'
       },
-      packInfo: [
+      packsInfo: [
         {
+          id: 1,
           days: '60 days  tourist visa',
           price: 'Rs 6300',
           oldPrice: 'Rs 7310',
           description: 'Insurance available'
         },
         {
+          id: 2,
           days: '90 days  tourist visa',
           price: 'Rs 7300',
           oldPrice: 'Rs 8310',
@@ -26,6 +28,7 @@ router.get('/info', (req, res) => {
       ],
       addonService: [
         {
+          id: 1,
           info: 'Flight bookings for two',
           detail:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
@@ -34,6 +37,7 @@ router.get('/info', (req, res) => {
           description: 'Insurance available'
         },
         {
+          id: 2,
           info: 'Hotel bookings for V',
           detail:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
@@ -95,6 +99,24 @@ router.get('/info', (req, res) => {
             'Original passport and old passports, if any',
             'Your passport should be valid for at least 6 months from the date of submission of the visa, with a minimum of three blank pages'
           ]
+        }
+      ],
+      faq: [
+        {
+          question: 'Once I apply, when I will receive my visa?',
+          answer:
+            'An e-Visa is an official document permitting entry into and travel within a certain country. The e-Visa is an alternative to visas issued at the ports of entry or visiting an embassy/consulate to obtain traditional paper visas'
+        },
+        {
+          question: 'What is an eVisa?',
+          answer:
+            'An e-Visa is an official document permitting entry into and travel within a certain country. The e-Visa is an alternative to visas issued at the ports of entry or visiting an embassy/consulate to obtain traditional paper visas'
+        },
+        {
+          question:
+            'How long is my visa valid for and how much does it cost how much does it cost?',
+          answer:
+            'An e-Visa is an official document permitting entry into and travel within a certain country. The e-Visa is an alternative to visas issued at the ports of entry or visiting an embassy/consulate to obtain traditional paper visas'
         }
       ]
     }

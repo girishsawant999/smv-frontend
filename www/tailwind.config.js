@@ -8,7 +8,8 @@ module.exports = {
         'manrope-extra-light': ['Manrope-extra-light']
       },
       minWidth: {
-        '10': '2.5rem'
+        '10': '2.5rem',
+        'manrope': ['Manrope'],
       }
     }
   },
