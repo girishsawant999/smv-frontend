@@ -1,59 +1,23 @@
 import React from 'react';
 import styles from './typography.module.css';
-
-type StyleType = "heading1"
-                 | "heading2"
-                 | "heading3"
-                 | "heading4"
-                 | "heading5"
-                 | "heading6"
-                 | "heading7"
-                 | "heading8"
-                 | "subHeading1"
-                 | "subHeading2"
-                 | "subHeading3"
-                 | "subHeading4"
-                 | "subHeading5"
-                 | "subHeading6"
-                 | "subHeading7"
-                 | "subHeading8"
-                 | "content1"
-                 | "content2"
-                 | "content3"
-                 | "content4"
-                 | "content5"
-                 | "content6"
-                 | "content7"
-                 | "content8"
-                 | "content9"
-                 | "content10"
-                 | "content11"
-                 | "content12";
-
-type variantType = "h1"
-                    | "h2"
-                    | "h3"
-                    | "h4"
-                    | "h5"
-                    | "h6"
-                    | "p"
-
-            
-
+import { StyleType, weightType, sizeType, variantType, fontType } from './types';
 
 type ITypographyProps = {
-  type: StyleType;
-  className?: string;
+  type?: StyleType;
+  weight: weightType;
+  size: sizeType;
   variant: variantType;
+  font?: fontType;
+  className?: string;
   children: React.ReactChild | React.ReactChildren | React.ReactChild[] | React.ReactChildren[] ;
 }
-const Typography = ({ type, className = '', variant, children }: ITypographyProps) => {
+const Typography = ({ type="heading", weight, size, font="primary", className = '', variant, children }: ITypographyProps) => {
 
   const Component = variant;
-  className = className.concat(' ');
+  console.log(size)
 
   return (
-      <Component className={className.concat(styles[type])} >
+      <Component className={[className, styles[type], styles[weight], styles["size-" + size], styles[font]].join(" ")} >
         {children}
       </Component>
   );

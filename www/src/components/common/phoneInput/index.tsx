@@ -5,6 +5,11 @@ import styles from './phoneInput.module.css';
 
 PhoneInputComp.propTypes = {};
 
+type IPhoneInputScreenProps = {
+  pageState: string;
+  setpageState: (pageState: string) => void;
+};
+
 function PhoneInputComp() {
   return (
     <PhoneInput
@@ -12,7 +17,14 @@ function PhoneInputComp() {
       containerClass={styles.containerClass}
       dropdownClass={styles.dropdownClass}
       country={'in'}
+      disableDropdown={true}
+      onlyCountries={['in']}
       onChange={(phone) => console.log(phone)}
+      inputProps={{
+        name: 'phoneNumber',
+        required: true,
+        autoFocus: true
+      }}
     />
   );
 }

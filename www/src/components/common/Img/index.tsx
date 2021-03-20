@@ -1,20 +1,56 @@
 import React from 'react';
-import Image from 'next/image';
+import LazyLoad from 'react-lazyload';
 
 Img.propTypes = {};
 
 type IImgProps = {
-  src: string;
   alt: string;
   className?: string;
-  width: string;
-  height: string;
+  width?: string;
+  height?: string;
+  srcSet: Array<string>;
+  isFromAssets?: Boolean;
+  type?: string;
+  placeHolderBg?: String;
+};
+
+const baseLocation = '/assets/images/';
+function Img({
+  alt,
+  className = '',
+  width = 'auto',
+  height = 'auto',
+  srcSet,
+  type = 'image/png',
+  isFromAssets = true,
+  placeHolderBg = 'transparent'
+}: IImgProps) {
+  let _srcSet = srcSet;
+  if (isFromAssets) {
+    _srcSet = _srcSet.map((src) => baseLocation.concat(src.trim()));
+  }
+
+  const Styles = {
+    imgBackground: { background: placeHolderBg }
+  };
+
+  return (
+    <LazyLoad offset={100} height={100} width={100} once>
+      <picture style={Styles.imgBackground}>
+        <source type={type} srcSet={_srcSet.join(', ')} />
+        <img
+          className={className}
+          width={width}
+          height={height}
+          alt={alt}
+          src={_srcSet[0]}
+          srcSet={_srcSet.join(', ')}
+          style={Styles.imgBackground}
+        />
+      </picture>
+    </LazyLoad>
+  );
 }
 
-const baseLocation = "/assets/images/";
+export default Img;
 
-function Img({ src, alt, className, width, height }: IImgProps) {
-  return <Image src={baseLocation + src} alt={alt} width={width} height={height} className={className} />;
-}
-
-export default Img

@@ -7,7 +7,8 @@ module.exports = {
         'manrope-extra-bold': ['Manrope-extra-bold'],
         'manrope-extra-light': ['Manrope-extra-light'],
         'manrope-regular': ['Manrope-regular'],
-        'manrope-semibold': ['Manrope-semibold']
+        'manrope-semibold': ['Manrope-semibold'],
+        manrope: ['Manrope']
       },
       backgroundColor: {
         '#FFFFFF': '#FFFFFF',
@@ -44,7 +45,7 @@ module.exports = {
         '17.5': '70px'
       },
       width: {
-        '26': '104px',
+        26: '104px',
         '84': '335px',
         '53.5': '214px',
         '13.75': '55px',
