@@ -1,28 +1,36 @@
 import Button from 'components/common/Button';
 import Emotes from 'components/common/emotes';
 import Typography from 'components/common/Typography';
-import React from 'react';
+import React, { useState } from 'react';
 import commonStyles from '../../login.module.css';
 import BackButton from 'components/common/backButton';
 import styles from './nameInput.module.css';
 
 NameInputScreen.propTypes = {};
 
+type IName = {
+  [key: string]: string;
+};
+
 type INameInputScreenProps = {
   pageState: string;
   setpageState: (pageState: string) => void;
-  setfirstName: (pageState: string) => void;
+  setname: (obj: IName) => void;
+  name: IName;
 };
 
 function NameInputScreen({
   pageState,
   setpageState,
-  setfirstName
+  setname,
+  name
 }: INameInputScreenProps) {
+  const onNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setname({ ...name, [e.target.name]: e.target.value });
+  };
+
   const nameSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let name = e.target.first.value + ' ' + e.target.last.value;
-    setfirstName(e.target.first.value);
     setpageState('welcome-screen');
   };
   return (
@@ -51,6 +59,9 @@ function NameInputScreen({
 
         <div className="mt-5">
           <div className="w-64 flex justify-between">
+            <label htmlFor="first" className="hidden">
+              Enter first name
+            </label>
             <input
               className={'mr-3.5 '.concat(styles.nameInput)}
               type="text"
@@ -58,13 +69,20 @@ function NameInputScreen({
               id="first"
               placeholder="First"
               autoFocus={true}
+              onChange={onNameChange}
+              value={name.first}
             />
+            <label htmlFor="last" className="hidden">
+              Enter last name
+            </label>
             <input
               className={styles.nameInput}
               type="text"
               name="last"
               id="last"
               placeholder="Last"
+              onChange={onNameChange}
+              value={name.last}
             />
           </div>
         </div>

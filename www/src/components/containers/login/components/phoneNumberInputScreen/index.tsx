@@ -23,7 +23,7 @@ function PhoneInputScreenComponent({
 }: IPhoneInputScreenProps) {
   const onChangePhoneNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
-    if (!phoneNumber && value.length === 1) {
+    if (!phoneNumber && value.length > 0) {
       value = '+91'.concat(value);
     }
     setphoneNumber(value);
