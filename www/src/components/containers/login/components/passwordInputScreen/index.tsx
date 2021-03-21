@@ -1,7 +1,7 @@
 import Button from 'components/common/Button';
 import Emotes from 'components/common/emotes';
 import Typography from 'components/common/Typography';
-import React from 'react';
+import React,{useState} from 'react';
 import commonStyles from '../../login.module.css';
 import BackButton from 'components/common/backButton';
 import styles from './passwordInputScreen.module.css';
@@ -14,6 +14,13 @@ type IOtpInputScreenProps = {
 };
 
 function PasswordInputScreen({ pageState, setpageState }: IOtpInputScreenProps) {
+  const [password, setpassword] = useState<string>('');
+
+  const onPasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
+    setpassword(value);
+  };
+
   const passwordSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     let password = e.target.password.value;
@@ -45,6 +52,9 @@ function PasswordInputScreen({ pageState, setpageState }: IOtpInputScreenProps) 
 
         <div className="mt-5">
           <div className="w-64 flex justify-between">
+            <label htmlFor="password" className="hidden">
+              Enter password
+            </label>
             <input
               className={styles.passwordInput}
               type="password"
@@ -52,6 +62,8 @@ function PasswordInputScreen({ pageState, setpageState }: IOtpInputScreenProps) 
               id="password"
               placeholder="Make it secure & unique"
               autoFocus={true}
+              onChange={onPasswordChange}
+              value={password}
             />
           </div>
         </div>
