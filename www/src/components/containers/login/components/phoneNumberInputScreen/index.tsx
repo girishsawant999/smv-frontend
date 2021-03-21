@@ -1,9 +1,10 @@
 import Button from 'components/common/Button';
 import Emotes from 'components/common/emotes';
-import PhoneInput from 'components/common/phoneInput';
+import Img from 'components/common/img';
 import Typography from 'components/common/Typography/index';
 import React from 'react';
 import commonStyles from '../../login.module.css';
+import Styles from './phoneNumberInput.module.css';
 
 PhoneInputScreenComponent.propTypes = {};
 
@@ -20,11 +21,16 @@ function PhoneInputScreenComponent({
   phoneNumber,
   setphoneNumber
 }: IPhoneInputScreenProps) {
+  const onChangePhoneNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
+    if (!phoneNumber && value.length === 1) {
+      value = '+91'.concat(value);
+    }
+    setphoneNumber(value);
+  };
+
   const requestOTP = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const _phoneNumber = e.target.phoneNumber.value.replace(/[^0-9]/g, '').slice(2);
-    if (!_phoneNumber) return;
-    setphoneNumber(_phoneNumber);
     setpageState('otp-screen');
   };
 
@@ -45,13 +51,34 @@ function PhoneInputScreenComponent({
           <Typography weight="extra-bold" variant="h1" size="20" className="x">
             Awesome, Let's get you in the system first!"
           </Typography>
-          <Typography weight="semi-bold" variant="h2" size="16" className="mt-2.5 mb-5">
+          <Typography
+            weight="semi-bold"
+            variant="h2"
+            size="16"
+            className="mt-2.5 mb-5">
             Enter your mobile number
           </Typography>
         </div>
 
-        <div className="max-w-sm mx-5">
-          <PhoneInput />
+        <div className={Styles.phoneNumberInputContainer}>
+          <label htmlFor="phoneNumber" className="hidden">
+            Phone Number
+          </label>
+          <span>
+            <Img
+              srcSet={['indian-flag.svg']}
+              alt="indian flag"
+              className="rounded-2xl"
+            />
+          </span>
+          <input
+            type="tel"
+            onChange={onChangePhoneNumber}
+            name="phoneNumber"
+            id="phoneNumber"
+            maxLength={13}
+            value={phoneNumber}
+          />
         </div>
 
         <div className={commonStyles.lowerdiv}>
