@@ -1,7 +1,7 @@
 import Button from 'components/common/Button';
 import Emotes from 'components/common/emotes';
 import Typography from 'components/common/Typography';
-import React from 'react';
+import React, { useState } from 'react';
 import commonStyles from '../../login.module.css';
 import BackButton from 'components/common/backButton';
 import styles from './emailInputScreen.module.css';
@@ -14,9 +14,15 @@ type IOtpInputScreenProps = {
 };
 
 function OtpInputScreenComp({ pageState, setpageState }: IOtpInputScreenProps) {
+  const [email, setemail] = useState<string>('');
+
+  const onEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
+    setemail(value);
+  };
+
   const emailSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let email = e.target.email.value;
     setpageState('password-screen');
   };
   return (
@@ -42,6 +48,9 @@ function OtpInputScreenComp({ pageState, setpageState }: IOtpInputScreenProps) {
 
         <div className="mt-5">
           <div className="w-64 flex justify-between">
+            <label htmlFor="email" className="hidden">
+              Enter email address
+            </label>
             <input
               className={styles.emailInput}
               type="email"
@@ -49,6 +58,8 @@ function OtpInputScreenComp({ pageState, setpageState }: IOtpInputScreenProps) {
               id="email"
               placeholder="name@example.com"
               autoFocus={true}
+              onChange={onEmailChange}
+              value={email}
             />
           </div>
         </div>
