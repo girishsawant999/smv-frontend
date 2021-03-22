@@ -1,19 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import AddonInfo from '../addonInfo/AddonInfo';
-import { InferGetServerSidePropsType } from 'next';
-import { getServerSideProps } from '../../../../../pages/country';
 import Typography from '../../../../common/Typography';
+import { IAddonService } from '../../types';
 
-type IAddonServiceProps={
-    id: number;
-    info: string;
-    detail: string;
-    price: string;
-    oldPrice: string;
-    description: string;
-}
 type IAddonServiceArrayProps={
-    addonService: Array<IAddonServiceProps>;
+    addonService: Array<IAddonService>;
     addonPacks: Array<number>;
     setAddonPacks: Function;
 }
@@ -28,7 +19,7 @@ function AddonService({addonService, addonPacks, setAddonPacks}:IAddonServiceArr
                             Add-on services
                         </Typography>
                         {
-                            addonService.map((packsItem:IAddonServiceProps, index) => {
+                            addonService.map((packsItem:IAddonService, index) => {
                                 return (
                                     <AddonInfo
                                         key={index}
@@ -46,7 +37,7 @@ function AddonService({addonService, addonPacks, setAddonPacks}:IAddonServiceArr
                         }
                     </section>
                 :
-                    <section></section>
+                    <section/>
             }
         </>
     )

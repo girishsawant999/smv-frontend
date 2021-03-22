@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Typography from '../../../../common/Typography';
 import styles from './addonInfo.module.css';
 

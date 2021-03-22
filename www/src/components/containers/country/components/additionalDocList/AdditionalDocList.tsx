@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import AdditionalDocListSubSection from './AdditionalDocListSubSection';
-import { InferGetServerSidePropsType } from 'next';
-import { getServerSideProps } from '../../../../../pages/country';
 import Typography from '../../../../common/Typography';
 
 type IAdditionDocListProps = {
@@ -29,7 +27,7 @@ function AdditionalDocList({ additionalDocList }:IAdditionDocListArrayProps){
                         }
                     </section>
                 :
-                <section></section>
+                <section/>
             }
         </>
     )

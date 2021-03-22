@@ -3,10 +3,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      fontFamily: {
-        'manrope-extra-bold': ['Manrope-extra-bold'],
-        'manrope-extra-light': ['Manrope-extra-light']
-      },
       minWidth: {
         '10': '2.5rem',
         'manrope': ['Manrope'],

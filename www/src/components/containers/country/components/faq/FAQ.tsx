@@ -29,7 +29,7 @@ function FAQ({faq}:IFAQArrayProps){
                         }
                     </section>
                 :
-                  <section></section>
+                  <section/>
             }
         </>
     )

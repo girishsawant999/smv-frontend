@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { InferGetServerSidePropsType } from 'next';
-import { getServerSideProps } from '../../../../../pages/country';
+import React from 'react';
 import Typography from '../../../../common/Typography';
 import styles from './importantInformation.module.css';
 
@@ -32,7 +30,7 @@ function ImportantInformation({importantInfo}:IImportantInfoArrayProps){
                         </div>
                     </section>
                 :
-                <section></section>
+                <section/>
             }
         </>
     )

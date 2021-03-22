@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-CountryPage.propTypes = {};
 import AllPacks from './components/allPacks/AllPacks';
 import AddonService from './components/addonService/AddonService';
 import ImportantInformation from './components/importantInformation/ImportantInformation';
@@ -9,47 +8,10 @@ import FAQ from './components/faq/FAQ';
 import CountryInfo from './components/countryInfo/CountryInfo';
 import CountryImage from './components/countryImage/CountryImage';
 import Button from "../../common/Button";
-import type IInputDataProps from "../../../pages/country/index"
+import { IInputDataProps } from './types';
 
-type IPackInfo={
-    id: number;
-    days: string;
-    price: string;
-    oldPrice: string;
-    description: string;
-}
-type IAddonService={
-    id: number;
-    info: string;
-    detail: string;
-    price: string;
-    oldPrice: string;
-    description: string;
-}
-type IAdditionalDoc={
-    condition: string;
-    list: Array<string>;
-}
-type IFaq = {
-    question: string;
-    answer: string;
-}
-type IInputDataProps ={
-    success: boolean;
-    data: {
-        countryInfo: {
-            name: string;
-            processingTime: string;
-            description: string;
-        };
-        packsInfo: Array<IPackInfo>;
-        addonService: Array<IAddonService>;
-        importantInfo: Array<string>;
-        documentList: Array<string>;
-        additionalDocList: Array<IAdditionalDoc>;
-        faq: Array<IFaq>;
-  }
-}
+CountryPage.propTypes = {};
+
 type ICountryInfoProps= {
     countryInfo: IInputDataProps
 }
@@ -60,7 +22,7 @@ function CountryPage({ countryInfo }:ICountryInfoProps) {
     const [addonPacks, setAddonPacks] = useState([]);
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col md:max-w-md md:mx-auto relative">
 
             {/*Header image section*/}
             <CountryImage/>

@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { InferGetServerSidePropsType } from 'next';
-import { getServerSideProps } from '../../../../../pages/country';
+import React from 'react';
 import Typography from '../../../../common/Typography';
 import styles from './documentList.module.css';
 
@@ -32,7 +30,7 @@ function DocumentList({ documentList }:IDocumentListArrayProps){
                         </div>
                     </section>
                 :
-                    <section></section>
+                    <section/>
             }
         </>
     )

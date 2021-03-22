@@ -1,19 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PackInfo from '../packInfo/PackInfo';
-import { InferGetServerSidePropsType } from 'next';
-import { getServerSideProps } from '../../../../../pages/country';
 import Typography from '../../../../common/Typography';
-import styles from './allPacks.module.css';
+import { IPackInfo } from '../../types';
 
-type IPackInfoProps = {
-    id: number
-    days: string;
-    price: string;
-    oldPrice: string;
-    description: string;
-}
 type IPackInfoArrayProps={
-    packsInfo: Array<IPackInfoProps>;
+    packsInfo: Array<IPackInfo>;
     selectedPack: number;
     setSelectedPack: Function;
 }
@@ -36,7 +27,7 @@ function AllPacks({packsInfo, selectedPack, setSelectedPack}:IPackInfoArrayProps
                             All our packs are inclusive of consultation fees, service charges & other taxes
                         </Typography>
                         {
-                            packsInfo.map((packsItem :IPackInfoProps, index)=>{
+                            packsInfo.map((packsItem :IPackInfo, index)=>{
                                 return(
                                     <PackInfo
                                         key={index}
@@ -53,7 +44,7 @@ function AllPacks({packsInfo, selectedPack, setSelectedPack}:IPackInfoArrayProps
                         }
                     </section>
                 :
-                    <section></section>
+                    <section/>
             }
         </>
     )

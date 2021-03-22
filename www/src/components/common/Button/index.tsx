@@ -16,13 +16,15 @@ function Button({
   type = 'button'
 }: IButtonProps) {
   return (
+    // <Typography weight="extra-bold" variant="span" size="12" className="text-white">
+      <button
+        className={className.concat(' ').concat(styles.button)}
+        type={type}
+        onClick={onClick}>
+        {children}
+      </button>
 
-        <button
-          className={className.concat(' ').concat(styles.button)}
-          type={type}
-          onClick={onClick}>
-            {children}
-        </button>
+    // </Typography>
 
   );
 }

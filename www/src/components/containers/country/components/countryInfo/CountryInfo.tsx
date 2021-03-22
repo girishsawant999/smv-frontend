@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { InferGetServerSidePropsType } from 'next';
-import { getServerSideProps } from '../../../../../pages/country';
+import React from 'react';
 import Typography from '../../../../common/Typography';
 
-type ICoutryInfoProps = {
+type ICountryInfoProps = {
     countryInfo:{
         name: string;
         processingTime: string;
@@ -11,7 +9,7 @@ type ICoutryInfoProps = {
     }
 }
 
-function CountryInfo({countryInfo}:ICoutryInfoProps){
+function CountryInfo({countryInfo}:ICountryInfoProps){
     return(
         <>
             { countryInfo !== undefined ?
@@ -27,7 +25,7 @@ function CountryInfo({countryInfo}:ICoutryInfoProps){
                     </Typography>
                 </section>
                 :
-                <section></section>
+                <section/>
             }
         </>
     )
