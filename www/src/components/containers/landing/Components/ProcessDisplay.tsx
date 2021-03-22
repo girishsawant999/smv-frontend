@@ -73,31 +73,19 @@ function getStatement(buttonIndex:number){
 }
 
 
-function ImageList(){
-
-    const [buttonIndex, setButtonIndex] = useState(1)
-
-    function nextButton(){
-        let x = buttonIndex + 1;
-        if(x === 4){
-          x=1
-        }
-        setButtonIndex(x)
-    }
-
-  setTimeout(nextButton,3000)
+function ImageList(props){
 
   return(
       <div>
           <div className=" mt-11 flex justify-center">
-             {getImage(buttonIndex)}
+             {getImage(props.buttonIndex)}
            </div>
           <div className="mt-10 flex text-base text-#4E4851 leading-8 justify-center font-manrope-semibold font-extrabold tracking-wider">
-             {getStatement(buttonIndex)}</div>
+             {getStatement(props.buttonIndex)}</div>
           <div className="flex justify-center mt-12">
-             <div className={buttonIndex===1? "bg-#1A181B ml-4 text-white font-manrope-extra-bold w-16 h-16 rounded-3xl py-5 px-7": "bg-#F5F4F5 ml-4 text-#1A181B font-manrope-extra-bold w-16 h-16 rounded-3xl py-5 px-7"}>1</div>
-             <div className={buttonIndex===2? "bg-#1A181B ml-4 text-white font-manrope-extra-bold w-16 h-16 rounded-3xl py-5 px-7": "bg-#F5F4F5 ml-4 text-#1A181B font-manrope-extra-bold w-16 h-16 rounded-3xl py-5 px-7"}>2</div>
-             <div className={buttonIndex===3? "bg-#1A181B ml-4 text-white font-manrope-extra-bold w-16 h-16 rounded-3xl py-5 px-7": "bg-#F5F4F5 ml-4 text-#1A181B font-manrope-extra-bold w-16 h-16 rounded-3xl py-5 px-7"}>3</div>
+             <div className={props.buttonIndex===1? "bg-#1A181B ml-4 text-white font-manrope-extra-bold w-16 h-16 rounded-3xl py-5 px-7": "bg-#F5F4F5 ml-4 text-#1A181B font-manrope-extra-bold w-16 h-16 rounded-3xl py-5 px-7"}>1</div>
+             <div className={props.buttonIndex===2? "bg-#1A181B ml-4 text-white font-manrope-extra-bold w-16 h-16 rounded-3xl py-5 px-7": "bg-#F5F4F5 ml-4 text-#1A181B font-manrope-extra-bold w-16 h-16 rounded-3xl py-5 px-7"}>2</div>
+             <div className={props.buttonIndex===3? "bg-#1A181B ml-4 text-white font-manrope-extra-bold w-16 h-16 rounded-3xl py-5 px-7": "bg-#F5F4F5 ml-4 text-#1A181B font-manrope-extra-bold w-16 h-16 rounded-3xl py-5 px-7"}>3</div>
           </div>
      </div>
    )

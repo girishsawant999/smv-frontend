@@ -8,7 +8,8 @@ module.exports = {
         'manrope-extra-light': ['Manrope-extra-light'],
         'manrope-regular': ['Manrope-regular'],
         'manrope-semibold': ['Manrope-semibold'],
-        manrope: ['Manrope']
+        'manrope': ['Manrope'],
+        'sequel':['Sequel-76']
       },
       backgroundColor: {
         '#FFFFFF': '#FFFFFF',
@@ -42,21 +43,29 @@ module.exports = {
       height: {
         '135': '540px',
         '68': '274px',
-        '17.5': '70px'
+        '17.5': '70px',
+        '120': '480px',
+        '4.5': '18px'
       },
       width: {
-        26: '104px',
+        '26': '104px',
         '84': '335px',
         '53.5': '214px',
         '13.75': '55px',
         '38.25': '153px',
-        '17.5': '70px'
+        '17.5': '70px',
+        '42': '168px',
+        '34':'136px'
       },
       padding: {
         '17': '69px'
       },
       boxShadow: {
-        'button': '0px 50px 25px 1px #FFFFFF'
+        'button': '0px 40px 18px 2px #FFFFFF'
+      },
+      screens: {
+        'xsm': '374px',
+        'xmd': '767px'
       }
     }
   },

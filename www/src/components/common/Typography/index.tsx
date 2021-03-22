@@ -14,7 +14,6 @@ type ITypographyProps = {
 const Typography = ({ type="heading", weight, size, font="primary", className = '', variant, children }: ITypographyProps) => {
 
   const Component = variant;
-  console.log(size)
 
   return (
       <Component className={[className, styles[type], styles[weight], styles["size-" + size], styles[font]].join(" ")} >

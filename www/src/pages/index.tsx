@@ -14,6 +14,7 @@ export const getServerSideProps:GetServerSideProps = async () => {
 }
 
 
+
 function Home({data}: InferGetServerSidePropsType<typeof getServerSideProps>){
   return <LandingPage data = {data}/>
 }
