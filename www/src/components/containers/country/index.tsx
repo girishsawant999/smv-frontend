@@ -54,9 +54,10 @@ function CountryPage({ data }:InferGetServerSidePropsType<typeof getServerSidePr
             <FAQ faq={data.data.faq}/>
 
             {/*Start button*/}
-            <div className={""}>
+            <div className={"flex w-full justify-center"}>
                 <Button
                     onClick={()=>{console.log(selectedPack); console.log(addonPacks)}}
+                    className={""}
                     type="submit">
                         Start my visa process
                 </Button>
