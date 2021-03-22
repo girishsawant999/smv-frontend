@@ -1,19 +1,14 @@
 import Button from 'components/common/Button';
 import Emotes from 'components/common/emotes';
 import Typography from 'components/common/Typography';
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import commonStyles from '../../login.module.css';
 import BackButton from 'components/common/backButton';
 import styles from './passwordInputScreen.module.css';
-
+import { IPasswordInputScreenProps } from '../../types';
 PasswordInputScreen.propTypes = {};
 
-type IOtpInputScreenProps = {
-  pageState: string;
-  setpageState: (pageState: string) => void;
-};
-
-function PasswordInputScreen({ pageState, setpageState }: IOtpInputScreenProps) {
+function PasswordInputScreen({ pageState, setpageState }: IPasswordInputScreenProps) {
   const [password, setpassword] = useState<string>('');
 
   const onPasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {

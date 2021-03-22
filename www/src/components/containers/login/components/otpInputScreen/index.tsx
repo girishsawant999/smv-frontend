@@ -5,17 +5,9 @@ import React, { useState } from 'react';
 import commonStyles from '../../login.module.css';
 import BackButton from 'components/common/backButton';
 import styles from './otpscreen.module.css';
+import { IOtpInputScreenProps, IOTP } from '../../types';
 
 OtpInputScreenComp.propTypes = {};
-
-type IOtpInputScreenProps = {
-  pageState: string;
-  setpageState: (pageState: string) => void;
-  phoneNumber: string;
-};
-type IOTP = {
-  [key: string]: string;
-};
 
 const OTP_INPUTS = ['otp1', 'otp2', 'otp3', 'otp4'];
 function OtpInputScreenComp({

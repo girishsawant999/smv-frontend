@@ -5,15 +5,9 @@ import Typography from 'components/common/Typography/index';
 import React from 'react';
 import commonStyles from '../../login.module.css';
 import Styles from './phoneNumberInput.module.css';
+import { IPhoneInputScreenProps } from '../../types';
 
 PhoneInputScreenComponent.propTypes = {};
-
-type IPhoneInputScreenProps = {
-  pageState: string;
-  setpageState: (pageState: string) => void;
-  phoneNumber: string;
-  setphoneNumber: (phoneNumber: string) => void;
-};
 
 function PhoneInputScreenComponent({
   pageState,

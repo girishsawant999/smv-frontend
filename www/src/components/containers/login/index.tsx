@@ -7,12 +7,9 @@ import PhoneNumberInput from 'components/containers/login/components/phoneNumber
 import WelcomeScreen from 'components/containers/login/components/welcomeScreen';
 import React, { useState } from 'react';
 import styles from './login.module.css';
+import { IName } from './types';
 
 Login.propTypes = {};
-
-type IName = {
-  [key: string]: string;
-};
 
 function Login() {
   const [pageState, setpageState] = useState<string>('phone-input');

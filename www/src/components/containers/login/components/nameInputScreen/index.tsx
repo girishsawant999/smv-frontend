@@ -1,23 +1,13 @@
+import BackButton from 'components/common/backButton';
 import Button from 'components/common/Button';
 import Emotes from 'components/common/emotes';
 import Typography from 'components/common/Typography';
-import React, { useState } from 'react';
+import React from 'react';
 import commonStyles from '../../login.module.css';
-import BackButton from 'components/common/backButton';
+import { INameInputScreenProps } from '../../types';
 import styles from './nameInput.module.css';
 
 NameInputScreen.propTypes = {};
-
-type IName = {
-  [key: string]: string;
-};
-
-type INameInputScreenProps = {
-  pageState: string;
-  setpageState: (pageState: string) => void;
-  setname: (obj: IName) => void;
-  name: IName;
-};
 
 function NameInputScreen({
   pageState,
@@ -58,7 +48,7 @@ function NameInputScreen({
         </div>
 
         <div className="mt-5">
-          <div className="w-64 flex justify-between">
+          <div className="max-w-64 flex justify-between">
             <label htmlFor="first" className="hidden">
               Enter first name
             </label>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Img from 'components/common/Img';
+import Img from 'components/common/img';
 import styles from './emotes.module.css';
 
 Emotes.propTypes = {};

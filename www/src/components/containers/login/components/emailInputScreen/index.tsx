@@ -5,15 +5,11 @@ import React, { useState } from 'react';
 import commonStyles from '../../login.module.css';
 import BackButton from 'components/common/backButton';
 import styles from './emailInputScreen.module.css';
+import { IEmailInputScreenProps } from '../../types';
 
 OtpInputScreenComp.propTypes = {};
 
-type IOtpInputScreenProps = {
-  pageState: string;
-  setpageState: (pageState: string) => void;
-};
-
-function OtpInputScreenComp({ pageState, setpageState }: IOtpInputScreenProps) {
+function OtpInputScreenComp({ pageState, setpageState }: IEmailInputScreenProps) {
   const [email, setemail] = useState<string>('');
 
   const onEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {

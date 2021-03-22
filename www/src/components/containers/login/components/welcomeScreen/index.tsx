@@ -1,18 +1,9 @@
 import Emotes from 'components/common/emotes';
 import Typography from 'components/common/Typography';
 import React, { useEffect } from 'react';
+import { IWelcomeScreenProps } from '../../types';
 
 WelcomeScreen.propTypes = {};
-
-type IName = {
-  [key: string]: string;
-};
-
-
-type IWelcomeScreenProps = {
-  setpageState: (pageState: string) => void;
-  name: IName;
-};
 
 function WelcomeScreen({ setpageState, name }: IWelcomeScreenProps) {
   useEffect(() => {
