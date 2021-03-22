@@ -8,12 +8,53 @@ import AdditionalDocList from './components/additionalDocList/AdditionalDocList'
 import FAQ from './components/faq/FAQ';
 import CountryInfo from './components/countryInfo/CountryInfo';
 import CountryImage from './components/countryImage/CountryImage';
-import { InferGetServerSidePropsType } from 'next';
-import { getServerSideProps } from '../../../pages/country';
 import Button from "../../common/Button";
-import styles from "./country.module.css";
+import type IInputDataProps from "../../../pages/country/index"
 
-function CountryPage({ data }:InferGetServerSidePropsType<typeof getServerSideProps>) {
+type IPackInfo={
+    id: number;
+    days: string;
+    price: string;
+    oldPrice: string;
+    description: string;
+}
+type IAddonService={
+    id: number;
+    info: string;
+    detail: string;
+    price: string;
+    oldPrice: string;
+    description: string;
+}
+type IAdditionalDoc={
+    condition: string;
+    list: Array<string>;
+}
+type IFaq = {
+    question: string;
+    answer: string;
+}
+type IInputDataProps ={
+    success: boolean;
+    data: {
+        countryInfo: {
+            name: string;
+            processingTime: string;
+            description: string;
+        };
+        packsInfo: Array<IPackInfo>;
+        addonService: Array<IAddonService>;
+        importantInfo: Array<string>;
+        documentList: Array<string>;
+        additionalDocList: Array<IAdditionalDoc>;
+        faq: Array<IFaq>;
+  }
+}
+type ICountryInfoProps= {
+    countryInfo: IInputDataProps
+}
+
+function CountryPage({ countryInfo }:ICountryInfoProps) {
 
     const [selectedPack, setSelectedPack] = useState(0);
     const [addonPacks, setAddonPacks] = useState([]);
@@ -25,33 +66,33 @@ function CountryPage({ data }:InferGetServerSidePropsType<typeof getServerSidePr
             <CountryImage/>
 
             {/*Introduction of country*/}
-            <CountryInfo countryInfo={data.data.countryInfo}/>
+            <CountryInfo countryInfo={countryInfo.data.countryInfo}/>
 
             {/*all pack information*/}
             <AllPacks
-                packsInfo={data.data.packsInfo}
+                packsInfo={countryInfo.data.packsInfo}
                 selectedPack={selectedPack}
                 setSelectedPack={setSelectedPack}
             />
 
             {/*Addon information*/}
             <AddonService
-                addonService={data.data.addonService}
+                addonService={countryInfo.data.addonService}
                 addonPacks={addonPacks}
                 setAddonPacks={setAddonPacks}
             />
 
             {/*Important information section*/}
-            <ImportantInformation importantInfo={data.data.importantInfo}/>
+            <ImportantInformation importantInfo={countryInfo.data.importantInfo}/>
 
             {/*Document list section*/}
-            <DocumentList documentList={data.data.documentList}/>
+            <DocumentList documentList={countryInfo.data.documentList}/>
 
             {/*Additional doc list*/}
-            <AdditionalDocList additionalDocList={data.data.additionalDocList}/>
+            <AdditionalDocList additionalDocList={countryInfo.data.additionalDocList}/>
 
             {/*FAQ section*/}
-            <FAQ faq={data.data.faq}/>
+            <FAQ faq={countryInfo.data.faq}/>
 
             {/*Start button*/}
             <div className={"flex w-full justify-center"}>

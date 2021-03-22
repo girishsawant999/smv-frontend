@@ -11,7 +11,7 @@ type IUseFetch = {
 const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 const OPTIONS = {};
 
-export const useFetch = ({
+export const useFetch = async ({
   url,
   options = OPTIONS,
   authenticated = false
@@ -21,10 +21,13 @@ export const useFetch = ({
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    console.log('-----------')
+    console.log(BASE_URL)
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const res = await fetch(BASE_URL + url, { ...OPTIONS, ...options });
+        // const res = await fetch(BASE_URL + url, { ...OPTIONS, ...options });
+        const res = await fetch( url, { ...OPTIONS, ...options });
         const json = await res.json();
         setResponse(json);
         setIsLoading(false);

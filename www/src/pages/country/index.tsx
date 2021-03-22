@@ -5,10 +5,10 @@ import { GetServerSideProps } from 'next'
 
 export const getServerSideProps:GetServerSideProps = async () => {
     const res = await fetch('http://localhost:44444/api/v1/ums/country/info')
-    const data = await res.json()
+    const countryInfo = await res.json()
     return {
         props: {
-            data,
+            countryInfo,
         },
     }
 }
@@ -51,14 +51,18 @@ type IInputDataProps ={
         faq: Array<IFaq>;
     }
 }
+type ICountryInfoProps= {
+    countryInfo: IInputDataProps
+}
 
-function CountryPageMain({data}:IInputDataProps) {
+function CountryPageMain({countryInfo}:ICountryInfoProps) {
+
     return (
         <Fragment>
             <Head>
                 <title>Country</title>
             </Head>
-            <CountryPage data={data}/>
+            <CountryPage countryInfo={countryInfo}/>
       </Fragment>
     )
 }

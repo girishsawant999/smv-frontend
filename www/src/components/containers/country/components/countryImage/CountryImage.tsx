@@ -15,7 +15,7 @@ function CountryImage(){
             </div>
             <Img
                 alt={"country image"}
-                className={"w-full h-96"}
+                className={"w-full"}
                 srcSet={["country/country.png", "country/country@2x.png 2x", "country/country@3x.png 3x"]}
                 placeHolderBg={'#f5f4f5'}
             />
