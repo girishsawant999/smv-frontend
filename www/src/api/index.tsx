@@ -1,40 +1,49 @@
-import { useState, useEffect } from 'react';
-
-type IFetchOptions = {};
-
 type IUseFetch = {
-  url: string;
-  options?: IFetchOptions;
+  url: String;
+  options?: RequestInit;
   authenticated?: Boolean;
 };
 
-const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+export type APIResponseType = {
+  response: JSON;
+  error: String;
+  status: Number;
+};
+
+const BASE_URL = process.env.REACT_APP_API_BASE_URL || 'localhost:44444/';
 const OPTIONS = {};
 
-export const useFetch = ({
-  url,
-  options = OPTIONS,
-  authenticated = false
-}: IUseFetch) => {
-  const [response, setResponse] = useState(null);
-  const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
+export const fetchApi = async (
+  url: string,
+  options: RequestInit = OPTIONS,
+  authenticated: Boolean = false
+) => {
+  let apiResponse: APIResponseType = await fetch(BASE_URL.concat(url), {
+    ...OPTIONS,
+    ...options
+  })
+    .then(async (res) => {
+      let response = null;
+      let error = null;
       try {
-        const res = await fetch(BASE_URL + url, { ...OPTIONS, ...options });
-        const json = await res.json();
-        setResponse(json);
-        setIsLoading(false);
-      } catch (error) {
-        setError(error);
-        setIsLoading(false);
+        response = await res.json();
+        console.log('response :>> ', response);
+        return {
+          response,
+          error,
+          status: res.status
+        };
+      } catch (err) {
+        error = (err && err.message) || 'Something went wrong!';
+        console.log('error :>> ', error);
+        return {
+          response,
+          error,
+          status: res.status
+        };
       }
-    };
-    fetchData();
-  }, []);
+    })
+    .then((res) => res);
 
-  return { response, error, isLoading };
+  return apiResponse;
 };
