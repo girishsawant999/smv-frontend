@@ -1,9 +1,3 @@
-type IUseFetch = {
-  url: String;
-  options?: RequestInit;
-  authenticated?: Boolean;
-};
-
 export type APIResponseType = {
   response: JSON;
   error: String;
