@@ -1,43 +1,43 @@
-import { useState, useEffect } from 'react';
-
-type IFetchOptions = {};
-
-type IUseFetch = {
-  url: string;
-  options?: IFetchOptions;
-  authenticated?: Boolean;
+export type APIResponseType = {
+  response: JSON;
+  error: String;
+  status: Number;
 };
 
-const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:44444/';
 const OPTIONS = {};
 
-export const useFetch = async ({
-  url,
-  options = OPTIONS,
-  authenticated = false
-}: IUseFetch) => {
-  const [response, setResponse] = useState(null);
-  const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    console.log('-----------')
-    console.log(BASE_URL)
-    const fetchData = async () => {
-      setIsLoading(true);
+export const fetchApi = async (
+  url: string,
+  options: RequestInit = OPTIONS,
+  authenticated: Boolean = false
+) => {
+  let apiResponse: APIResponseType = await fetch(BASE_URL.concat(url), {
+    ...OPTIONS,
+    ...options
+  })
+    .then(async (res) => {
+      let response = null;
+      let error = null;
       try {
-        // const res = await fetch(BASE_URL + url, { ...OPTIONS, ...options });
-        const res = await fetch( url, { ...OPTIONS, ...options });
-        const json = await res.json();
-        setResponse(json);
-        setIsLoading(false);
-      } catch (error) {
-        setError(error);
-        setIsLoading(false);
+        response = await res.json();
+        console.log('response :>> ', response);
+        return {
+          response,
+          error,
+          status: res.status
+        };
+      } catch (err) {
+        error = (err && err.message) || 'Something went wrong!';
+        console.log('error :>> ', error);
+        return {
+          response,
+          error,
+          status: res.status
+        };
       }
-    };
-    fetchData();
-  }, []);
+    })
+    .then((res) => res);
 
-  return { response, error, isLoading };
+  return apiResponse;
 };

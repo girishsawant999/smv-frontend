@@ -37,6 +37,3 @@ export type IInputDataProps ={
         faq: Array<IFaq>;
     }
 }
-export type ICountryInfoProps= {
-    countryInfo: IInputDataProps
-}

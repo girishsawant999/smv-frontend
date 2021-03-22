@@ -57,7 +57,7 @@ function CountryPage({ countryInfo }:ICountryInfoProps) {
             <FAQ faq={countryInfo.data.faq}/>
 
             {/*Start button*/}
-            <div className={"flex w-full justify-center"}>
+            <div className={"flex w-full justify-center mb-5"}>
                 <Button
                     onClick={()=>{console.log(selectedPack); console.log(addonPacks)}}
                     className={""}
