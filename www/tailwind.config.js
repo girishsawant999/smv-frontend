@@ -3,10 +3,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      minWidth: {
-        10: '2.5rem',
+      fontFamily: {
         manrope: ['Manrope'],
         sequel: ['Sequel-76']
+      },
+      minWidth: {
+        10: '2.5rem',
       },
       backgroundColor: {
         '#FFFFFF': '#FFFFFF',
