@@ -4,7 +4,7 @@ export type APIResponseType = {
   status: Number;
 };
 
-const BASE_URL = process.env.REACT_APP_API_BASE_URL || 'localhost:44444/';
+const BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:44444/';
 const OPTIONS = {};
 
 export const fetchApi = async (

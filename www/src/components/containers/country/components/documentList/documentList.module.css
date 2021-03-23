@@ -1,0 +1,9 @@
+.ul{
+    padding:0 20px;
+    list-style-type: disc;
+}
+.li{
+    margin:0 0 0 10px;
+    font-size: 0.75rem;
+    color: #9B939F;
+}
