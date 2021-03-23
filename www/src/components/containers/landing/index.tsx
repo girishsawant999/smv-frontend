@@ -131,8 +131,10 @@ function LandingPage({LandingPageInfo}:ILandingPageInfoProps) {
                         />
                     </div>
                 </div>
+
                 <div>
                   <CountriesVisaDetailSlider countryList = {LandingPageInfo.data.CountryVisaDetailFast}/>
+
                 </div>
             </section>
 
