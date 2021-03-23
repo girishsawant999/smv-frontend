@@ -1,0 +1,27 @@
+.phoneNumberInputContainer {
+  max-width: 335px;
+  width: 100%;
+  height: 55px;
+  margin: 0 0 18px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: solid 1px #e6e4e7;
+  position: relative;
+}
+.phoneNumberInputContainer span {
+    position: absolute;
+    left: 20px;
+    width: 39px;
+}
+.phoneNumberInputContainer input {
+    font-family: Manrope;
+    outline: none;
+    text-align: center;
+    font-size: 0.875rem;
+    position: absolute;
+    left: 65px;
+    right: 10px;
+    top: 8px;
+    bottom: 8px;
+    width: calc(100% - 85px);
+}

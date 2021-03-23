@@ -1,15 +1,11 @@
 import Emotes from 'components/common/emotes';
 import Typography from 'components/common/Typography';
 import React, { useEffect } from 'react';
+import { IWelcomeScreenProps } from '../../types';
 
 WelcomeScreen.propTypes = {};
 
-type IWelcomeScreenProps = {
-  setpageState: (pageState: string) => void;
-  firstName: string;
-};
-
-function WelcomeScreen({ setpageState, firstName }: IWelcomeScreenProps) {
+function WelcomeScreen({ setpageState, name }: IWelcomeScreenProps) {
   useEffect(() => {
     setTimeout(() => {
       setpageState('phone-input');
@@ -29,7 +25,7 @@ function WelcomeScreen({ setpageState, firstName }: IWelcomeScreenProps) {
 
         <div className="mx-10 max-w-sm text-center">
           <Typography weight="extra-bold" variant="h1" size="20">
-            Hey {firstName} <br /> Glad to have you here.
+            Hey {name.first} <br /> Glad to have you here.
           </Typography>
         </div>
       </div>
