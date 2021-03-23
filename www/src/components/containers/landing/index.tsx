@@ -88,6 +88,7 @@ function LandingPage({LandingPageInfo}:ILandingPageInfoProps) {
                             type="text"
                             placeholder="I am looking for a visa to..."
                             name="searchCountryValue"
+                            disabled
                             />
                             <button type="submit" className="bg-#1A181B w-10 h-10 my-2.5 ml-4 mr-2 text-white
                             rounded-2xl flex justify-center items-center">
