@@ -1,10 +1,10 @@
 const router = require('express').Router();
 
-router.get('/landing', (req, res) => {
+router.get('/list', (req, res) => {
   const response = {
     success: true,
     data: {
-      CountryVisaDetailSlow: [
+      SuggestedCountryVisaDetail: [
         {
           imageLink: {
             imageLink_1x: 'landing/country_portugal_images/bitmap_2.png',
@@ -42,7 +42,7 @@ router.get('/landing', (req, res) => {
           time: '4-7 working days'
         }
       ],
-      CountryVisaDetailFast: [
+      FastestCountryVisaDetail: [
         {
           imageLink: {
             imageLink_1x: 'landing/country_greece_images/bitmap.png',

@@ -20,8 +20,8 @@ export type IBlogArrayProps = {
 export type IInputDataProps = {
   success: boolean;
   data: {
-    CountryVisaDetailSlow:Array<ICountryListObjectProps>;
-    CountryVisaDetailFast:Array<ICountryListObjectProps>;
+    SuggestedCountryVisaDetail:Array<ICountryListObjectProps>;
+    FastestCountryVisaDetail:Array<ICountryListObjectProps>;
     BlogArray:Array<IBlogArrayProps>
   }
 }

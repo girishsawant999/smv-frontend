@@ -115,7 +115,7 @@ function LandingPage({LandingPageInfo}:ILandingPageInfoProps) {
                     </div>
                 </div>
                 <div>
-                    <CountriesVisaDetailSlider countryList = {LandingPageInfo.data.CountryVisaDetailSlow}/>
+                    <CountriesVisaDetailSlider countryList = {LandingPageInfo.data.SuggestedCountryVisaDetail}/>
                 </div>
             </section>
 
@@ -133,7 +133,7 @@ function LandingPage({LandingPageInfo}:ILandingPageInfoProps) {
                 </div>
 
                 <div>
-                  <CountriesVisaDetailSlider countryList = {LandingPageInfo.data.CountryVisaDetailFast}/>
+                  <CountriesVisaDetailSlider countryList = {LandingPageInfo.data.FastestCountryVisaDetail}/>
 
                 </div>
             </section>
