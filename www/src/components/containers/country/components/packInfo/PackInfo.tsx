@@ -21,12 +21,10 @@ function PackInfo({id, days, price, oldPrice, description, selectedPack, setSele
             </Typography>
             <div className={styles.radio_btn+ " absolute right-5 top-5"}>
                 <div className={styles.container}>
-                    <form>
-                        <label>
-                            <input type="radio" checked={id===selectedPack} name="radio" onChange={()=>setSelectedPack(id)}/>
-                            <span className={styles.checkmark}> </span>
-                        </label>
-                    </form>
+                    <label>
+                        <input type="radio" checked={id===selectedPack} name="radio" onChange={()=>setSelectedPack(id)}/>
+                        <span className={styles.checkmark}> </span>
+                    </label>
                 </div>
             </div>
             <div className="flex items-end">

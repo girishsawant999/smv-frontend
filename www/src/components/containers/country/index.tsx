@@ -24,47 +24,49 @@ function CountryPage({ countryInfo }:ICountryInfoProps) {
     return (
         <div className="flex flex-col md:max-w-md md:mx-auto relative">
 
-            {/*Header image section*/}
-            <CountryImage/>
+            <form>
+                {/*Header image section*/}
+                <CountryImage/>
 
-            {/*Introduction of country*/}
-            <CountryInfo countryInfo={countryInfo.data.countryInfo}/>
+                {/*Introduction of country*/}
+                <CountryInfo countryInfo={countryInfo.data.countryInfo}/>
 
-            {/*all pack information*/}
-            <AllPacks
-                packsInfo={countryInfo.data.packsInfo}
-                selectedPack={selectedPack}
-                setSelectedPack={setSelectedPack}
-            />
+                {/*all pack information*/}
+                <AllPacks
+                    packsInfo={countryInfo.data.packsInfo}
+                    selectedPack={selectedPack}
+                    setSelectedPack={setSelectedPack}
+                />
 
-            {/*Addon information*/}
-            <AddonService
-                addonService={countryInfo.data.addonService}
-                addonPacks={addonPacks}
-                setAddonPacks={setAddonPacks}
-            />
+                {/*Addon information*/}
+                <AddonService
+                    addonService={countryInfo.data.addonService}
+                    addonPacks={addonPacks}
+                    setAddonPacks={setAddonPacks}
+                />
 
-            {/*Important information section*/}
-            <ImportantInformation importantInfo={countryInfo.data.importantInfo}/>
+                {/*Important information section*/}
+                <ImportantInformation importantInfo={countryInfo.data.importantInfo}/>
 
-            {/*Document list section*/}
-            <DocumentList documentList={countryInfo.data.documentList}/>
+                {/*Document list section*/}
+                <DocumentList documentList={countryInfo.data.documentList}/>
 
-            {/*Additional doc list*/}
-            <AdditionalDocList additionalDocList={countryInfo.data.additionalDocList}/>
+                {/*Additional doc list*/}
+                <AdditionalDocList additionalDocList={countryInfo.data.additionalDocList}/>
 
-            {/*FAQ section*/}
-            <FAQ faq={countryInfo.data.faq}/>
+                {/*FAQ section*/}
+                <FAQ faq={countryInfo.data.faq}/>
 
-            {/*Start button*/}
-            <div className={"flex w-full justify-center mb-5"}>
-                <Button
-                    onClick={()=>{console.log(selectedPack); console.log(addonPacks)}}
-                    className={""}
-                    type="submit">
-                        Start my visa process
-                </Button>
-            </div>
+                {/*Start button*/}
+                <div className={"flex w-full justify-center mb-5"}>
+                    <Button
+                        onClick={()=>{console.log(selectedPack); console.log(addonPacks)}}
+                        className={""}
+                        type="submit">
+                            Start my visa process
+                    </Button>
+                </div>
+            </form>
         </div>
     );
 }
