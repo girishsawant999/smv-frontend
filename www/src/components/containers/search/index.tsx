@@ -9,21 +9,17 @@ function SearchMain({ suggestedCountries, mostPopularCountries }: ISearchMain) {
   const [resultCountries, setResultCountries] = useState<Array<CountryObject>>([]);
 
   const getCountries = async (query: string) => {
-    console.log('resultCountries :>> ', resultCountries);
-    try {
-      const resCountries = await fetchApi(`api/v1/ums/countries/list?name=${query}`);
-      if (resCountries && !resCountries.error && resCountries.response) {
-        let { response } = resCountries;
-        setResultCountries((response && response.data) || []);
-      }
-    } catch (err) {
-      console.log('err :>> ', err);
+    const resCountries = await fetchApi(`api/v1/ums/countries/list?name=${query}`);
+    if (resCountries && !resCountries.error && resCountries.response) {
+      let { response } = resCountries;
+      setResultCountries((response && response.data) || []);
     }
   };
 
   const onSearchQueryChange = (event: { target: HTMLInputElement }) => {
     const value = event.target.value;
     if (value) getCountries(value);
+    else setResultCountries([]);
     setsearchQuery(value);
   };
 
@@ -46,9 +42,11 @@ function SearchMain({ suggestedCountries, mostPopularCountries }: ISearchMain) {
           />
         </div>
       ) : (
-        mostPopularCountries && (
+        resultCountries &&
+        Array.isArray(resultCountries) &&
+        resultCountries.length > 0 && (
           <div>
-            <CountryList countries={mostPopularCountries} isResultPage={true} />
+            <CountryList countries={resultCountries} isResultPage={true} />
           </div>
         )
       )}
