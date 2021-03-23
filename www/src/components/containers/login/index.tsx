@@ -7,13 +7,16 @@ import PhoneNumberInput from 'components/containers/login/components/phoneNumber
 import WelcomeScreen from 'components/containers/login/components/welcomeScreen';
 import React, { useState } from 'react';
 import styles from './login.module.css';
+import { IName } from './types';
+
 
 Login.propTypes = {};
+
 
 function Login() {
   const [pageState, setpageState] = useState<string>('phone-input');
   const [phoneNumber, setphoneNumber] = useState('');
-  const [firstName, setfirstName] = useState('');
+  const [name, setname] = useState<IName>({});
 
   return (
     <div className={styles.logindiv}>
@@ -43,11 +46,12 @@ function Login() {
           <NameInput
             pageState={pageState}
             setpageState={setpageState}
-            setfirstName={setfirstName}
+            setname={setname}
+            name={name}
           />
         )}
         {pageState === 'welcome-screen' && (
-          <WelcomeScreen firstName={firstName} setpageState={setpageState} />
+          <WelcomeScreen name={name} setpageState={setpageState} />
         )}
       </Popover>
     </div>
