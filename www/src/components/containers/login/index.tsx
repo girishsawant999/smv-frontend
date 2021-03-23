@@ -9,7 +9,9 @@ import React, { useState } from 'react';
 import styles from './login.module.css';
 import { IName } from './types';
 
+
 Login.propTypes = {};
+
 
 function Login() {
   const [pageState, setpageState] = useState<string>('phone-input');
