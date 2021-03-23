@@ -20,9 +20,9 @@ function Accordion({question, answer}:IAccordionProp){
             <div className="w-8 h-8 p-2 bg-gray-200 flex justify-center items-center bg-opacity-40 rounded-xl cursor-pointer">
               {
                 !selected ?
-                  <Icon src={"landing/plus/plus-square.svg"} alt={"expand button"}/>
+                  <Icon src={"plus-square.svg"} alt={"expand button"}/>
                   :
-                  <Icon src={"landing/minus/path.svg"} alt={"collapse button"}/>
+                  <Icon src={"minus.svg"} alt={"collapse button"}/>
               }
             </div>
           </div>

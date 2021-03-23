@@ -7,7 +7,7 @@ type IIconProps = {
   className?: string;
 }
 
-const baseLocation = "/assets/images/";
+const baseLocation = "/assets/icons/";
 function Icon({ src, alt, className }: IIconProps) {
   return <img src={baseLocation + src} alt={alt} className={className} />;
 }

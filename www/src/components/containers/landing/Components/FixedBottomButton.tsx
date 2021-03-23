@@ -7,14 +7,14 @@ function FixedBottomButton(){
       <div className="flex bg-#1A181B py-6 px-7 w-32 h-17.5 rounded-30px justify-between">
         <div className="shadow-button">
           <Icon
-            src={"landing/compass_icon _image/compass@3x.png"}
+            src={"compass@3x.png"}
             alt="compass_icon _image"
             className="w-5 h-5"
           />
         </div>
         <div>
           <Icon
-            src={"landing/user_icon_image/user@3x.png"}
+            src={"user@3x.png"}
             alt="compass_icon _image"
             className="w-4 h-4.5"
           />
@@ -23,7 +23,7 @@ function FixedBottomButton(){
       <div className="flex bg-#1A181B p-6 ml-5 w-17.5 h-17.5 rounded-30px text-white">
         <div>
           <Icon
-            src={"landing/chat_icon_image/chat@3x.png"}
+            src={"chat@3x.png"}
             alt="compass_icon _image"
             className="w-5 h-5"
           />

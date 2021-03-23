@@ -93,7 +93,7 @@ function LandingPage({LandingPageInfo}:ILandingPageInfoProps) {
                             <button type="submit" className="bg-#1A181B w-10 h-10 my-2.5 ml-4 mr-2 text-white
                             rounded-2xl flex justify-center items-center">
                                 <Icon
-                                  src={"landing/search_icon_image/search-1@3x.png"}
+                                  src={"search-1@3x.png"}
                                   alt="Search for specific country"
                                   className="p-3"
                                 />
@@ -109,7 +109,7 @@ function LandingPage({LandingPageInfo}:ILandingPageInfoProps) {
                         Countries to visit right now
                     </Typography>
                     <div className="bg-#F5F4F5 w-8 h-8 mr-5 mt-5 xsm:mt-0  rounded-xl flex justify-center items-center">
-                        <Icon src={"landing/right_arrow_image/arrow-right_2@3x.png"}
+                        <Icon src={"arrow-right_2@3x.png"}
                               alt="right arrow navigation image"
                               className="p-2"
                         />
@@ -126,7 +126,7 @@ function LandingPage({LandingPageInfo}:ILandingPageInfoProps) {
                           Fastest visa process
                     </Typography>
                     <div className="bg-#F5F4F5 w-8 h-8 mr-5 rounded-xl flex justify-center items-center">
-                        <Icon src={"landing/right_arrow_image/arrow-right_2@3x.png"}
+                        <Icon src={"arrow-right_2@3x.png"}
                               alt="right arrow navigation image"
                               className="p-2"
                         />
@@ -162,7 +162,7 @@ function LandingPage({LandingPageInfo}:ILandingPageInfoProps) {
                             Fresh from the blog
                       </Typography>
                         <div className="bg-#F5F4F5 w-8 h-8 mr-5 rounded-xl flex justify-center items-center">
-                          <Icon src={"landing/right_arrow_image/arrow-right_2@3x.png"}
+                          <Icon src={"arrow-right_2@3x.png"}
                                 alt="right arrow navigation image"
                                 className="p-2" />
                         </div>

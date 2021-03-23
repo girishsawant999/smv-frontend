@@ -7,10 +7,10 @@ function CountryImage(){
         <section className="relative">
             <div className=" z-10 ">
                 <button className="absolute w-10 h-10 bg-white flex top-10 right-5 justify-center items-center bg-opacity-40 rounded-2xl cursor-pointer">
-                    <Icon src={"share/share.svg"} alt={"share"}/>
+                    <Icon src={"share.svg"} alt={"share"}/>
                 </button>
                 <button className="absolute w-10 h-10 bg-white flex top-10 left-5 justify-center items-center bg-opacity-40 rounded-2xl cursor-pointer"  onClick={()=>history.back()}>
-                    <Icon src={"chevron-left/chevron-left.svg"} alt={"go back"}/>
+                    <Icon src={"chevron-left.svg"} alt={"go back"}/>
                 </button>
             </div>
             <Img
