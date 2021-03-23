@@ -1,43 +1,38 @@
-export type APIResponseType = {
-  response: JSON;
-  error: String;
-  status: Number;
-};
-
 const BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:44444/';
 const OPTIONS = {};
 
-export const fetchApi = async (
-  url: string,
-  options: RequestInit = OPTIONS,
-  authenticated: Boolean = false
-) => {
-  let apiResponse: APIResponseType = await fetch(BASE_URL.concat(url), {
-    ...OPTIONS,
-    ...options
-  })
-    .then(async (res) => {
-      let response = null;
-      let error = null;
-      try {
-        response = await res.json();
-        console.log('response :>> ', response);
-        return {
-          response,
-          error,
-          status: res.status
-        };
-      } catch (err) {
-        error = (err && err.message) || 'Something went wrong!';
-        console.log('error :>> ', error);
-        return {
-          response,
-          error,
-          status: res.status
-        };
-      }
-    })
-    .then((res) => res);
+export type successType<T> = {
+  statusCode: number;
+  data: T;
+}
 
-  return apiResponse;
+export type errorType = {
+  statusCode: number | null;
+  message: string;
+}
+
+export type APIResponseType<T> = successType<T>;
+
+export async function fetchApi<T>(url: string, options?: RequestInit, authenticated?: Boolean) : Promise<APIResponseType<T>> {
+  let res;
+  try {
+    res = await fetch(BASE_URL.concat(url), {
+      ...OPTIONS,
+      ...options
+    });
+    const response = await res.json();
+    return {
+      statusCode: res.status,
+      data: response
+    };
+  } catch(err) {
+    throw err;
+    /*
+    const error:string = (err && err.message) || 'Something went wrong!';
+    return {
+      statusCode: res ? res.status : null,
+      message: error
+    };
+    */
+  }
 };
