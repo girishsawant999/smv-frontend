@@ -35,7 +35,7 @@ function Img({
   };
 
   return (
-    <LazyLoad offset={100} height={100} width={100} once>
+    <LazyLoad offset={100} height={100} once>
       <picture style={Styles.imgBackground}>
         <source type={type} srcSet={_srcSet.join(', ')} />
         <img
