@@ -7,68 +7,69 @@ import AdditionalDocList from './components/additionalDocList/AdditionalDocList'
 import FAQ from './components/faq/FAQ';
 import CountryInfo from './components/countryInfo/CountryInfo';
 import CountryImage from './components/countryImage/CountryImage';
-import Button from "../../common/Button";
+import Button from '../../common/Button';
 import { IInputDataProps } from './types';
 
 CountryPage.propTypes = {};
 
-type ICountryInfoProps= {
-    countryInfo: IInputDataProps
-}
+type ICountryInfoProps = {
+  countryInfo: IInputDataProps;
+};
 
-function CountryPage({ countryInfo }:ICountryInfoProps) {
+function CountryPage({ countryInfo }: ICountryInfoProps) {
+  const [selectedPack, setSelectedPack] = useState(0);
+  const [addonPacks, setAddonPacks] = useState([]);
 
-    const [selectedPack, setSelectedPack] = useState(0);
-    const [addonPacks, setAddonPacks] = useState([]);
+  return (
+    <div className="flex flex-col md:max-w-md md:mx-auto relative">
+      <form>
+        {/*Header image section*/}
+        <CountryImage />
 
-    return (
-        <div className="flex flex-col md:max-w-md md:mx-auto relative">
+        {/*Introduction of country*/}
+        <CountryInfo countryInfo={countryInfo.data.countryInfo} />
 
-            <form>
-                {/*Header image section*/}
-                <CountryImage/>
+        {/*all pack information*/}
+        <AllPacks
+          packsInfo={countryInfo.data.packsInfo}
+          selectedPack={selectedPack}
+          setSelectedPack={setSelectedPack}
+        />
 
-                {/*Introduction of country*/}
-                <CountryInfo countryInfo={countryInfo.data.countryInfo}/>
+        {/*Addon information*/}
+        <AddonService
+          addonService={countryInfo.data.addonService}
+          addonPacks={addonPacks}
+          setAddonPacks={setAddonPacks}
+        />
 
-                {/*all pack information*/}
-                <AllPacks
-                    packsInfo={countryInfo.data.packsInfo}
-                    selectedPack={selectedPack}
-                    setSelectedPack={setSelectedPack}
-                />
+        {/*Important information section*/}
+        <ImportantInformation importantInfo={countryInfo.data.importantInfo} />
 
-                {/*Addon information*/}
-                <AddonService
-                    addonService={countryInfo.data.addonService}
-                    addonPacks={addonPacks}
-                    setAddonPacks={setAddonPacks}
-                />
+        {/*Document list section*/}
+        <DocumentList documentList={countryInfo.data.documentList} />
 
-                {/*Important information section*/}
-                <ImportantInformation importantInfo={countryInfo.data.importantInfo}/>
+        {/*Additional doc list*/}
+        <AdditionalDocList additionalDocList={countryInfo.data.additionalDocList} />
 
-                {/*Document list section*/}
-                <DocumentList documentList={countryInfo.data.documentList}/>
+        {/*FAQ section*/}
+        <FAQ faq={countryInfo.data.faq} />
 
-                {/*Additional doc list*/}
-                <AdditionalDocList additionalDocList={countryInfo.data.additionalDocList}/>
-
-                {/*FAQ section*/}
-                <FAQ faq={countryInfo.data.faq}/>
-
-                {/*Start button*/}
-                <div className={"flex w-full justify-center mb-5"}>
-                    <Button
-                        onClick={()=>{console.log(selectedPack); console.log(addonPacks)}}
-                        className={""}
-                        type="submit">
-                            Start my visa process
-                    </Button>
-                </div>
-            </form>
+        {/*Start button*/}
+        <div className={'flex w-full justify-center mb-5'}>
+          <Button
+            onClick={() => {
+              console.log(selectedPack);
+              console.log(addonPacks);
+            }}
+            className={''}
+            type="submit">
+            Start my visa process
+          </Button>
         </div>
-    );
+      </form>
+    </div>
+  );
 }
 
 export default CountryPage;

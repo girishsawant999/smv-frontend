@@ -8,7 +8,10 @@ import styles from './passwordInputScreen.module.css';
 import { IPasswordInputScreenProps } from '../../types';
 PasswordInputScreen.propTypes = {};
 
-function PasswordInputScreen({ pageState, setpageState }: IPasswordInputScreenProps) {
+function PasswordInputScreen({
+  pageState,
+  setpageState
+}: IPasswordInputScreenProps) {
   const [password, setpassword] = useState<string>('');
 
   const onPasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {

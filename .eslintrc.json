@@ -27,7 +27,7 @@
     "no-array-constructor": 0,
     "new-cap": 0,
     "space-before-function-paren": 0,
-//    "indent": ["error", 4],
+    //    "indent": ["error", 4],
     "prettier/prettier": "error"
   }
 }

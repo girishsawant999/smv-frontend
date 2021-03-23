@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: Manrope;
   src: url('/fonts/Manrope-ExtraLight.ttf');
@@ -40,11 +39,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .react-tel-input {
   .flag-dropdown {
     background: #fff !important;
     border: none !important;
   }
 }
-

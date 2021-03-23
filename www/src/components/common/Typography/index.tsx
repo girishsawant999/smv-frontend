@@ -10,17 +10,35 @@ type ITypographyProps = {
   variant: variantType;
   font?: fontType;
   className?: string;
-  children: React.ReactChild | React.ReactChildren | React.ReactChild[] | React.ReactChildren[] ;
-}
-const Typography = ({ type="heading", weight, size, font="primary", className = '', variant, children }: ITypographyProps) => {
-
+  children:
+    | React.ReactChild
+    | React.ReactChildren
+    | React.ReactChild[]
+    | React.ReactChildren[];
+};
+const Typography = ({
+  type = 'heading',
+  weight,
+  size,
+  font = 'primary',
+  className = '',
+  variant,
+  children
+}: ITypographyProps) => {
   const Component = variant;
 
   return (
-      <Component className={[className, styles[type], styles[weight], styles["size-" + size], styles[font]].join(" ")} >
-        {children}
-      </Component>
+    <Component
+      className={[
+        className,
+        styles[type],
+        styles[weight],
+        styles['size-' + size],
+        styles[font]
+      ].join(' ')}>
+      {children}
+    </Component>
   );
-}
+};
 
 export default Typography;

@@ -11,7 +11,11 @@ router.get('/list', (req, res) => {
         currency: null,
         currency_symbol: null,
         processing_time_in_days: '5-6 working days',
-        image_url: ['landing/country_portugal_images/bitmap_2.png','landing/country_portugal_images/bitmap_2@2x.png','landing/country_portugal_images/bitmap_2@3x.png'],
+        image_url: [
+          'landing/country_portugal_images/bitmap_2.png',
+          'landing/country_portugal_images/bitmap_2@2x.png',
+          'landing/country_portugal_images/bitmap_2@3x.png'
+        ],
         tags: ['MOST_POPULAR', 'SUGGESTED', 'VISIT_NOW'],
         is_deleted: false,
         updated_at: null,
@@ -24,7 +28,11 @@ router.get('/list', (req, res) => {
         currency: null,
         currency_symbol: null,
         processing_time_in_days: '7-8 working days',
-        image_url: ['landing/country_portugal_images/bitmap_2.png','landing/country_portugal_images/bitmap_2@2x.png','landing/country_portugal_images/bitmap_2@3x.png'],
+        image_url: [
+          'landing/country_portugal_images/bitmap_2.png',
+          'landing/country_portugal_images/bitmap_2@2x.png',
+          'landing/country_portugal_images/bitmap_2@3x.png'
+        ],
         tags: ['MOST_POPULAR', 'SUGGESTED', 'VISIT_NOW'],
         is_deleted: false,
         updated_at: null,
@@ -37,7 +45,11 @@ router.get('/list', (req, res) => {
         currency: null,
         currency_symbol: null,
         processing_time_in_days: '7-8 working days',
-        image_url: ['landing/country_portugal_images/bitmap_2.png','landing/country_portugal_images/bitmap_2@2x.png','landing/country_portugal_images/bitmap_2@3x.png'],
+        image_url: [
+          'landing/country_portugal_images/bitmap_2.png',
+          'landing/country_portugal_images/bitmap_2@2x.png',
+          'landing/country_portugal_images/bitmap_2@3x.png'
+        ],
         tags: ['MOST_POPULAR', 'SUGGESTED', 'VISIT_NOW'],
         is_deleted: false,
         updated_at: null,
@@ -50,7 +62,11 @@ router.get('/list', (req, res) => {
         currency: null,
         currency_symbol: null,
         processing_time_in_days: '7-8 working days',
-        image_url: ['landing/country_portugal_images/bitmap_2.png','landing/country_portugal_images/bitmap_2@2x.png','landing/country_portugal_images/bitmap_2@3x.png'],
+        image_url: [
+          'landing/country_portugal_images/bitmap_2.png',
+          'landing/country_portugal_images/bitmap_2@2x.png',
+          'landing/country_portugal_images/bitmap_2@3x.png'
+        ],
         tags: ['MOST_POPULAR', 'SUGGESTED', 'VISIT_NOW'],
         is_deleted: false,
         updated_at: null,
@@ -63,7 +79,11 @@ router.get('/list', (req, res) => {
         currency: null,
         currency_symbol: null,
         processing_time_in_days: '7-8 working days',
-        image_url: ['landing/country_portugal_images/bitmap_2.png','landing/country_portugal_images/bitmap_2@2x.png','landing/country_portugal_images/bitmap_2@3x.png'],
+        image_url: [
+          'landing/country_portugal_images/bitmap_2.png',
+          'landing/country_portugal_images/bitmap_2@2x.png',
+          'landing/country_portugal_images/bitmap_2@3x.png'
+        ],
         tags: ['MOST_POPULAR', 'SUGGESTED', 'VISIT_NOW'],
         is_deleted: false,
         updated_at: null,
@@ -76,7 +96,11 @@ router.get('/list', (req, res) => {
         currency: null,
         currency_symbol: null,
         processing_time_in_days: '7-8 working days',
-        image_url: ['landing/country_portugal_images/bitmap_2.png','landing/country_portugal_images/bitmap_2@2x.png','landing/country_portugal_images/bitmap_2@3x.png'],
+        image_url: [
+          'landing/country_portugal_images/bitmap_2.png',
+          'landing/country_portugal_images/bitmap_2@2x.png',
+          'landing/country_portugal_images/bitmap_2@3x.png'
+        ],
         tags: ['MOST_POPULAR', 'SUGGESTED', 'VISIT_NOW'],
         is_deleted: false,
         updated_at: null,

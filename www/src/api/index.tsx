@@ -4,16 +4,20 @@ const OPTIONS = {};
 export type successType<T> = {
   statusCode: number;
   data: T;
-}
+};
 
 export type errorType = {
   statusCode: number | null;
   message: string;
-}
+};
 
 export type APIResponseType<T> = successType<T>;
 
-export async function fetchApi<T>(url: string, options?: RequestInit, authenticated?: Boolean) : Promise<APIResponseType<T>> {
+export async function fetchApi<T>(
+  url: string,
+  options?: RequestInit,
+  authenticated?: Boolean
+): Promise<APIResponseType<T>> {
   let res;
   try {
     res = await fetch(BASE_URL.concat(url), {
@@ -25,7 +29,7 @@ export async function fetchApi<T>(url: string, options?: RequestInit, authentica
       statusCode: res.status,
       data: response
     };
-  } catch(err) {
+  } catch (err) {
     throw err;
     /*
     const error:string = (err && err.message) || 'Something went wrong!';
@@ -35,4 +39,4 @@ export async function fetchApi<T>(url: string, options?: RequestInit, authentica
     };
     */
   }
-};
+}
