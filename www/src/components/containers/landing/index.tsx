@@ -1,30 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Accordion from "./Components/Accordion";
 import CustomerReviewBox from "./Components/CustomerReviewBox";
 import ImageList from "./Components/ProcessDisplay";
 import DisplayBlogPost from "./Components/BlogPost";
 import CountriesVisaDetailSlider from "./Components/DisplayCountryVisaDetail";
-import { InferGetServerSidePropsType } from "next";
-import { getServerSideProps } from "../../../pages";
 import Typography from "../../common/Typography";
 import Img from "../../common/Img";
 import Icon from "../../common/Icon";
 import WhyStampMyVisa from "./Components/WhyStampMyVisa";
-import WhyStampmyVisaFAST from "./Components/WhyStampMyVisaFAST";
+import WhyStampMyVisaFAST from "./Components/WhyStampMyVisaFAST";
 import JoinTheClub from "./Components/JoinTheClub";
-import FixedBottomBotton from "./Components/FixedBottomBotton";
+import FixedBottomButton from "./Components/FixedBottomButton";
 import { useRouter } from "next/router";
 import ProcessSlider from "./Components/ProcessSlider/ProcessSlider";
+import { IInputDataProps } from "./types";
+
+type ILandingPageInfoProps={
+  LandingPageInfo:IInputDataProps;
+}
 
 
-
-
-function LandingPage({ data }:InferGetServerSidePropsType<typeof getServerSideProps>) {
-    // const history = useHistory();
-    const searchValue = (event) => {
-      event.preventDefault();
-      console.log(event.target.searchCountryValue.value);
-    };
+function LandingPage({LandingPageInfo}:ILandingPageInfoProps) {
     const QuestionAndAnswer=[
       {
       question: "Once I apply, when I will receive my visa?",
@@ -63,12 +59,17 @@ function LandingPage({ data }:InferGetServerSidePropsType<typeof getServerSidePr
       country: 'travelled to USA',
       name: 'RICHARD LORYCH'
     }]
-    const router = useRouter()
 
-    const handleClick = (e) => {
+    const router = useRouter()
+    const handleClick = (e: { preventDefault: () => void; }) => {
       e.preventDefault()
       router.push( "/search")
-  }
+    }
+
+    useEffect(() => {
+      router.prefetch('/search')
+    }, [])
+
     return (
         <div className="bg-#FFFFFF flex-col items-center">
             <section>
@@ -78,12 +79,12 @@ function LandingPage({ data }:InferGetServerSidePropsType<typeof getServerSidePr
                               "landing/cover_images/cover1@3x.png 3x"]}
                      width="100%"
                  />
-                <button onClick={handleClick} className="relative bottom-8 flex justify-center">
+                <div onClick={handleClick} className="relative bottom-8 flex justify-center">
                     <div className="bg-white mx-12 rounded-2xl shadow w-10/12 xsm:w-3/4 xmd:w-2/3">
-                        <form onSubmit={searchValue} className="flex justify-between">
+                        <form className="flex justify-between">
                           <input id="countryName" className="ml-8 xsm:ml-10 xmd:ml-20 xsm:py-5 text-sm xsm:text-sm xmd:text-base
                             rounded-3xl focus:outline-none w-44 xsm:w-44 xmd:w-48 leading-5
-                            focus:placeholder-transparent placeholder-#4E4851 font-manrope-regular font-bold"
+                            placeholder-#4E4851 font-manrope-regular font-bold"
                             type="text"
                             placeholder="I am looking for a visa to..."
                             name="searchCountryValue"
@@ -98,7 +99,7 @@ function LandingPage({ data }:InferGetServerSidePropsType<typeof getServerSidePr
                             </button>
                         </form>
                     </div>
-                </button>
+                </div>
             </section>
 
             <section className="ml-5 mt-8">
@@ -114,7 +115,7 @@ function LandingPage({ data }:InferGetServerSidePropsType<typeof getServerSidePr
                     </div>
                 </div>
                 <div>
-                    <CountriesVisaDetailSlider countryList = {data.data.CountryVisaDetailSlow}/>
+                    <CountriesVisaDetailSlider countryList = {LandingPageInfo.data.CountryVisaDetailSlow}/>
                 </div>
             </section>
 
@@ -131,7 +132,7 @@ function LandingPage({ data }:InferGetServerSidePropsType<typeof getServerSidePr
                     </div>
                 </div>
                 <div>
-                  <CountriesVisaDetailSlider countryList = {data.data.CountryVisaDetailFast}/>
+                  <CountriesVisaDetailSlider countryList = {LandingPageInfo.data.CountryVisaDetailFast}/>
                 </div>
             </section>
 
@@ -146,7 +147,7 @@ function LandingPage({ data }:InferGetServerSidePropsType<typeof getServerSidePr
                       <WhyStampMyVisa/>
                     </div>
                     <div className="ml-5 mt-5 xmd:ml-0 xmd:w-1/2 ">
-                      <WhyStampmyVisaFAST/>
+                      <WhyStampMyVisaFAST/>
                     </div>
                 </div>
             </section>
@@ -164,7 +165,7 @@ function LandingPage({ data }:InferGetServerSidePropsType<typeof getServerSidePr
                         </div>
                     </div>
                     <div>
-                        <DisplayBlogPost blogList = {data.data.BlogArray} />
+                        <DisplayBlogPost blogList = {LandingPageInfo.data.BlogArray} />
                     </div>
                 </div>
             </section>
@@ -175,9 +176,9 @@ function LandingPage({ data }:InferGetServerSidePropsType<typeof getServerSidePr
                     <Typography type="heading" size="20" weight="extra-bold" variant="h1" className="">
                           Our process is simple as
                     </Typography>
-                  <div className="w-96 overflow-x-auto">
-                    <ProcessSlider/>
-                  </div>
+                  {/*<div className="w-96 overflow-x-auto">*/}
+                  {/*  <ProcessSlider/>*/}
+                  {/*</div>*/}
                </div>
             </section>
 
@@ -215,7 +216,7 @@ function LandingPage({ data }:InferGetServerSidePropsType<typeof getServerSidePr
             </section>
 
             <div>
-              <FixedBottomBotton/>
+              <FixedBottomButton/>
             </div>
         </div>
     )

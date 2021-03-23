@@ -99,36 +99,6 @@ router.get('/landing', (req, res) => {
           statement: 'How to extend your visa if you are stranded due to COVID-19',
           date: 'Jan 1,2021'
         }
-      ],
-      Customer_review: [
-        {
-          comment:
-            " service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
-          gender: 'male',
-          country: 'travelled to USA',
-          name: 'RICHARD LORYCH'
-        },
-        {
-          comment:
-            "Impressive service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
-          gender: 'female',
-          country: 'travelled to USA',
-          name: 'RICHARD LORYCH'
-        },
-        {
-          comment:
-            "pressive service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
-          gender: 'female',
-          country: 'travelled to USA',
-          name: 'RICHARD LORYCH'
-        },
-        {
-          comment:
-            "pressive service, after trying and failing numerous time at the official site, i thought i'll have to go another way.",
-          gender: 'male',
-          country: 'travelled to USA',
-          name: 'RICHARD LORYCH'
-        }
       ]
     }
   };

@@ -1,7 +1,7 @@
 import React from "react";
 import Img from "../../../common/Img";
 
-function WhyStampmyVisaFAST(){
+function WhyStampMyVisaFAST(){
   return(
     <div className="flex">
       <div className="flex-col w-1/2">
@@ -82,4 +82,4 @@ function WhyStampmyVisaFAST(){
   )
 }
 
-export default WhyStampmyVisaFAST
+export default WhyStampMyVisaFAST

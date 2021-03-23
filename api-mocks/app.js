@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+
 const landing = require('./landing');
 
 app.use('/api/v1/ums/landing', landing);
