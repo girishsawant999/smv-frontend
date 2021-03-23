@@ -1,0 +1,9 @@
+.otpinput {
+  font-family: Manrope;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #e6e4e7;
+  border-radius: 20px;
+  outline: none;
+  text-align: center;
+}

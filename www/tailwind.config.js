@@ -4,10 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'manrope-extra-bold': ['Manrope-extra-bold'],
-        'manrope-extra-light': ['Manrope-extra-light'],
-        'manrope-regular': ['Manrope-regular'],
-        'manrope-semibold': ['Manrope-semibold']
+        'manrope': ['Manrope'],
       },
       backgroundColor: {
         '#FFFFFF': '#FFFFFF',
