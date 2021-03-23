@@ -1,6 +1,6 @@
 import Button from 'components/common/Button';
 import Emotes from 'components/common/emotes';
-import Img from 'components/common/img';
+import Img from 'components/common/Img';
 import Typography from 'components/common/Typography/index';
 import React from 'react';
 import commonStyles from '../../login.module.css';
