@@ -31,12 +31,14 @@
   src: url('/fonts/Manrope-SemiBold.ttf');
 }
 
+@font-face {
+  font-family: Sequel-76;
+  src: url('/fonts/Sequel100Black-76.ttf');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-//@import 'components/containers/login/styles.scss';
-//@import 'components/containers/landing/styles.scss';
 
 
 .react-tel-input {

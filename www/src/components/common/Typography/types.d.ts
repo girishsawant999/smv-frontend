@@ -2,7 +2,7 @@ export type StyleType = "heading" | "content";
 
 export type weightType = "extra-bold" | "semi-bold" | "regular";
 
-export type sizeType = "24" | "20" | "20" | "18" | "16" | "14" | "12" | "10" ;
+export type sizeType = "24" | "20" | "18" | "16" | "14" | "12" | "10" ;
 
 export type fontType = "primary" | "secondary" | "graphical"
 
