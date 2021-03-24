@@ -7,7 +7,7 @@ import ErrorPage from '../components/containers/landing/Components/ErrorPage';
 import { IInputDataProps } from '../components/containers/landing/types';
 
 export const getServerSideProps: GetServerSideProps = async () => {
-       try {
+  try {
     const res: APIResponseType<IInputDataProps> = await fetchApi<IInputDataProps>(
       'api/v1/ums/landing/list?tags=SUGGESTED&tags=MOST_POPULAR'
     );
