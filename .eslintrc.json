@@ -4,7 +4,12 @@
     "es6": true,
     "jest": true
   },
-  "extends": ["plugin:prettier/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -27,7 +32,6 @@
     "no-array-constructor": 0,
     "new-cap": 0,
     "space-before-function-paren": 0,
-    //    "indent": ["error", 4],
     "prettier/prettier": "error"
   }
 }
