@@ -16,6 +16,7 @@
   color: #9b939f;
 }
 .searchInput::placeholder {
-  font-family: 'Manrope-extra-light';
+  font-family: Manrope;
+  font-weight: 200;
   color: #9b939f;
 }

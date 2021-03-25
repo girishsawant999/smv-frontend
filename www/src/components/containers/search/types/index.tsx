@@ -1,17 +1,20 @@
 export type CountryObject = {
-  currency: String;
-  currency_symbol: String;
-  processing_time_in_days: String;
+  currency: string;
+  currency_symbol: string;
+  processing_time_in_days: string;
   image_url: Array<string>;
-  tags: Array<String>;
+  tags: Array<string>;
   is_deleted: Boolean;
-  updated_at: String;
-  _id: String;
-  name: String;
-  symbol: String;
-  created_at: String;
+  updated_at: string;
+  _id: string;
+  name: string;
+  symbol: string;
+  created_at: string;
 };
-
+export type IInputDataProps = {
+  success: boolean;
+  data: Array<CountryObject>;
+};
 export type ISearchMain = {
   suggestedCountries: Array<CountryObject>;
   mostPopularCountries: Array<CountryObject>;

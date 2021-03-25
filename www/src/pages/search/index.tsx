@@ -1,30 +1,37 @@
 import SearchMain from 'components/containers/search';
 import React from 'react';
-import { fetchApi } from 'api';
-import { CountryObject } from 'components/containers/search/types';
+import { fetchApi, APIResponseType } from 'api';
+import { CountryObject, IInputDataProps } from 'components/containers/search/types';
 
 export async function getServerSideProps() {
-  const resSuggested = await fetchApi('api/v1/ums/countries/list?tags=SUGGESTED');
-  const resMostPopular = await fetchApi(
-    'api/v1/ums/countries/list?tags=MOST_POPULAR'
-  );
-  let suggestedCountries = [];
-  if (resSuggested && !resSuggested.error && resSuggested.response) {
-    let { response } = resSuggested;
-    suggestedCountries = (response && response.data) || [];
+  try {
+    const ressuggestedCountries: APIResponseType<IInputDataProps> = await fetchApi<IInputDataProps>(
+      'api/v1/ums/countries/list?tags=SUGGESTED'
+    );
+    const suggestedCountries: Array<CountryObject> =
+      (ressuggestedCountries.data && ressuggestedCountries.data.data) || [];
+
+    const resmostPopularCountries: APIResponseType<IInputDataProps> = await fetchApi<IInputDataProps>(
+      'api/v1/ums/countries/list?tags=MOST_POPULAR'
+    );
+    const mostPopularCountries: Array<CountryObject> =
+      (resmostPopularCountries.data && resmostPopularCountries.data.data) || [];
+
+    return {
+      props: {
+        suggestedCountries,
+        mostPopularCountries
+      }
+    };
+  } catch (err) {
+    return {
+      props: {
+        data: {}
+      }
+    };
   }
-  let mostPopularCountries = [];
-  if (resMostPopular && !resMostPopular.error && resMostPopular.response) {
-    let { response } = resMostPopular;
-    mostPopularCountries = (response && response.data) || [];
-  }
-  return {
-    props: {
-      suggestedCountries,
-      mostPopularCountries
-    }
-  };
 }
+
 type IPropsType = {
   suggestedCountries: Array<CountryObject>;
   mostPopularCountries: Array<CountryObject>;

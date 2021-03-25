@@ -7,7 +7,7 @@ function CountryList({ title = '', countries, isResultPage = false }: ICountryLi
   return (
     <div className="ml-5 py-2">
       {title && (
-        <Typography type="content" variant="h2" size="20" weight="extra-bold">
+        <Typography type="heading" variant="h2" size="18" weight="extra-bold">
           {title}
         </Typography>
       )}
@@ -24,20 +24,18 @@ function CountryList({ title = '', countries, isResultPage = false }: ICountryLi
                   srcSet={country.image_url}
                   placeHolderBg={'#f5f4f5'}
                   alt="city"
-                  width="72px"
-                  height="89px"
-                  className="rounded-2xl"
+                  className="rounded-2xl w-17.5"
                 />
                 <div className="ml-4">
                   <Typography
                     type="content"
                     variant="h2"
                     size="16"
-                    weight="extra-bold">
-                    <>{country.name}</>
+                    weight="semi-bold">
+                    {country.name}
                   </Typography>
                   <Typography type="content" variant="p" size="14" weight="regular">
-                    <>{country.processing_time_in_days}</>
+                    {country.processing_time_in_days}
                   </Typography>
                 </div>
               </div>
