@@ -3,43 +3,42 @@ import Head from 'next/head';
 import CountryPage from 'components/containers/country';
 import { GetServerSideProps } from 'next';
 import { IInputDataProps } from '../../components/containers/country/types';
-import { fetchApi } from '../../api';
+import { fetchApi, APIResponseType } from '../../api';
 import ErrorPage from '../../components/containers/country/components/ErrorPage';
 
-export const getServerSideProps:GetServerSideProps = async () => {
-    const res = await fetchApi('api/v1/ums/country/info')
-    // const countryInfo = "await res.json()"
+export const getServerSideProps: GetServerSideProps = async () => {
+  try {
+    const res: APIResponseType<IInputDataProps> = await fetchApi<IInputDataProps>(
+      'api/v1/ums/country/info'
+    );
+    const data: IInputDataProps = res.data;
     return {
-        props: {
-            status: res.status,
-            response: res.response,
-            error: res.error
-        },
-    }
-}
+      props: {
+        data: data
+      }
+    };
+  } catch (err) {
+    return {
+      props: {
+        data: {}
+      }
+    };
+  }
+};
 
-type ICountryInfoProps= {
-    status: number;
-    error: string;
-    response: IInputDataProps;
-}
+type ICountryInfoProps = {
+  data: IInputDataProps;
+};
 
-function CountryPageMain({status, response, error}:ICountryInfoProps) {
-
-    return (
-        <Fragment>
-            <Head>
-                <title>Country</title>
-            </Head>
-            {
-                error === null ?
-                    <CountryPage countryInfo={response}/>
-                :
-                    <ErrorPage/>
-            }
-
-      </Fragment>
-    )
+function CountryPageMain({ data }: ICountryInfoProps) {
+  return (
+    <Fragment>
+      <Head>
+        <title>Country</title>
+      </Head>
+      {data != null ? <CountryPage countryInfo={data} /> : <ErrorPage />}
+    </Fragment>
+  );
 }
 
 export default CountryPageMain;

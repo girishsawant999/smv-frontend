@@ -1,0 +1,22 @@
+.searchInput {
+  font-family: Manrope;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #1a181b;
+}
+.searchInput::-webkit-input-placeholder {
+  font-family: Manrope;
+  font-weight: 200;
+  color: #9b939f;
+}
+.searchInput:-ms-input-placeholder {
+  font-family: Manrope;
+  font-weight: 200;
+  color: #9b939f;
+}
+.searchInput::placeholder {
+  font-family: Manrope;
+  font-weight: 200;
+  color: #9b939f;
+}
