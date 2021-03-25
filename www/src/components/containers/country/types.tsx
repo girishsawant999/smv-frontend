@@ -29,6 +29,7 @@ export type IInputDataProps ={
             processingTime: string;
             description: string;
         };
+        moreOptions: Array<string>;
         packsInfo: Array<IPackInfo>;
         addonService: Array<IAddonService>;
         importantInfo: Array<string>;
