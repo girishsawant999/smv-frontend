@@ -12,10 +12,14 @@ function SearchInput({ searchQuery, setsearchQuery }: ISearchInput) {
   const onChangeSearchQuery = (e: React.ChangeEvent<HTMLInputElement>) =>
     setsearchQuery(e.target.value);
 
+  const onSearchSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setsearchQuery(e.target.search.value);
+  };
   return (
     <div className="flex py-4 px-5 items-center w-full sticky bg-white top-0 transition-all">
       <BackButton onClick={() => null} className="static" />
-      <form action="" className="w-full px-4 relative">
+      <form onSubmit={onSearchSubmit} className="w-full px-4 relative">
         <label hidden>Search</label>
         <input
           type="text"

@@ -25,3 +25,6 @@ export type ICountryList = {
   isResultPage?: Boolean;
   countries: Array<CountryObject>;
 };
+export type IQueryObject = {
+  searchquery?: string;
+};
