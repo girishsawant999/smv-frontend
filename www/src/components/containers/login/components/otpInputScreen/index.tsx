@@ -9,14 +9,14 @@ import { IOtpInputScreenProps, IOTP } from '../../types';
 
 OtpInputScreenComp.propTypes = {};
 
-const OTP_INPUTS = ['otp1', 'otp2', 'otp3', 'otp4'];
+const OTP_INPUTS: string[] = ['otp1', 'otp2', 'otp3', 'otp4'];
 function OtpInputScreenComp({
 	pageState,
 	setpageState,
 	phoneNumber
 }: IOtpInputScreenProps) {
 	const [inValid, setinValid] = useState(false);
-	const [OTP, setOTP] = useState<IOTP>({});
+	const [OTP, setOTP] = useState<IOTP>({ otp1: '', otp2: '', otp3: '', otp4: '' });
 
 	const onOTPChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
@@ -38,8 +38,8 @@ function OtpInputScreenComp({
 	const verifyOTP = (e: React.ChangeEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		const otp = '';
-		OTP_INPUTS.forEach((element) => {
-			otp.concat(OTP[element]);
+		Object.keys(OTP).forEach((element) => {
+			otp.concat(OTP[element as keyof IOTP]);
 		});
 		if (!inValid) {
 			setinValid(true);
