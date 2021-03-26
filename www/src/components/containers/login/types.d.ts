@@ -24,10 +24,10 @@ export type IOtpInputScreenProps = {
   phoneNumber: string;
 };
 export type IOTP = {
-  otp1: string;
-  otp2: string;
-  otp3: string;
-  otp4: string;
+  [otp1: string]: string;
+  [otp2: string]: string;
+  [otp3: string]: string;
+  [otp4: string]: string;
 };
 export type IPasswordInputScreenProps = {
   pageState: string;

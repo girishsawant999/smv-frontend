@@ -139,7 +139,9 @@ function LandingPage({ LandingPageInfo }: ILandingPageInfoProps) {
         </div>
         <div>
           <CountriesVisaDetailSlider
-            countryList={LandingPageInfo.data.SuggestedCountryVisaDetail}
+            countryList={
+              LandingPageInfo.data && LandingPageInfo.data.SuggestedCountryVisaDetail
+            }
           />
         </div>
       </section>
