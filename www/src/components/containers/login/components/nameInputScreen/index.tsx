@@ -79,7 +79,7 @@ function NameInputScreen({
 
         <div className={commonStyles.lowerdiv}>
           <div className={commonStyles.loginCommonBtn}>
-            <Button type="submit">Next</Button>
+            <Button type="submit">Done</Button>
           </div>
         </div>
       </form>
