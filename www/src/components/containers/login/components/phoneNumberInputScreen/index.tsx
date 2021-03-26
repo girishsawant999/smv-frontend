@@ -10,23 +10,23 @@ import { IPhoneInputScreenProps } from '../../types';
 PhoneInputScreenComponent.propTypes = {};
 
 function PhoneInputScreenComponent({
-  pageState,
-  setpageState,
-  phoneNumber,
-  setphoneNumber
+	pageState,
+	setpageState,
+	phoneNumber,
+	setphoneNumber
 }: IPhoneInputScreenProps) {
-  const onChangePhoneNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let value = e.target.value;
-    if (!phoneNumber && value.length > 0) {
-      value = '+91'.concat(value);
-    }
-    setphoneNumber(value);
-  };
+	const onChangePhoneNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
+		let value = e.target.value;
+		if (!phoneNumber && value.length > 0) {
+			value = '+91'.concat(value);
+		}
+		setphoneNumber(value);
+	};
 
-  const requestOTP = (e: React.ChangeEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setpageState('otp-screen');
-  };
+	const requestOTP = (e: React.ChangeEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		setpageState('otp-screen');
+	};
 
   return (
     <>

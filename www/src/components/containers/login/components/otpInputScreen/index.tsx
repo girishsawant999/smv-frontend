@@ -11,10 +11,11 @@ OtpInputScreenComp.propTypes = {};
 
 const OTP_INPUTS: Array<string> = ['otp1', 'otp2', 'otp3', 'otp4'];
 function OtpInputScreenComp({
-  pageState,
-  setpageState,
-  phoneNumber
+	pageState,
+	setpageState,
+	phoneNumber
 }: IOtpInputScreenProps) {
+<<<<<<< HEAD
   const [inValid, setinValid] = useState(false);
   const [OTP, setOTP] = useState<IOTP>({
     otp1: '',
@@ -52,24 +53,29 @@ function OtpInputScreenComp({
       settimerEnd(true);
     }
   }, [timer]);
+=======
+	const [inValid, setinValid] = useState(false);
+	const [OTP, setOTP] = useState<IOTP>({});
+>>>>>>> 12b4f6a71ba35a4be2296322d7b16762f947c108
 
-  const onOTPChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let value = e.target.value;
-    setOTP({ ...OTP, [e.target.name]: value });
-    let index = OTP_INPUTS.indexOf(e.target.name);
-    if (value.length === 1) {
-      if (index < OTP_INPUTS.length - 1) {
-        let ele = document.getElementById(OTP_INPUTS[index + 1]);
-        ele && ele.focus();
-      }
-    } else if (value.length === 0) {
-      if (index > 0) {
-        let ele = document.getElementById(OTP_INPUTS[index - 1]);
-        ele && ele.focus();
-      }
-    }
-  };
+	const onOTPChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const value = e.target.value;
+		setOTP({ ...OTP, [e.target.name]: value });
+		const index = OTP_INPUTS.indexOf(e.target.name);
+		if (value.length === 1) {
+			if (index < OTP_INPUTS.length - 1) {
+				const ele = document.getElementById(OTP_INPUTS[index + 1]);
+				ele && ele.focus();
+			}
+		} else if (value.length === 0) {
+			if (index > 0) {
+				const ele = document.getElementById(OTP_INPUTS[index - 1]);
+				ele && ele.focus();
+			}
+		}
+	};
 
+<<<<<<< HEAD
   const verifyOTP = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     let otp = '';
@@ -103,19 +109,57 @@ function OtpInputScreenComp({
                 ]
           }
         />
+=======
+	const verifyOTP = (e: React.ChangeEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		const otp = '';
+		OTP_INPUTS.forEach((element) => {
+			otp.concat(OTP[element]);
+		});
+		if (!inValid) {
+			setinValid(true);
+			return;
+		}
+		setpageState('email-screen');
+	};
+	return (
+		<>
+			<BackButton
+				onClick={() => setpageState('phone-input')}
+				className="absolute"
+			/>
+			<form
+				onSubmit={verifyOTP}
+				className="flex flex-col h-full items-center max-w-sm relative w-full">
+				<Emotes
+					srcSet={
+						inValid
+							? [
+									'emote-thinking/emote-thinking.png',
+									'emote-thinking/emote-thinking@2x.png 2x',
+									'emote-thinking/emote-thinking@3x.png 3x'
+							  ]
+							: [
+									'emote-smiling/emote-smiling.png',
+									'emote-smiling/emote-smiling@2x.png 2x',
+									'emote-smiling/emote-smiling@3x.png 3x'
+							  ]
+					}
+				/>
+>>>>>>> 12b4f6a71ba35a4be2296322d7b16762f947c108
 
-        <div className="mx-10 max-w-sm text-center">
-          <Typography weight="semi-bold" variant="h1" size="16">
-            Enter the 4 digit code sent to you at {phoneNumber.slice(3)}.
-            {inValid ? (
-              <span className="text-red-500">
-                &nbsp;Did you enter the correct mobile number?
-              </span>
-            ) : (
-              <></>
-            )}
-          </Typography>
-        </div>
+				<div className="mx-10 max-w-sm text-center">
+					<Typography weight="semi-bold" variant="h1" size="16">
+						Enter the 4 digit code sent to you at {phoneNumber.slice(3)}.
+						{inValid ? (
+							<span className="text-red-500">
+								&nbsp;Did you enter the correct mobile number?
+							</span>
+						) : (
+							<></>
+						)}
+					</Typography>
+				</div>
 
         <div className="otp-input-div mt-5">
           <div className="w-64 flex justify-between">

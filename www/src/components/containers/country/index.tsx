@@ -9,67 +9,79 @@ import CountryInfo from './components/countryInfo/CountryInfo';
 import CountryImage from './components/countryImage/CountryImage';
 import Button from '../../common/Button';
 import { IInputDataProps } from './types';
+import MoreOptions from './components/moreOptions/MoreOptions';
 
 CountryPage.propTypes = {};
 
 type ICountryInfoProps = {
-  countryInfo: IInputDataProps;
+	countryInfo: IInputDataProps;
 };
 
 function CountryPage({ countryInfo }: ICountryInfoProps) {
-  const [selectedPack, setSelectedPack] = useState(0);
-  const [addonPacks, setAddonPacks] = useState([]);
+	const [selectedPack, setSelectedPack] = useState(0);
+	const [addonPacks, setAddonPacks] = useState([]);
 
-  return (
-    <div className="flex flex-col md:max-w-md md:mx-auto relative">
-      <form>
-        {/*Header image section*/}
-        <CountryImage />
+	return (
+		<div className="flex flex-col md:max-w-md md:mx-auto relative">
+			<form>
+				{/*Header image section*/}
+				<CountryImage />
 
-        {/*Introduction of country*/}
-        <CountryInfo countryInfo={countryInfo.data.countryInfo} />
+				{/*Introduction of country*/}
+				<CountryInfo countryInfo={countryInfo.data.countryInfo} />
 
-        {/*all pack information*/}
-        <AllPacks
-          packsInfo={countryInfo.data.packsInfo}
-          selectedPack={selectedPack}
-          setSelectedPack={setSelectedPack}
-        />
+				{/*customizing options for travel*/}
+				{true ? (
+					<MoreOptions moreOptions={countryInfo.data.moreOptions} />
+				) : (
+					<></>
+				)}
 
-        {/*Addon information*/}
-        <AddonService
-          addonService={countryInfo.data.addonService}
-          addonPacks={addonPacks}
-          setAddonPacks={setAddonPacks}
-        />
+				{/*all pack information*/}
+				<AllPacks
+					packsInfo={countryInfo.data.packsInfo}
+					selectedPack={selectedPack}
+					setSelectedPack={setSelectedPack}
+				/>
 
-        {/*Important information section*/}
-        <ImportantInformation importantInfo={countryInfo.data.importantInfo} />
+				{/*Addon information*/}
+				<AddonService
+					addonService={countryInfo.data.addonService}
+					addonPacks={addonPacks}
+					setAddonPacks={setAddonPacks}
+				/>
 
-        {/*Document list section*/}
-        <DocumentList documentList={countryInfo.data.documentList} />
+				{/*Important information section*/}
+				<ImportantInformation
+					importantInfo={countryInfo.data.importantInfo}
+				/>
 
-        {/*Additional doc list*/}
-        <AdditionalDocList additionalDocList={countryInfo.data.additionalDocList} />
+				{/*Document list section*/}
+				<DocumentList documentList={countryInfo.data.documentList} />
 
-        {/*FAQ section*/}
-        <FAQ faq={countryInfo.data.faq} />
+				{/*Additional doc list*/}
+				<AdditionalDocList
+					additionalDocList={countryInfo.data.additionalDocList}
+				/>
 
-        {/*Start button*/}
-        <div className={'flex w-full justify-center mb-5'}>
-          <Button
-            onClick={() => {
-              console.log(selectedPack);
-              console.log(addonPacks);
-            }}
-            className={''}
-            type="submit">
-            Start my visa process
-          </Button>
-        </div>
-      </form>
-    </div>
-  );
+				{/*FAQ section*/}
+				<FAQ faq={countryInfo.data.faq} />
+
+				{/*Start button*/}
+				<div className={'flex w-full justify-center mb-5'}>
+					<Button
+						onClick={() => {
+							console.log(selectedPack);
+							console.log(addonPacks);
+						}}
+						className={''}
+						type="submit">
+						Start my visa process
+					</Button>
+				</div>
+			</form>
+		</div>
+	);
 }
 
 export default CountryPage;
