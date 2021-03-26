@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import LandingPage from '../components/containers/landing';
 import { GetServerSideProps } from 'next';
 import { fetchApi, APIResponseType, errorType } from '../api';
-import Head from 'next/head';
+import Head from 'components/common/Head';
 import ErrorPage from '../components/containers/landing/Components/ErrorPage';
 import { IInputDataProps } from '../components/containers/landing/types';
 
@@ -33,9 +33,7 @@ type ILandingInfoProps = {
 function Home({ data }: ILandingInfoProps) {
 	return (
 		<Fragment>
-			<Head>
-				<title>Home</title>
-			</Head>
+			<Head title="Home" desc="Homepage of Stamp My Visa" />
 			{data != null ? <LandingPage LandingPageInfo={data} /> : <ErrorPage />}
 		</Fragment>
 	);

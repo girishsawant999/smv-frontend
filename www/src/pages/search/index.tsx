@@ -1,5 +1,6 @@
 import SearchMain from 'components/containers/search';
 import React from 'react';
+import Head from 'components/common/Head';
 import { fetchApi, APIResponseType } from 'api';
 import { CountryObject, IInputDataProps } from 'components/containers/search/types';
 
@@ -39,7 +40,12 @@ type IPropsType = {
 };
 
 function Search(props: IPropsType) {
-	return <SearchMain {...props} />;
+	return (
+		<>
+			<Head title="Search" desc="Search for various countries" />
+			<SearchMain {...props} />;
+		</>
+	);
 }
 
 export default Search;

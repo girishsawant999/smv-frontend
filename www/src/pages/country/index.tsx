@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-import Head from 'next/head';
 import CountryPage from 'components/containers/country';
 import { GetServerSideProps } from 'next';
 import { IInputDataProps } from '../../components/containers/country/types';
 import { fetchApi, APIResponseType } from '../../api';
 import ErrorPage from '../../components/containers/country/components/ErrorPage';
+import Head from 'components/common/Head';
 
 export const getServerSideProps: GetServerSideProps = async () => {
 	try {
@@ -33,9 +33,7 @@ type ICountryInfoProps = {
 function CountryPageMain({ data }: ICountryInfoProps) {
 	return (
 		<Fragment>
-			<Head>
-				<title>Country</title>
-			</Head>
+			<Head title="Country Page" desc="Information about a country" />
 			{data != null ? <CountryPage countryInfo={data} /> : <ErrorPage />}
 		</Fragment>
 	);
