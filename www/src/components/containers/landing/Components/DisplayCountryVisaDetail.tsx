@@ -1,5 +1,6 @@
 import Typography from '../../../common/Typography';
 import Img from '../../../common/Img';
+import { useRouter } from 'next/router';
 
 type ICountryListObjectProps = {
 	imageLink: {
@@ -16,11 +17,14 @@ type ICountryListArrayProps = {
 };
 
 function countryLayout(item: ICountryListObjectProps, index: number) {
+	const router = useRouter();
+
 	return (
 		<div
 			key={index}
-			onClick={() => {
-				window.open('home');
+			onClick={(e) => {
+				e.preventDefault();
+				router.push('/country');
 			}}
 			className="mr-3">
 			<div className="w-40 mb-4">
