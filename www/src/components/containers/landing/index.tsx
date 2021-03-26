@@ -93,7 +93,7 @@ function LandingPage({ LandingPageInfo }: ILandingPageInfoProps) {
 				/>
 				<div
 					onClick={handleClick}
-					className="relative bottom-8 flex justify-center">
+					className="relative bottom-8 flex justify-center cursor-pointer">
 					<div className="bg-white mx-12 rounded-2xl shadow w-10/12 xsm:w-3/4 xmd:w-2/3">
 						<form className="flex justify-between">
 							<input

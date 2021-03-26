@@ -1,6 +1,6 @@
 import BackButton from 'components/common/backButton';
 import Typography from 'components/common/Typography';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Styles from './searchInput.module.css';
 
 type ISearchInput = {
@@ -9,6 +9,14 @@ type ISearchInput = {
 };
 
 function SearchInput({ searchQuery, setsearchQuery }: ISearchInput) {
+	const searchRef = useRef<HTMLInputElement>(null);
+
+	useEffect(() => {
+		if (searchRef.current) {
+			searchRef.current.focus();
+		}
+	}, []);
+
 	const onChangeSearchQuery = (e: React.ChangeEvent<HTMLInputElement>) =>
 		setsearchQuery(e.target.value);
 
@@ -27,6 +35,7 @@ function SearchInput({ searchQuery, setsearchQuery }: ISearchInput) {
 					name="search"
 					id="search-input"
 					value={searchQuery}
+					ref={searchRef}
 					className={Styles.searchInput.concat(' h-6 outline-none w-full')}
 					onChange={onChangeSearchQuery}
 				/>
