@@ -121,32 +121,30 @@ function LandingPage({ LandingPageInfo }: ILandingPageInfoProps) {
 				</div>
 			</section>
 
-      <section className="ml-5 mt-8">
-        <div className="flex justify-between">
-          <Typography
-            type="heading"
-            size="20"
-            weight="extra-bold"
-            variant="h1"
-            className="">
-            Countries to visit right now
-          </Typography>
-          <div className="bg-#F5F4F5 w-8 h-8 mr-5 mt-5 xsm:mt-0  rounded-xl flex justify-center items-center">
-            <Icon
-              src={'arrow-right_2@3x.png'}
-              alt="right arrow navigation image"
-              className="p-2"
-            />
-          </div>
-        </div>
-        <div>
-          <CountriesVisaDetailSlider
-            countryList={
-              LandingPageInfo.data && LandingPageInfo.data.SuggestedCountryVisaDetail
-            }
-          />
-        </div>
-      </section>
+			<section className="ml-5 mt-8">
+				<div className="flex justify-between">
+					<Typography
+						type="heading"
+						size="20"
+						weight="extra-bold"
+						variant="h1"
+						className="">
+						Countries to visit right now
+					</Typography>
+					<div className="bg-#F5F4F5 w-8 h-8 mr-5 mt-5 xsm:mt-0  rounded-xl flex justify-center items-center">
+						<Icon
+							src={'arrow-right_2@3x.png'}
+							alt="right arrow navigation image"
+							className="p-2"
+						/>
+					</div>
+				</div>
+				<div>
+					<CountriesVisaDetailSlider
+						countryList={LandingPageInfo.data.SuggestedCountryVisaDetail}
+					/>
+				</div>
+			</section>
 
 			<section className="ml-5 mt-14">
 				<div className="flex justify-between mt-8">
