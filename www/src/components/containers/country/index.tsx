@@ -31,18 +31,13 @@ function CountryPage({ countryInfo }: ICountryInfoProps) {
         <CountryInfo countryInfo={countryInfo.data.countryInfo} />
 
         {/*customizing options for travel*/}
-        {
-            true ?
-                  <MoreOptions moreOptions={countryInfo.data.moreOptions}/>
-                  :
-                  <div/>
-        }
+        {true ? <MoreOptions moreOptions={countryInfo.data.moreOptions} /> : <></>}
 
         {/*all pack information*/}
         <AllPacks
-            packsInfo={countryInfo.data.packsInfo}
-            selectedPack={selectedPack}
-            setSelectedPack={setSelectedPack}
+          packsInfo={countryInfo.data.packsInfo}
+          selectedPack={selectedPack}
+          setSelectedPack={setSelectedPack}
         />
 
         {/*Addon information*/}
