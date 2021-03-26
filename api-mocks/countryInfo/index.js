@@ -10,6 +10,7 @@ router.get('/info', (req, res) => {
         description:
           'Planning a holiday to Australia with you friends and family? Be at ease, and get your Australia Visa with stamp my visa. The process is extremely simple and hassle-free'
       },
+      moreOptions: ['Vacation', '15-23 Jan', 'Employed', 'More Options'],
       packsInfo: [
         {
           id: 1,

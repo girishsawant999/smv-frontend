@@ -9,6 +9,7 @@ import CountryInfo from './components/countryInfo/CountryInfo';
 import CountryImage from './components/countryImage/CountryImage';
 import Button from '../../common/Button';
 import { IInputDataProps } from './types';
+import MoreOptions from './components/moreOptions/MoreOptions';
 
 CountryPage.propTypes = {};
 
@@ -28,6 +29,9 @@ function CountryPage({ countryInfo }: ICountryInfoProps) {
 
         {/*Introduction of country*/}
         <CountryInfo countryInfo={countryInfo.data.countryInfo} />
+
+        {/*customizing options for travel*/}
+        {true ? <MoreOptions moreOptions={countryInfo.data.moreOptions} /> : <></>}
 
         {/*all pack information*/}
         <AllPacks
