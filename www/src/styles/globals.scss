@@ -1,30 +1,30 @@
 @font-face {
-  font-family: Manrope;
-  src: url('/fonts/Manrope-ExtraLight.ttf');
-  font-weight: 200;
+	font-family: Manrope;
+	src: url('/fonts/Manrope-ExtraLight.ttf');
+	font-weight: 200;
 }
 
 @font-face {
-  font-family: Manrope;
-  src: url('/fonts/Manrope-Regular.ttf');
-  font-weight: 400;
+	font-family: Manrope;
+	src: url('/fonts/Manrope-Regular.ttf');
+	font-weight: 400;
 }
 
 @font-face {
-  font-family: Manrope;
-  src: url('/fonts/Manrope-SemiBold.ttf');
-  font-weight: 600;
+	font-family: Manrope;
+	src: url('/fonts/Manrope-SemiBold.ttf');
+	font-weight: 600;
 }
 
 @font-face {
-  font-family: Manrope;
-  src: url('/fonts/Manrope-ExtraBold.ttf');
-  font-weight: 800;
+	font-family: Manrope;
+	src: url('/fonts/Manrope-ExtraBold.ttf');
+	font-weight: 800;
 }
 
 @font-face {
-  font-family: Sequel-76;
-  src: url('/fonts/Sequel100Black-76.ttf');
+	font-family: Sequel-76;
+	src: url('/fonts/Sequel100Black-76.ttf');
 }
 
 @tailwind base;
@@ -32,8 +32,8 @@
 @tailwind utilities;
 
 .react-tel-input {
-  .flag-dropdown {
-    background: #fff !important;
-    border: none !important;
-  }
+	.flag-dropdown {
+		background: #fff !important;
+		border: none !important;
+	}
 }

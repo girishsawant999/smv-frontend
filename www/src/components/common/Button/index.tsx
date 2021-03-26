@@ -9,19 +9,19 @@ type IButtonProps = {
 };
 
 function Button({
-  onClick,
-  className = '',
-  children,
-  type = 'button'
+	onClick,
+	className = '',
+	children,
+	type = 'button'
 }: IButtonProps) {
-  return (
-    <button
-      className={className.concat(' ').concat(styles.button)}
-      type={type}
-      onClick={onClick}>
-      {children}
-    </button>
-  );
+	return (
+		<button
+			className={className.concat(' ').concat(styles.button)}
+			type={type}
+			onClick={onClick}>
+			{children}
+		</button>
+	);
 }
 
 export default Button;

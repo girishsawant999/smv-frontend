@@ -3,13 +3,13 @@ import Filler from './Filler';
 import styles from './ProgressBar.module.css';
 
 type IProgressBarProps = {
-  percent: number;
+	percent: number;
 };
 const ProgressBar = ({ percent }: IProgressBarProps) => {
-  return (
-    <div className={styles.progressBar}>
-      <Filler percent={percent} />
-    </div>
-  );
+	return (
+		<div className={styles.progressBar}>
+			<Filler percent={percent} />
+		</div>
+	);
 };
 export default ProgressBar;

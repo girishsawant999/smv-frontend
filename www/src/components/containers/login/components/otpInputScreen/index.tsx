@@ -11,9 +11,9 @@ OtpInputScreenComp.propTypes = {};
 
 const OTP_INPUTS: Array<string> = ['otp1', 'otp2', 'otp3', 'otp4'];
 function OtpInputScreenComp({
-  pageState,
-  setpageState,
-  phoneNumber
+	pageState,
+	setpageState,
+	phoneNumber
 }: IOtpInputScreenProps) {
   const [inValid, setinValid] = useState(false);
   const [OTP, setOTP] = useState<IOTP>({
@@ -53,22 +53,22 @@ function OtpInputScreenComp({
     }
   }, [timer]);
 
-  const onOTPChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let value = e.target.value;
-    setOTP({ ...OTP, [e.target.name]: value });
-    let index = OTP_INPUTS.indexOf(e.target.name);
-    if (value.length === 1) {
-      if (index < OTP_INPUTS.length - 1) {
-        let ele = document.getElementById(OTP_INPUTS[index + 1]);
-        ele && ele.focus();
-      }
-    } else if (value.length === 0) {
-      if (index > 0) {
-        let ele = document.getElementById(OTP_INPUTS[index - 1]);
-        ele && ele.focus();
-      }
-    }
-  };
+	const onOTPChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const value = e.target.value;
+		setOTP({ ...OTP, [e.target.name]: value });
+		const index = OTP_INPUTS.indexOf(e.target.name);
+		if (value.length === 1) {
+			if (index < OTP_INPUTS.length - 1) {
+				const ele = document.getElementById(OTP_INPUTS[index + 1]);
+				ele && ele.focus();
+			}
+		} else if (value.length === 0) {
+			if (index > 0) {
+				const ele = document.getElementById(OTP_INPUTS[index - 1]);
+				ele && ele.focus();
+			}
+		}
+	};
 
   const verifyOTP = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -104,18 +104,18 @@ function OtpInputScreenComp({
           }
         />
 
-        <div className="mx-10 max-w-sm text-center">
-          <Typography weight="semi-bold" variant="h1" size="16">
-            Enter the 4 digit code sent to you at {phoneNumber.slice(3)}.
-            {inValid ? (
-              <span className="text-red-500">
-                &nbsp;Did you enter the correct mobile number?
-              </span>
-            ) : (
-              <></>
-            )}
-          </Typography>
-        </div>
+				<div className="mx-10 max-w-sm text-center">
+					<Typography weight="semi-bold" variant="h1" size="16">
+						Enter the 4 digit code sent to you at {phoneNumber.slice(3)}.
+						{inValid ? (
+							<span className="text-red-500">
+								&nbsp;Did you enter the correct mobile number?
+							</span>
+						) : (
+							<></>
+						)}
+					</Typography>
+				</div>
 
         <div className="otp-input-div mt-5">
           <div className="w-64 flex justify-between">
