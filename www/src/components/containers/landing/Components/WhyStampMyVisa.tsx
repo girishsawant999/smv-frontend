@@ -1,19 +1,29 @@
 import React from 'react';
 import Typography from '../../../common/Typography';
 import Img from '../../../common/Img';
+import Marquee from 'react-fast-marquee';
+import styles from './landing.module.css';
 
 function WhyStampMyVisa() {
 	return (
 		<div className="relative">
 			<div className="relative bg-#3CC39A bg-opacity-20 rounded-3xl flex-col pt-6 mt-5 xmd:h-120">
 				<div className="flex text-2xl italic font-sequel text-#3CC39A justify-center">
-					<marquee width="100%" direction="left">
-						BOOKINGS FOR VISA{' '}
-						<span className="text-center text-2xl">&#8226;</span>{' '}
-						BOOKINGS FOR VISA
-						<span className="text-center text-2xl">&#8226;</span>{' '}
-						BOOKINGS FOR VISA
-					</marquee>
+					<Marquee
+						speed={60}
+						direction="left"
+						gradient={false}
+						gradientWidth={0}>
+						<div className={styles['bfv-marquee-width']}>
+							BOOKINGS FOR VISA{' '}
+							<span className="text-center text-2xl">&#8226;</span>{' '}
+							BOOKINGS FOR VISA
+							<span className="text-center text-2xl">
+								&#8226;
+							</span>{' '}
+							BOOKINGS FOR VISA
+						</div>
+					</Marquee>
 				</div>
 				<Typography
 					type="heading"
