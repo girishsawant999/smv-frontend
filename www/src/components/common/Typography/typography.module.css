@@ -1,50 +1,50 @@
 /* Styling for line-height */
 .heading {
-  line-height: 1.5;
+	line-height: 1.5;
 }
 .content {
-  line-height: 1.8;
+	line-height: 1.8;
 }
 
 /* Styling for weight */
 .extra-bold {
-  font-weight: 800;
-  color: #1a181b;
+	font-weight: 800;
+	color: #1a181b;
 }
 
 .semi-bold {
-  font-weight: 600;
-  color: #4e4851;
+	font-weight: 600;
+	color: #4e4851;
 }
 .regular {
-  font-weight: 400;
-  color: #9b939f;
+	font-weight: 400;
+	color: #9b939f;
 }
 
 /* Styling for size */
 .size-24 {
-  font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 .size-20 {
-  font-size: 1.25rem;
+	font-size: 1.25rem;
 }
 .size-18 {
-  font-size: 1.125rem;
+	font-size: 1.125rem;
 }
 .size-16 {
-  font-size: 1rem;
+	font-size: 1rem;
 }
 .size-14 {
-  font-size: 0.875rem;
+	font-size: 0.875rem;
 }
 .size-12 {
-  font-size: 0.75rem;
+	font-size: 0.75rem;
 }
 .size-10 {
-  font-size: 0.625rem;
+	font-size: 0.625rem;
 }
 
 /* Styling for font */
 .primary {
-  font-family: Manrope;
+	font-family: Manrope;
 }

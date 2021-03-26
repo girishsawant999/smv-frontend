@@ -4,7 +4,7 @@ import React from 'react';
 LoginMain.propTypes = {};
 
 function LoginMain() {
-  return <Login />;
+	return <Login />;
 }
 
 export default LoginMain;
