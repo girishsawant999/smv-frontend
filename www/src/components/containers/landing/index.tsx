@@ -93,27 +93,26 @@ function LandingPage({ LandingPageInfo }: ILandingPageInfoProps) {
 				/>
 				<div
 					onClick={handleClick}
-					className="relative bottom-8 flex justify-center cursor-pointer">
-					<div className="bg-white mx-12 rounded-2xl shadow w-10/12 xsm:w-3/4 xmd:w-2/3">
-						<form className="flex justify-between">
+					className="relative bottom-8 xlg:bottom-11 flex justify-center">
+					<div className="bg-white mx-12 rounded-2xl shadow w-10/12 xsm:w-3/4 xmd:w-2/3 xlg:w-1/2">
+						<form className="xlg:relative flex justify-between xlg:justify-center xlg:py-2">
 							<input
 								id="countryName"
-								className="ml-8 xsm:ml-10 xmd:ml-20 xsm:py-5 text-sm xsm:text-sm xmd:text-base
-                            rounded-3xl focus:outline-none w-44 xsm:w-44 xmd:w-48 leading-5
-                            placeholder-#4E4851 font-manrope-regular font-bold"
+								className="ml-8 xsm:ml-10 xmd:ml-20 xlg:ml-0 xsm:py-5 text-sm xsm:text-sm xmd:text-base rounded-3xl
+							xlg:text-xl focus:outline-none w-44 xsm:w-44 xmd:w-48 xlg:w-64 leading-6
+							placeholder-#4E4851 font-manrope-regular font-bold xlg:font-extrabold"
 								type="text"
 								placeholder="I am looking for a visa to..."
 								name="searchCountryValue"
-								disabled
 							/>
 							<button
 								type="submit"
-								className="bg-#1A181B w-10 h-10 my-2.5 ml-4 mr-2 text-white
-                            rounded-2xl flex justify-center items-center">
+								className="bg-#1A181B w-10 h-10 my-2.5 ml-4 mr-2 xlg:w-16 xlg:h-16 text-white
+							rounded-2xl xlg:rounded-20px xlg:absolute xlg:my-0 xlg:right-0 flex justify-center items-center">
 								<Icon
-									src={'search-1@3x.png'}
+									src={'landing/search_icon_image/search-1@3x.png'}
 									alt="Search for specific country"
-									className="p-3"
+									className="p-3 xlg:p-5"
 								/>
 							</button>
 						</form>
