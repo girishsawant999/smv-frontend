@@ -1,11 +1,12 @@
+import BackButton from 'components/common/backButton';
 import Button from 'components/common/Button';
 import Emotes from 'components/common/emotes';
 import Typography from 'components/common/Typography';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import commonStyles from '../../login.module.css';
-import BackButton from 'components/common/backButton';
+import { IOTP, IOtpInputScreenProps } from '../../types';
+import Timer from './components/Timer';
 import styles from './otpscreen.module.css';
-import { IOtpInputScreenProps, IOTP } from '../../types';
 
 OtpInputScreenComp.propTypes = {};
 
@@ -16,7 +17,26 @@ function OtpInputScreenComp({
 	phoneNumber
 }: IOtpInputScreenProps) {
 	const [inValid, setinValid] = useState(false);
-	const [OTP, setOTP] = useState<IOTP>({ otp1: '', otp2: '', otp3: '', otp4: '' });
+	const [OTP, setOTP] = useState<IOTP>({
+		otp1: '',
+		otp2: '',
+		otp3: '',
+		otp4: ''
+	});
+
+	const [timer, setTimer] = React.useState({
+		minutes: 1,
+		seconds: 30
+	});
+	const [timerEnd, settimerEnd] = useState(false);
+
+	const onClickResendCode = () => {
+		setTimer({
+			minutes: 0,
+			seconds: 60
+		});
+		settimerEnd(false);
+	};
 
 	const onOTPChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
@@ -37,16 +57,19 @@ function OtpInputScreenComp({
 
 	const verifyOTP = (e: React.ChangeEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		const otp = '';
-		Object.keys(OTP).forEach((element) => {
-			otp.concat(OTP[element as keyof IOTP]);
+		let otp = '';
+		OTP_INPUTS.forEach((element: string) => {
+			otp = otp.concat(OTP[element]);
 		});
-		if (!inValid) {
-			setinValid(true);
+		if (otp === '5555') {
+			// for testing
+			setpageState('email-screen');
 			return;
 		}
-		setpageState('email-screen');
+		setinValid(true);
+		return;
 	};
+
 	return (
 		<>
 			<BackButton
@@ -107,27 +130,32 @@ function OtpInputScreenComp({
 						})}
 					</div>
 				</div>
-
-				<div className={commonStyles.lowerdiv}>
-					{inValid ? (
+				<div className="mt-8">
+					{timerEnd ? (
 						<Typography
 							weight="extra-bold"
-							variant="h6"
-							size="12"
+							variant="h4"
+							size="14"
 							className="underline">
-							I haven’t recieved a code
+							<button
+								type="button"
+								className="focus:outline-none underline font-extrabold"
+								onClick={onClickResendCode}>
+								I haven’t recieved a code
+							</button>
 						</Typography>
 					) : (
-						<Typography weight="semi-bold" variant="h6" size="12">
-							Resend code in 0:20
-						</Typography>
+						<Timer
+							onTimerEnd={() => settimerEnd(true)}
+							selectedTimer={timer}
+						/>
 					)}
 				</div>
 
-				<div className={commonStyles.loginCommonBtn}>
-					<Button type="submit" onClick={() => null}>
-						Verify
-					</Button>
+				<div className={commonStyles.lowerdiv}>
+					<div className={commonStyles.loginCommonBtn}>
+						<Button type="submit">Verify</Button>
+					</div>
 				</div>
 			</form>
 		</>

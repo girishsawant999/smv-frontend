@@ -66,10 +66,10 @@ function PasswordInputScreen({
 					</div>
 				</div>
 
-				<div className={commonStyles.loginCommonBtn}>
-					<Button type="submit" onClick={() => null}>
-						Next
-					</Button>
+				<div className={commonStyles.lowerdiv}>
+					<div className={commonStyles.loginCommonBtn}>
+						<Button type="submit">Next</Button>
+					</div>
 				</div>
 			</form>
 		</>

@@ -77,10 +77,10 @@ function NameInputScreen({
 					</div>
 				</div>
 
-				<div className={commonStyles.loginCommonBtn}>
-					<Button type="submit" onClick={() => null}>
-						Done
-					</Button>
+				<div className={commonStyles.lowerdiv}>
+					<div className={commonStyles.loginCommonBtn}>
+						<Button type="submit">Done</Button>
+					</div>
 				</div>
 			</form>
 		</>
