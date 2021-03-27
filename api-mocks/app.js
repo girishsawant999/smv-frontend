@@ -12,6 +12,7 @@ app.use('/api/v1/ums/landing', landing);
 app.use('/api/v1/ums/country', countryInfo);
 app.use('/api/v1/ums/countries', country);
 
-app.listen(44444, () => {
-	console.log('Api Mock service is listening on port 44444');
+const port = process.env.PORT ? process.env.PORT : 44444;
+app.listen(port, () => {
+	console.log(`Api Mock service is listening on port ${port}`);
 });
