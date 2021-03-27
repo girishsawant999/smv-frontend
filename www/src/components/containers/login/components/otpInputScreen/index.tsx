@@ -5,7 +5,7 @@ import Typography from 'components/common/Typography';
 import React, { useEffect, useState } from 'react';
 import commonStyles from '../../login.module.css';
 import { IOTP, IOtpInputScreenProps } from '../../types';
-import Timer from './components/timer';
+import Timer from './components/Timer';
 import styles from './otpscreen.module.css';
 
 OtpInputScreenComp.propTypes = {};
@@ -59,14 +59,17 @@ function OtpInputScreenComp({
 		e.preventDefault();
 		let otp = '';
 		OTP_INPUTS.forEach((element: string) => {
-			otp.concat(OTP[element]);
+			otp = otp.concat(OTP[element]);
 		});
-		if (!inValid) {
-			setinValid(true);
+		if (otp === '5555') {
+			// for testing
+			setpageState('email-screen');
 			return;
 		}
-		setpageState('email-screen');
+		setinValid(true);
+		return;
 	};
+
 	return (
 		<>
 			<BackButton
