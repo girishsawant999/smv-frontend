@@ -1,7 +1,8 @@
 import BackButton from 'components/common/backButton';
 import Typography from 'components/common/Typography';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Styles from './searchInput.module.css';
+import { useRouter } from 'next/router';
 
 type ISearchInput = {
 	setsearchQuery: (searchQuery: string) => void;
@@ -9,6 +10,15 @@ type ISearchInput = {
 };
 
 function SearchInput({ searchQuery, setsearchQuery }: ISearchInput) {
+	const router = useRouter();
+	const searchRef = useRef<HTMLInputElement>(null);
+
+	useEffect(() => {
+		if (searchRef.current) {
+			searchRef.current.focus();
+		}
+	}, []);
+
 	const onChangeSearchQuery = (e: React.ChangeEvent<HTMLInputElement>) =>
 		setsearchQuery(e.target.value);
 
@@ -18,7 +28,7 @@ function SearchInput({ searchQuery, setsearchQuery }: ISearchInput) {
 	};
 	return (
 		<div className="flex py-4 px-5 items-center w-full sticky bg-white top-0 transition-all">
-			<BackButton onClick={() => null} className="static" />
+			<BackButton onClick={() => router.push('/')} className="static" />
 			<form onSubmit={onSearchSubmit} className="w-full px-4 relative">
 				<label hidden>Search</label>
 				<input
@@ -27,6 +37,7 @@ function SearchInput({ searchQuery, setsearchQuery }: ISearchInput) {
 					name="search"
 					id="search-input"
 					value={searchQuery}
+					ref={searchRef}
 					className={Styles.searchInput.concat(' h-6 outline-none w-full')}
 					onChange={onChangeSearchQuery}
 				/>

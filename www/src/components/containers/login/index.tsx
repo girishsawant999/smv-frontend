@@ -14,7 +14,7 @@ Login.propTypes = {};
 function Login() {
 	const [pageState, setpageState] = useState<string>('phone-input');
 	const [phoneNumber, setphoneNumber] = useState('');
-	const [name, setname] = useState<IName>({});
+	const [name, setname] = useState<IName>({ first: '', last: '' });
 
 	return (
 		<div className={styles.logindiv}>

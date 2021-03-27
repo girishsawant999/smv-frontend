@@ -72,7 +72,11 @@ function getStatement(buttonIndex: number) {
 	}
 }
 
-function ImageList(props) {
+type IImageListProps = {
+	buttonIndex: number;
+};
+
+function ImageList(props: IImageListProps) {
 	return (
 		<div>
 			<div className=" mt-11 flex justify-center">

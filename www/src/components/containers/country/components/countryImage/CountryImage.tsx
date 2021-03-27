@@ -1,8 +1,11 @@
 import React from 'react';
 import Icon from '../../../../common/Icon';
 import Img from '../../../../common/Img';
+import { useRouter } from 'next/router';
 
 function CountryImage() {
+	const router = useRouter();
+
 	return (
 		<section className="relative">
 			<div className=" z-10 ">
@@ -11,7 +14,10 @@ function CountryImage() {
 				</button>
 				<button
 					className="absolute w-10 h-10 bg-white flex top-10 left-5 justify-center items-center bg-opacity-40 rounded-2xl cursor-pointer"
-					onClick={() => history.back()}>
+					onClick={(e) => {
+						e.preventDefault();
+						router.back();
+					}}>
 					<Icon src={'chevron-left.svg'} alt={'go back'} />
 				</button>
 			</div>

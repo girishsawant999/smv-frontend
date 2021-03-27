@@ -9,7 +9,7 @@ import styles from './otpscreen.module.css';
 
 OtpInputScreenComp.propTypes = {};
 
-const OTP_INPUTS: Array<string> = ['otp1', 'otp2', 'otp3', 'otp4'];
+const OTP_INPUTS: string[] = ['otp1', 'otp2', 'otp3', 'otp4'];
 function OtpInputScreenComp({
 	pageState,
 	setpageState,

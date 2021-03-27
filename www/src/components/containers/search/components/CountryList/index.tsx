@@ -1,4 +1,4 @@
-import Img from 'components/common/img';
+import Img from 'components/common/Img';
 import Typography from 'components/common/Typography';
 import React from 'react';
 import { ICountryList } from '../../types';

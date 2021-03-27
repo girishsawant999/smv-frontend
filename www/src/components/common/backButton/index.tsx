@@ -8,6 +8,10 @@ type IBackButtonProps = {
 };
 
 function BackButton({ onClick, className = '' }: IBackButtonProps) {
+	const handleClick = (e: React.MouseEvent<HTMLElement>) => {
+		e.preventDefault();
+		onClick();
+	};
 	return (
 		<button
 			className={
@@ -15,7 +19,7 @@ function BackButton({ onClick, className = '' }: IBackButtonProps) {
 				' flex justify-center items-center focus:outline-none ' +
 				className
 			}
-			onClick={onClick}>
+			onClick={handleClick}>
 			<Img alt="back" width="auto" height="auto" srcSet={['left-arrow.svg']} />
 		</button>
 	);

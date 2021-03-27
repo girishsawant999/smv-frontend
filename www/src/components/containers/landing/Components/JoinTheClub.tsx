@@ -1,8 +1,21 @@
 import React from 'react';
 import Typography from '../../../common/Typography';
 import Img from '../../../common/Img';
+import { useRouter } from 'next/router';
 
 function JoinTheClub() {
+	const router = useRouter();
+
+	const goToLogin = (e: React.MouseEvent<HTMLElement>) => {
+		e.preventDefault();
+		router.push('/login');
+	};
+
+	const goToSignup = (e: React.MouseEvent<HTMLElement>) => {
+		e.preventDefault();
+		router.push('/login');
+	};
+
 	return (
 		<div>
 			<div className="relative">
@@ -63,10 +76,14 @@ function JoinTheClub() {
 					</Typography>
 				</div>
 				<div className="flex mt-12">
-					<button className="bg-white py-5 px-10 rounded-20px text-xs font-bold w-40">
+					<button
+						className="bg-white py-5 px-10 rounded-20px text-xs font-bold w-40"
+						onClick={goToSignup}>
 						Sign up
 					</button>
-					<button className="bg-#1A181B ml-4 py-5 px-10 rounded-20px font-bold text-xs text-white w-40">
+					<button
+						className="bg-#1A181B ml-4 py-5 px-10 rounded-20px font-bold text-xs text-white w-40"
+						onClick={goToLogin}>
 						Sign in
 					</button>
 				</div>

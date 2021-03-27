@@ -1,5 +1,7 @@
 import React from 'react';
 import Img from '../../../common/Img';
+import Marquee from 'react-fast-marquee';
+import styles from './landing.module.css';
 
 function WhyStampMyVisaFAST() {
 	return (
@@ -19,15 +21,21 @@ function WhyStampMyVisaFAST() {
 						</div>
 					</div>
 					<div className="mt-10 flex text-2xl italic font-sequel text-#74C2F1">
-						<marquee width="100%" direction="left">
-							FAST{' '}
-							<span className="text-center text-2xl">&#8226;</span>{' '}
-							FAST{' '}
-							<span className="text-center text-2xl">&#8226;</span>{' '}
-							FAST{' '}
-							<span className="text-center text-2xl">&#8226;</span>{' '}
-							FAST
-						</marquee>
+						<Marquee
+							speed={60}
+							direction="left"
+							gradient={false}
+							gradientWidth={0}>
+							<div className={styles['fast-marquee-width']}>
+								FAST{' '}
+								<span className="text-center text-2xl">&#8226;</span>{' '}
+								FAST{' '}
+								<span className="text-center text-2xl">&#8226;</span>{' '}
+								FAST{' '}
+								<span className="text-center text-2xl">&#8226;</span>{' '}
+								FAST
+							</div>
+						</Marquee>
 					</div>
 				</div>
 				<div className="bg-#FF8199 h-68 mr-4 mt-4 pt-17 rounded-30px bg-opacity-20">
@@ -44,30 +52,42 @@ function WhyStampMyVisaFAST() {
 						</div>
 					</div>
 					<div className="mt-12 text-2xl italic font-sequel text-#FF8199">
-						<marquee width="100%" direction="left">
-							SIMPLE{' '}
-							<span className="text-center text-2xl">&#8226;</span>{' '}
-							SIMPLE{' '}
-							<span className="text-center text-2xl">&#8226;</span>{' '}
-							SIMPLE{' '}
-							<span className="text-center text-2xl">&#8226;</span>{' '}
-							SIMPLE
-						</marquee>
+						<Marquee
+							speed={60}
+							direction="left"
+							gradient={false}
+							gradientWidth={0}>
+							<div className={styles['simple-marquee-width']}>
+								SIMPLE{' '}
+								<span className="text-center text-2xl">&#8226;</span>{' '}
+								SIMPLE{' '}
+								<span className="text-center text-2xl">&#8226;</span>{' '}
+								SIMPLE{' '}
+								<span className="text-center text-2xl">&#8226;</span>{' '}
+								SIMPLE
+							</div>
+						</Marquee>
 					</div>
 				</div>
 			</div>
 			<div className="flex-col w-1/2">
 				<div className="bg-#9977FF mr-5 h-68 pt-6 rounded-30px bg-opacity-20">
 					<div className="text-2xl italic font-sequel text-#9977FF">
-						<marquee width="100%" direction="left">
-							AWESOME{' '}
-							<span className="text-center text-2xl">&#8226;</span>{' '}
-							AWESOME{' '}
-							<span className="text-center text-2xl">&#8226;</span>{' '}
-							AWESOME{' '}
-							<span className="text-center text-2xl">&#8226;</span>{' '}
-							AWESOME
-						</marquee>
+						<Marquee
+							speed={60}
+							direction="left"
+							gradient={false}
+							gradientWidth={0}>
+							<div className={styles['awesome-marquee-width']}>
+								AWESOME{' '}
+								<span className="text-center text-2xl">&#8226;</span>{' '}
+								AWESOME{' '}
+								<span className="text-center text-2xl">&#8226;</span>{' '}
+								AWESOME{' '}
+								<span className="text-center text-2xl">&#8226;</span>{' '}
+								AWESOME
+							</div>
+						</Marquee>
 					</div>
 					<div className="mt-8 px-8 flex justify-center">
 						<div className="w-24">
@@ -84,15 +104,21 @@ function WhyStampMyVisaFAST() {
 				</div>
 				<div className="bg-#FFB600 h-48 mr-5 mt-4 pt-6 rounded-30px bg-opacity-20">
 					<div className="text-2xl italic font-sequel text-#FFB600">
-						<marquee width="100%" direction="left">
-							TRUSTWORTHY{' '}
-							<span className="text-center text-2xl">&#8226;</span>{' '}
-							TRUSTWORTHY{' '}
-							<span className="text-center text-2xl">&#8226;</span>{' '}
-							TRUSTWORTHY{' '}
-							<span className="text-center text-2xl">&#8226;</span>{' '}
-							TRUSTWORTHY
-						</marquee>
+						<Marquee
+							speed={80}
+							direction="left"
+							gradient={false}
+							gradientWidth={0}>
+							<div className={styles['trustworthy-marquee-width']}>
+								TRUSTWORTHY{' '}
+								<span className="text-center text-2xl">&#8226;</span>{' '}
+								TRUSTWORTHY{' '}
+								<span className="text-center text-2xl">&#8226;</span>{' '}
+								TRUSTWORTHY{' '}
+								<span className="text-center text-2xl">&#8226;</span>{' '}
+								TRUSTWORTHY
+							</div>
+						</Marquee>
 					</div>
 					<div className="pr-8 pl-7 flex justify-center">
 						<div className="w-25">

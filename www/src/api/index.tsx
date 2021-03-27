@@ -1,4 +1,4 @@
-const BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:44444/';
+const BASE_URL = process.env.API_BASE_URL || 'http://localhost:44444/';
 const OPTIONS = {
 	headers: {
 		'Access-Control-Allow-Origin': '*'
