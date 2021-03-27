@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './commonButton.module.css';
 
 type IButtonProps = {
-  onClick?: () => void;
-  type: 'button' | 'submit' | 'reset';
-  className?: string;
-  children: React.ReactChild | React.ReactChildren;
+	onClick?: () => void;
+	type: 'button' | 'submit' | 'reset';
+	className?: string;
+	children: React.ReactChild | React.ReactChildren;
 };
 
 function Button({

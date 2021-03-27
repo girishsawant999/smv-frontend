@@ -28,74 +28,82 @@ function PhoneInputScreenComponent({
 		setpageState('otp-screen');
 	};
 
-  return (
-    <>
-      <form
-        onSubmit={requestOTP}
-        className="flex flex-col h-full items-center max-w-sm relative w-full">
-        <Emotes
-          srcSet={[
-            'emote-smiling/emote-smiling.png',
-            'emote-smiling/emote-smiling@2x.png 2x',
-            'emote-smiling/emote-smiling@3x.png 3x'
-          ]}
-        />
-        <div className="mx-10 max-w-sm text-center">
-          <Typography weight="extra-bold" variant="h1" size="20" className="x">
-            Awesome, Let's get you in the system first!"
-          </Typography>
-          <Typography
-            weight="semi-bold"
-            variant="h2"
-            size="16"
-            className="mt-2.5 mb-5">
-            Enter your mobile number
-          </Typography>
-        </div>
-        <div className="px-4 max-w-sm w-full">
-          <div className={Styles.phoneNumberInputContainer}>
-            <label htmlFor="phoneNumber" className="hidden">
-              Phone Number
-            </label>
-            <span>
-              <Img
-                srcSet={['indian-flag.svg']}
-                alt="indian flag"
-                className="rounded-2xl"
-              />
-            </span>
-            <input
-              type="tel"
-              onChange={onChangePhoneNumber}
-              name="phoneNumber"
-              id="phoneNumber"
-              maxLength={13}
-              value={phoneNumber}
-            />
-          </div>
-        </div>
-        <div className="mt-8">
-          <a href="#" className="underline">
-            <Typography weight="extra-bold" variant="h6" size="12">
-              or signup using a social account
-            </Typography>
-          </a>
-        </div>
+	return (
+		<>
+			<form
+				onSubmit={requestOTP}
+				className="flex flex-col h-full items-center max-w-sm relative w-full">
+				<Emotes
+					srcSet={[
+						'emote-smiling/emote-smiling.png',
+						'emote-smiling/emote-smiling@2x.png 2x',
+						'emote-smiling/emote-smiling@3x.png 3x'
+					]}
+				/>
+				<div className="mx-10 max-w-sm text-center">
+					<Typography
+						weight="extra-bold"
+						variant="h1"
+						size="20"
+						className="x">
+						Awesome, Let's get you in the system first!"
+					</Typography>
+					<Typography
+						weight="semi-bold"
+						variant="h2"
+						size="16"
+						className="mt-2.5 mb-5">
+						Enter your mobile number
+					</Typography>
+				</div>
+				<div className="px-4 max-w-sm w-full">
+					<div className={Styles.phoneNumberInputContainer}>
+						<span>
+							<Img
+								srcSet={['indian-flag.svg']}
+								alt="indian flag"
+								className="rounded-2xl"
+							/>
+						</span>
+						<label htmlFor="phoneNumber" className="hidden">
+							Phone Number
+						</label>
+						<input
+							type="tel"
+							onChange={onChangePhoneNumber}
+							name="phoneNumber"
+							id="phoneNumber"
+							maxLength={13}
+							value={phoneNumber}
+						/>
+					</div>
+				</div>
+				<div className="mt-8">
+					<a href="#" className="underline">
+						<Typography weight="extra-bold" variant="h6" size="12">
+							or signup using a social account
+						</Typography>
+					</a>
+				</div>
 
-        <div className={commonStyles.lowerdiv}>
-          <div className={commonStyles.disclaimer}>
-            <Typography type="content" weight="regular" variant="p" size="12">
-              By continuing you may receive an SMS for verification. Message and data
-              rates may apply.
-            </Typography>
-          </div>
-          <div className={commonStyles.loginCommonBtn}>
-            <Button type="submit">Request OTP</Button>
-          </div>
-        </div>
-      </form>
-    </>
-  );
+				<div className={commonStyles.lowerdiv}>
+					<div className={commonStyles.disclaimer}>
+						<Typography
+							type="content"
+							weight="regular"
+							variant="p"
+							size="12">
+							By continuing you may receive an SMS for verification.
+							Message and data rates may apply.
+						</Typography>
+					</div>
+					<div className={commonStyles.loginCommonBtn}>
+						<Button type="submit">Request OTP</Button>
+					</div>
+				</div>
+			</form>
+		</>
+	);
 }
 
 export default PhoneInputScreenComponent;

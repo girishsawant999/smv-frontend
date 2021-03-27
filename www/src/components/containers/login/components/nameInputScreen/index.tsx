@@ -77,14 +77,14 @@ function NameInputScreen({
 					</div>
 				</div>
 
-        <div className={commonStyles.lowerdiv}>
-          <div className={commonStyles.loginCommonBtn}>
-            <Button type="submit">Done</Button>
-          </div>
-        </div>
-      </form>
-    </>
-  );
+				<div className={commonStyles.lowerdiv}>
+					<div className={commonStyles.loginCommonBtn}>
+						<Button type="submit">Done</Button>
+					</div>
+				</div>
+			</form>
+		</>
+	);
 }
 
 export default NameInputScreen;

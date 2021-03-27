@@ -66,14 +66,14 @@ function PasswordInputScreen({
 					</div>
 				</div>
 
-        <div className={commonStyles.lowerdiv}>
-          <div className={commonStyles.loginCommonBtn}>
-            <Button type="submit">Next</Button>
-          </div>
-        </div>
-      </form>
-    </>
-  );
+				<div className={commonStyles.lowerdiv}>
+					<div className={commonStyles.loginCommonBtn}>
+						<Button type="submit">Next</Button>
+					</div>
+				</div>
+			</form>
+		</>
+	);
 }
 
 export default PasswordInputScreen;

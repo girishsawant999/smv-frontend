@@ -5,6 +5,7 @@ import Typography from 'components/common/Typography';
 import React, { useEffect, useState } from 'react';
 import commonStyles from '../../login.module.css';
 import { IOTP, IOtpInputScreenProps } from '../../types';
+import Timer from './components/timer';
 import styles from './otpscreen.module.css';
 
 OtpInputScreenComp.propTypes = {};
@@ -15,43 +16,27 @@ function OtpInputScreenComp({
 	setpageState,
 	phoneNumber
 }: IOtpInputScreenProps) {
-  const [inValid, setinValid] = useState(false);
-  const [OTP, setOTP] = useState<IOTP>({
-    otp1: '',
-    otp2: '',
-    otp3: '',
-    otp4: ''
-  });
+	const [inValid, setinValid] = useState(false);
+	const [OTP, setOTP] = useState<IOTP>({
+		otp1: '',
+		otp2: '',
+		otp3: '',
+		otp4: ''
+	});
 
-  const [timer, setTimer] = React.useState({
-    minutes: 1,
-    seconds: 30
-  });
-  const [timerEnd, settimerEnd] = useState(false);
+	const [timer, setTimer] = React.useState({
+		minutes: 1,
+		seconds: 30
+	});
+	const [timerEnd, settimerEnd] = useState(false);
 
-  const onClickResendCode = () => {
-    settimerEnd(false);
-    setTimer({
-      minutes: 0,
-      seconds: 60
-    });
-  };
-
-  useEffect(() => {
-    let _seconds = timer.minutes * 60 + timer.seconds - 1;
-    if (_seconds > 0) {
-      setTimeout(
-        () =>
-          setTimer({
-            minutes: parseInt(String(_seconds / 60)),
-            seconds: _seconds % 60
-          }),
-        1000
-      );
-    } else {
-      settimerEnd(true);
-    }
-  }, [timer]);
+	const onClickResendCode = () => {
+		setTimer({
+			minutes: 0,
+			seconds: 60
+		});
+		settimerEnd(false);
+	};
 
 	const onOTPChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
@@ -70,39 +55,42 @@ function OtpInputScreenComp({
 		}
 	};
 
-  const verifyOTP = (e: React.ChangeEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    let otp = '';
-    OTP_INPUTS.forEach((element: string) => {
-      otp.concat(OTP[element]);
-    });
-    if (!inValid) {
-      setinValid(true);
-      return;
-    }
-    setpageState('email-screen');
-  };
-  return (
-    <>
-      <BackButton onClick={() => setpageState('phone-input')} className="absolute" />
-      <form
-        onSubmit={verifyOTP}
-        className="flex flex-col h-full items-center max-w-sm relative w-full">
-        <Emotes
-          srcSet={
-            inValid
-              ? [
-                  'emote-thinking/emote-thinking.png',
-                  'emote-thinking/emote-thinking@2x.png 2x',
-                  'emote-thinking/emote-thinking@3x.png 3x'
-                ]
-              : [
-                  'emote-smiling/emote-smiling.png',
-                  'emote-smiling/emote-smiling@2x.png 2x',
-                  'emote-smiling/emote-smiling@3x.png 3x'
-                ]
-          }
-        />
+	const verifyOTP = (e: React.ChangeEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		let otp = '';
+		OTP_INPUTS.forEach((element: string) => {
+			otp.concat(OTP[element]);
+		});
+		if (!inValid) {
+			setinValid(true);
+			return;
+		}
+		setpageState('email-screen');
+	};
+	return (
+		<>
+			<BackButton
+				onClick={() => setpageState('phone-input')}
+				className="absolute"
+			/>
+			<form
+				onSubmit={verifyOTP}
+				className="flex flex-col h-full items-center max-w-sm relative w-full">
+				<Emotes
+					srcSet={
+						inValid
+							? [
+									'emote-thinking/emote-thinking.png',
+									'emote-thinking/emote-thinking@2x.png 2x',
+									'emote-thinking/emote-thinking@3x.png 3x'
+							  ]
+							: [
+									'emote-smiling/emote-smiling.png',
+									'emote-smiling/emote-smiling@2x.png 2x',
+									'emote-smiling/emote-smiling@3x.png 3x'
+							  ]
+					}
+				/>
 
 				<div className="mx-10 max-w-sm text-center">
 					<Typography weight="semi-bold" variant="h1" size="16">
@@ -117,57 +105,58 @@ function OtpInputScreenComp({
 					</Typography>
 				</div>
 
-        <div className="otp-input-div mt-5">
-          <div className="w-64 flex justify-between">
-            {OTP_INPUTS.map((item, index) => {
-              return (
-                <>
-                  <label htmlFor={item} className="hidden">
-                    Enter OTP number {index + 1}
-                  </label>
-                  <input
-                    className={styles.otpinput}
-                    type="text"
-                    name={item}
-                    id={item}
-                    maxLength={1}
-                    autoFocus={index === 0}
-                    onChange={onOTPChange}
-                  />
-                </>
-              );
-            })}
-          </div>
-        </div>
-        <div className="mt-8">
-          {timerEnd ? (
-            <Typography
-              weight="extra-bold"
-              variant="h4"
-              size="14"
-              className="underline">
-              <button
-                type="button"
-                className="focus:outline-none underline font-extrabold"
-                onClick={onClickResendCode}>
-                I haven’t recieved a code
-              </button>
-            </Typography>
-          ) : (
-            <Typography weight="semi-bold" variant="h4" size="14">
-              Resend code in {timer.minutes}:{('0' + timer.seconds).slice(-2)}
-            </Typography>
-          )}
-        </div>
+				<div className="otp-input-div mt-5">
+					<div className="w-64 flex justify-between">
+						{OTP_INPUTS.map((item, index) => {
+							return (
+								<>
+									<label htmlFor={item} className="hidden">
+										Enter OTP number {index + 1}
+									</label>
+									<input
+										className={styles.otpinput}
+										type="text"
+										name={item}
+										id={item}
+										maxLength={1}
+										autoFocus={index === 0}
+										onChange={onOTPChange}
+									/>
+								</>
+							);
+						})}
+					</div>
+				</div>
+				<div className="mt-8">
+					{timerEnd ? (
+						<Typography
+							weight="extra-bold"
+							variant="h4"
+							size="14"
+							className="underline">
+							<button
+								type="button"
+								className="focus:outline-none underline font-extrabold"
+								onClick={onClickResendCode}>
+								I haven’t recieved a code
+							</button>
+						</Typography>
+					) : (
+						<Timer
+							onTimerEnd={() => settimerEnd(true)}
+							selectedTimer={timer}
+						/>
+					)}
+				</div>
 
-        <div className={commonStyles.lowerdiv}>
-          <div className={commonStyles.loginCommonBtn}>
-            <Button type="submit">Verify</Button>
-          </div>
-        </div>
-      </form>
-    </>
-  );
+				<div className={commonStyles.lowerdiv}>
+					<div className={commonStyles.loginCommonBtn}>
+						<Button type="submit">Verify</Button>
+					</div>
+				</div>
+			</form>
+		</>
+	);
 }
 
 export default OtpInputScreenComp;

@@ -24,10 +24,10 @@ export type IOtpInputScreenProps = {
 	phoneNumber: string;
 };
 export type IOTP = {
-  [otp1: string]: string;
-  [otp2: string]: string;
-  [otp3: string]: string;
-  [otp4: string]: string;
+	[otp1: string]: string;
+	[otp2: string]: string;
+	[otp3: string]: string;
+	[otp4: string]: string;
 };
 export type IPasswordInputScreenProps = {
 	pageState: string;
@@ -36,4 +36,13 @@ export type IPasswordInputScreenProps = {
 export type IWelcomeScreenProps = {
 	setpageState: (pageState: string) => void;
 	name: IName;
+};
+export type ITimeObj = {
+	minutes: number;
+	seconds: number;
+};
+
+export type ITimer = {
+	onTimerEnd: () => void;
+	selectedTimer: ITimeObj;
 };
