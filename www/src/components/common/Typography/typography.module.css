@@ -52,6 +52,12 @@
 	font-size: 0.625rem;
 }
 
+@media only screen and (min-width: 768px) {
+	.size-20 {
+		font-size: 2rem;
+	}
+}
+
 /* Styling for font */
 .primary {
 	font-family: Manrope;
