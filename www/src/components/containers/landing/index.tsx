@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Accordion from './Components/Accordion';
 import CustomerReviewBox from './Components/CustomerReviewBox';
-import ImageList from './Components/ProcessDisplay';
 import DisplayBlogPost from './Components/BlogPost';
 import CountriesVisaDetailSlider from './Components/DisplayCountryVisaDetail';
 import Typography from '../../common/Typography';
@@ -12,8 +11,8 @@ import WhyStampMyVisaFAST from './Components/WhyStampMyVisaFAST';
 import JoinTheClub from './Components/JoinTheClub';
 import FixedBottomButton from './Components/FixedBottomButton';
 import { useRouter } from 'next/router';
-import ProcessSlider from './Components/ProcessSlider/ProcessSlider';
 import { IInputDataProps } from './types';
+import SliderOfProcess from './Components/ProcessSlider/SliderOfProcess';
 
 type ILandingPageInfoProps = {
 	LandingPageInfo: IInputDataProps;
@@ -90,7 +89,44 @@ function LandingPage({ LandingPageInfo }: ILandingPageInfoProps) {
 						'landing/cover_images/cover1@3x.png 3x'
 					]}
 					width="100%"
+					className="flex xmd:hidden"
 				/>
+				<Img
+					alt="cover image"
+					srcSet={[
+						'landing/cover_images/cover1@1x.png 1x',
+						'landing/cover_images/cover1@2x.png 2x',
+						'landing/cover_images/cover1@3x.png 3x'
+					]}
+					width="100%"
+					className="hidden xmd:flex"
+				/>
+				<div className="w-full flex fixed justify-between top-3 px-22.5 hidden lg:flex">
+					<div>
+						<Img
+							alt="company logo image"
+							srcSet={[
+								'landing/Company_logo_image/group-copy-7@1x.png 1x',
+								'landing/Company_logo_image/group-copy-7@2x.png 2x',
+								'landing/Company_logo_image/group-copy-7@3x.png 3x'
+							]}
+							width="100%"
+							className="my-2"
+						/>
+					</div>
+					<div className="flex items-center ">
+						<Icon
+							src={'landing/compass_icon _image/compass@3x.png'}
+							alt="compass_icon _image"
+							className="w-6 h-6 bg-#1A181B"
+						/>
+						<Icon
+							src={'landing/user_icon_image/user@3x.png'}
+							alt="compass_icon _image"
+							className="w-6 h-6 ml-9 bg-#1A181B"
+						/>
+					</div>
+				</div>
 				<div
 					onClick={handleClick}
 					className="relative bottom-8 xlg:bottom-11 flex justify-center">
@@ -99,8 +135,8 @@ function LandingPage({ LandingPageInfo }: ILandingPageInfoProps) {
 							<input
 								id="countryName"
 								className="ml-8 xsm:ml-10 xmd:ml-20 xlg:ml-0 xsm:py-5 text-sm xsm:text-sm xmd:text-base rounded-3xl
-							xlg:text-xl focus:outline-none w-44 xsm:w-44 xmd:w-48 xlg:w-64 leading-6
-							placeholder-#4E4851 font-manrope-regular font-bold xlg:font-extrabold"
+					xlg:text-xl focus:outline-none w-44 xsm:w-44 xmd:w-48 xlg:w-64 leading-6
+					placeholder-#4E4851 font-manrope-regular font-bold xlg:font-extrabold"
 								type="text"
 								placeholder="I am looking for a visa to..."
 								name="searchCountryValue"
@@ -108,7 +144,7 @@ function LandingPage({ LandingPageInfo }: ILandingPageInfoProps) {
 							<button
 								type="submit"
 								className="bg-#1A181B w-10 h-10 my-2.5 ml-4 mr-2 xlg:w-16 xlg:h-16 text-white
-							rounded-2xl xlg:rounded-20px xlg:absolute xlg:my-0 xlg:right-0 flex justify-center items-center">
+					  rounded-2xl xlg:rounded-20px xlg:absolute xlg:my-0 xlg:right-0 flex justify-center items-center">
 								<Icon
 									src={'landing/search_icon_image/search-1@3x.png'}
 									alt="Search for specific country"
@@ -120,25 +156,45 @@ function LandingPage({ LandingPageInfo }: ILandingPageInfoProps) {
 				</div>
 			</section>
 
-			<section className="ml-5 mt-8">
+			<section className="ml-5 mt-8 xlg:mt-14 xlg:ml-25">
 				<div className="flex justify-between">
 					<Typography
 						type="heading"
 						size="20"
 						weight="extra-bold"
 						variant="h1"
-						className="">
+						className="xlg:hidden">
 						Countries to visit right now
 					</Typography>
-					<div className="bg-#F5F4F5 w-8 h-8 mr-5 mt-5 xsm:mt-0  rounded-xl flex justify-center items-center">
+					<div className="xlg:hidden bg-#F5F4F5 w-8 h-8 mr-5 mt-5 xsm:mt-0 rounded-xl flex justify-center items-center">
 						<Icon
-							src={'arrow-right_2@3x.png'}
+							src={'landing/right_arrow_image/arrow-right_2@3x.png'}
 							alt="right arrow navigation image"
 							className="p-2"
 						/>
 					</div>
+					<Typography
+						type="heading"
+						size="32"
+						weight="extra-bold"
+						variant="h1"
+						className="hidden xlg:flex">
+						Countries to visit right now
+					</Typography>
+					<div className="hidden xlg:flex bg-#F5F4F5 w-12.5 h-12.5 mr-5 mt-5 xsm:mt-0 rounded-20px flex justify-center items-center">
+						<Icon
+							src={'landing/right_arrow_image/arrow-right_2@3x.png'}
+							alt="right arrow navigation image"
+							className="p-3"
+						/>
+					</div>
 				</div>
-				<div>
+				<div className="xlg:hidden">
+					<CountriesVisaDetailSlider
+						countryList={LandingPageInfo.data.SuggestedCountryVisaDetail}
+					/>
+				</div>
+				<div className="hidden xlg:flex">
 					<CountriesVisaDetailSlider
 						countryList={LandingPageInfo.data.SuggestedCountryVisaDetail}
 					/>
@@ -151,13 +207,12 @@ function LandingPage({ LandingPageInfo }: ILandingPageInfoProps) {
 						type="heading"
 						size="20"
 						weight="extra-bold"
-						variant="h1"
-						className="">
+						variant="h1">
 						Fastest visa process
 					</Typography>
 					<div className="bg-#F5F4F5 w-8 h-8 mr-5 rounded-xl flex justify-center items-center">
 						<Icon
-							src={'arrow-right_2@3x.png'}
+							src={'landing/right_arrow_image/arrow-right_2@3x.png'}
 							alt="right arrow navigation image"
 							className="p-2"
 						/>
@@ -198,13 +253,14 @@ function LandingPage({ LandingPageInfo }: ILandingPageInfoProps) {
 							type="heading"
 							size="20"
 							weight="extra-bold"
-							variant="h1"
-							className="">
+							variant="h1">
 							Fresh from the blog
 						</Typography>
 						<div className="bg-#F5F4F5 w-8 h-8 mr-5 rounded-xl flex justify-center items-center">
 							<Icon
-								src={'arrow-right_2@3x.png'}
+								src={
+									'landing/right_arrow_image/arrow-right_2@3x.png'
+								}
 								alt="right arrow navigation image"
 								className="p-2"
 							/>
@@ -222,13 +278,12 @@ function LandingPage({ LandingPageInfo }: ILandingPageInfoProps) {
 						type="heading"
 						size="20"
 						weight="extra-bold"
-						variant="h1"
-						className="">
+						variant="h1">
 						Our process is simple as
 					</Typography>
-					{/*<div className="w-96 overflow-x-auto">*/}
-					{/*  <ProcessSlider/>*/}
-					{/*</div>*/}
+					<div>
+						<SliderOfProcess />
+					</div>
 				</div>
 			</section>
 

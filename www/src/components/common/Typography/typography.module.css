@@ -21,7 +21,15 @@
 	color: #9b939f;
 }
 
+.extra-bold-white {
+	font-weight: 800;
+	color: white;
+}
+
 /* Styling for size */
+.size-32 {
+	font-size: 2rem;
+}
 .size-24 {
 	font-size: 1.5rem;
 }

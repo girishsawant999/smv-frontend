@@ -1,8 +1,8 @@
 export type StyleType = 'heading' | 'content';
 
-export type weightType = 'extra-bold' | 'semi-bold' | 'regular';
+export type weightType = 'extra-bold' | 'semi-bold' | 'regular' | 'extra-bold-white';
 
-export type sizeType = '24' | '20' | '18' | '16' | '14' | '12' | '10';
+export type sizeType = '32' | '24' | '20' | '18' | '16' | '14' | '12' | '10';
 
 export type fontType = 'primary' | 'secondary' | 'graphical';
 

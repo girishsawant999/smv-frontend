@@ -111,11 +111,11 @@ function Slide(props: ISliderSlideProps) {
 					<Typography
 						type="heading"
 						size="14"
-						weight={`${
+						weight={
 							props.buttonIndex === 1
 								? 'extra-bold-white'
 								: 'extra-bold'
-						}`}
+						}
 						className={`${
 							props.buttonIndex === 1 ? 'bg-#1A181B' : 'bg-#F5F4F5'
 						} " ml-4 w-16 h-16 rounded-3xl px-7 py-5 "`}
@@ -128,11 +128,11 @@ function Slide(props: ISliderSlideProps) {
 						<Typography
 							type="heading"
 							size="14"
-							weight={`${
+							weight={
 								props.buttonIndex === 2
 									? 'extra-bold-white'
 									: 'extra-bold'
-							}`}
+							}
 							className={`${
 								props.buttonIndex === 2 ? 'bg-#1A181B' : 'bg-#F5F4F5'
 							} " ml-4 w-16 h-16 rounded-3xl px-7 py-5 "`}
@@ -146,11 +146,11 @@ function Slide(props: ISliderSlideProps) {
 						<Typography
 							type="heading"
 							size="14"
-							weight={`${
+							weight={
 								props.buttonIndex === 3
 									? 'extra-bold-white'
 									: 'extra-bold'
-							}`}
+							}
 							className={`${
 								props.buttonIndex === 3 ? 'bg-#1A181B' : 'bg-#F5F4F5'
 							} " ml-4 w-16 h-16 rounded-3xl px-7 py-5 "`}
