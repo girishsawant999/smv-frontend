@@ -2,81 +2,94 @@ import React from 'react';
 import HeaderImg from 'components/common/Layout/HeaderImage';
 import FloatingButton from 'components/common/FloatingButtons';
 import CountryInfoCard from 'components/common/CountryInfoCard';
-import DocumentsSection, {
-	documentStatusType
-} from 'components/common/DocumentsSection';
+import DocumentsSection from 'components/common/DocumentsSection';
 import TravellersSection from 'components/common/TravellersSection';
 import PaymentSection from 'components/common/PaymentSection';
-import { IDocumentStatusCardProps } from 'components/common/DocumentStatusCard';
-type tripObjectType = {
-	country: string;
-	city: string;
-	srcSet: string[];
-	visaType: string;
-	dates: string;
-	status: documentStatusType;
-	documents: IDocumentStatusCardProps[];
-	amount: number;
-};
-const tripObject: tripObjectType = {
-	country: 'Australia',
-	city: 'Victoria',
-	srcSet: [
-		'country/country.png',
-		'country/country@2x.png 2x',
-		'country/country@3x.png 3x'
-	],
-	visaType: '90 days tourist visa',
-	dates: '15-16 May 2021',
-	status: 'inProgress',
-	documents: [
-		{
-			name: 'Atul Khola',
-			status: 'notStarted',
-			progress: 2,
-			relation: 'Me',
-			numOfCompletedDocs: 0,
-			totalNumOfDocs: 15
-		},
-		{
-			name: 'Ayaan Khola',
-			status: 'notStarted',
-			progress: 2,
-			relation: 'Son',
-			numOfCompletedDocs: 0,
-			totalNumOfDocs: 15
-		}
-	],
-	amount: 10000
-};
-const Trip = () => {
+import FloatingMessageButton from 'components/common/FloatingMessageButton';
+import Response from 'components/common/Response';
+import Button from 'components/common/Button';
+import BottomButtonPopover from 'components/common/BottomButtonPopover';
+import { tripObjectType } from './types';
+const Trip = ({
+	srcSet,
+	status,
+	response,
+	date_of_document_submission,
+	documents,
+	dates,
+	country,
+	visaType,
+	city,
+	amount
+}: tripObjectType) => {
 	return (
 		<div className="flex flex-col md:max-w-sm md:mx-auto shadow-lg relative">
-			<FloatingButton src={'chevron-left.svg'} alt={'cancel'} />
-			<HeaderImg srcSet={tripObject.srcSet} country={tripObject.country} />
+			<FloatingButton src={'cross.svg'} alt={'cancel'} />
+			<HeaderImg srcSet={srcSet} country={country} />
 
 			<section className="mx-5 my-5">
 				<CountryInfoCard
-					heading={`${tripObject.country},${tripObject.city}`}
-					subHeading={tripObject.visaType}
-					date={tripObject.dates}
+					heading={`${country},${city}`}
+					subHeading={visaType}
+					date={dates}
+					status={status}
 				/>
 			</section>
 
-			<section className="mx-5 my-5">
-				<DocumentsSection
-					status={tripObject.status}
-					documents={tripObject.documents}
-				/>
-			</section>
+			{status === 'inProgress' ? (
+				<>
+					<section className="mx-5 my-5">
+						<DocumentsSection documents={documents} />
+					</section>
 
-			<section className="mx-5 my-5">
-				<TravellersSection travellers={tripObject.documents} />
-			</section>
+					<section className="mx-5 my-5">
+						<TravellersSection travellers={documents} />
+					</section>
+				</>
+			) : (
+				<>
+					<section className="mx-5 my-5">
+						<TravellersSection travellers={documents} />
+					</section>
+					<section className="mx-5 my-5">
+						<DocumentsSection
+							documents={documents}
+							date_of_document_submission={date_of_document_submission}
+						/>
+					</section>
+				</>
+			)}
 
-			<section className="mx-5 my-5">
-				<PaymentSection amount={tripObject.amount} />
+			{response && (
+				<section className="mx-5 my-5">
+					<Response {...response} />
+				</section>
+			)}
+
+			<section className="mx-5 my-5 mb-28">
+				<PaymentSection amount={amount} />
 			</section>
+			<FloatingMessageButton
+				className=""
+				variant="bottomRight"
+				position={response ? 'bottom-28' : 'bottom-5'}
+			/>
+
+			{response && (
+				<section className="h-24 w-full">
+					<BottomButtonPopover>
+						<Button
+							onClick={() => {
+								console.log('downloading...');
+							}}
+							type="submit">
+							{status === 'rejected'
+								? 'Download rejection letter'
+								: 'Download visa'}
+						</Button>
+					</BottomButtonPopover>
+				</section>
+			)}
 		</div>
 	);
 };

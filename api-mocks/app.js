@@ -7,10 +7,12 @@ app.use(cors());
 const countryInfo = require('./countryInfo/index');
 const country = require('./countries/index');
 const landing = require('./landing');
+const trip = require('./trip/index');
 
 app.use('/api/v1/ums/landing', landing);
 app.use('/api/v1/ums/country', countryInfo);
 app.use('/api/v1/ums/countries', country);
+app.use('/api/v1/ums/trip', trip);
 
 const port = process.env.PORT ? process.env.PORT : 44444;
 app.listen(port, () => {

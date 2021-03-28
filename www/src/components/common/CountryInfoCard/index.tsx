@@ -1,5 +1,6 @@
 import React from 'react';
 import Typography from 'components/common/Typography';
+import styles from './CountryInfoCard.module.css';
 
 type ICoutryInfoProps = {
 	heading?: string;
@@ -30,17 +31,19 @@ const CountryInfoCard = ({
 						</Typography>
 					)}
 				</div>
-				<div className="w-4/12 text-right">
-					{status && (
+				{status && status != 'inProgress' && (
+					<div className="w-4/12 text-right">
 						<Typography
-							size="24"
-							weight="extra-bold"
+							size="12"
+							weight="semi-bold"
 							variant="p"
-							className="mb-1">
+							className={'mb-1 capitalize pt-3 '.concat(
+								styles[status]
+							)}>
 							{status}
 						</Typography>
-					)}
-				</div>
+					</div>
+				)}
 				<div className="w-7/12">
 					{subHeading && (
 						<Typography

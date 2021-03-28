@@ -45,7 +45,7 @@ const DocumentStatusCard = ({
 					</Typography>
 				</div>
 			</div>
-			<ProgressBar percent={progress} />
+			<ProgressBar percent={(numOfCompletedDocs / totalNumOfDocs) * 100} />
 			<div className="flex mt-3">
 				<div className="w-4/12">
 					<Typography weight="semi-bold" size="16" variant="p">

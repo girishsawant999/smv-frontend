@@ -3,13 +3,22 @@ import Typography from 'components/common/Typography';
 import DocumentStatusCard from 'components/common/DocumentStatusCard';
 import { IDocumentStatusCardProps } from 'components/common/DocumentStatusCard';
 
-export type documentStatusType = 'inProgress' | 'submitted';
+type documentStatusType = 'inProgress' | 'submitted';
 export type IDocumentsSection = {
-	status: documentStatusType;
 	documents: IDocumentStatusCardProps[];
+	date_of_document_submission?: string;
 };
 
-const DocumentsSection = ({ status, documents }: IDocumentsSection) => {
+const DocumentsSection = ({
+	documents,
+	date_of_document_submission
+}: IDocumentsSection) => {
+	const status: documentStatusType = documents.every((document) => {
+		return document.status === 'completed';
+	})
+		? 'submitted'
+		: 'inProgress';
+
 	const getHeading = (): string => {
 		switch (status) {
 			case 'inProgress':
@@ -28,15 +37,31 @@ const DocumentsSection = ({ status, documents }: IDocumentsSection) => {
 	};
 	return (
 		<>
-			<Typography weight="extra-bold" size="18" variant="h3" className="my-3">
-				{getHeading()}
-			</Typography>
+			<div className="flex flex-wrap my-3">
+				<div className="w-8/12">
+					<Typography weight="extra-bold" size="18" variant="h3">
+						{getHeading()}
+					</Typography>
+				</div>
+				<div className="w-4/12 text-right">
+					{date_of_document_submission && (
+						<Typography
+							type="content"
+							size="14"
+							weight="regular"
+							variant="p">
+							{date_of_document_submission}
+						</Typography>
+					)}
+				</div>
+			</div>
 			<Typography type="content" weight="semi-bold" size="14" variant="p">
 				{getContent()}
 			</Typography>
-			{documents.map((document) => {
-				return <DocumentStatusCard {...document} />;
-			})}
+			{status === 'inProgress' &&
+				documents.map((document) => {
+					return <DocumentStatusCard {...document} />;
+				})}
 		</>
 	);
 };
