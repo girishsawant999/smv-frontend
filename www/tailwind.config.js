@@ -14,6 +14,7 @@ module.exports = {
 				10: '2.5rem'
 			},
 			backgroundColor: {
+				'bg-gray-200': '#f5f4f5',
 				'#FFFFFF': '#FFFFFF',
 				'#1A181B': '#1A181B',
 				'#4E4851': '#4E4851',

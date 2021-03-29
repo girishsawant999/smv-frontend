@@ -23,7 +23,7 @@ const Trip = ({
 	amount
 }: tripObjectType) => {
 	return (
-		<div className="flex flex-col md:mx-24 shadow-lg relative">
+		<div className="flex flex-col md:mx-24 shadow-lg md:shadow-none relative">
 			<FloatingButton
 				src={'cross.svg'}
 				srcSet={'cross.svg 640w, chevron-left.svg 1024w'}

@@ -7,7 +7,7 @@ type IHeaderImgProps = {
 
 const HeaderImg = ({ country, srcSet }: IHeaderImgProps) => {
 	return (
-		<section>
+		<section className="md:relative md:top-40">
 			<Img
 				alt={'view of ' + country}
 				className={'w-full'}
