@@ -55,23 +55,24 @@ function SocialSignUp({ setpageState }: IEmailInputScreenProps) {
 					Choose an account
 				</Typography>
 			</div>
+			<div className="mt-1 max-w-xs w-full">
+				{SOCIAL_SIGNUP_METHOD.map((method) => (
+					<div
+						key={method.id}
+						className={
+							Styles.socialSignupTag +
+							' mt-4 cursor-pointer px-5 py-4 rounded-20px flex items-center justify-between'
+						}
+						onClick={onGoogleSignupClick}>
+						<Typography weight="semi-bold" variant="h1" size="16">
+							{method.label}
+						</Typography>
+						<Img srcSet={method.image.src} alt={method.image.alt} />
+					</div>
+				))}
+			</div>
 
-			{SOCIAL_SIGNUP_METHOD.map((method) => (
-				<div
-					key={method.id}
-					className={
-						Styles.socialSignupTag +
-						' mt-5 cursor-pointer px-5 py-4 rounded-20px flex items-center justify-between'
-					}
-					onClick={onGoogleSignupClick}>
-					<Typography weight="semi-bold" variant="h1" size="16">
-						{method.label}
-					</Typography>
-					<Img srcSet={method.image.src} alt={method.image.alt} />
-				</div>
-			))}
-
-			<div className="max-w-xs text-center mt-5">
+			<div className="max-w-xs text-center mt-10">
 				<Typography type="content" weight="regular" variant="p" size="12">
 					By continuing you may receive an SMS for verification. Message
 					and data rates may apply.
