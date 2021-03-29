@@ -57,18 +57,18 @@ function SocialSignUp({ setpageState }: IEmailInputScreenProps) {
 			</div>
 			<div className="mt-1 max-w-xs w-full">
 				{SOCIAL_SIGNUP_METHOD.map((method) => (
-					<div
+					<button
 						key={method.id}
 						className={
-							Styles.socialSignupTag +
-							' mt-4 cursor-pointer px-5 py-4 rounded-20px flex items-center justify-between'
+							Styles.socialSignupButton +
+							' mt-4 focus:outline-none w-full px-5 py-4 rounded-20px flex items-center justify-between'
 						}
 						onClick={onGoogleSignupClick}>
 						<Typography weight="semi-bold" variant="h1" size="16">
 							{method.label}
 						</Typography>
 						<Img srcSet={method.image.src} alt={method.image.alt} />
-					</div>
+					</button>
 				))}
 			</div>
 
