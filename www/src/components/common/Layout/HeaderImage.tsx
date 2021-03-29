@@ -1,8 +1,8 @@
 import React from 'react';
-import Img from 'components/common/Img/index';
+import Img, { srcSetType } from 'components/common/Img/index';
 type IHeaderImgProps = {
 	country: string;
-	srcSet: string[];
+	srcSet: string[] | srcSetType[];
 };
 
 const HeaderImg = ({ country, srcSet }: IHeaderImgProps) => {
