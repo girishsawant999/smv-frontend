@@ -9,6 +9,7 @@ import FloatingMessageButton from 'components/common/FloatingMessageButton';
 import Response from 'components/common/Response';
 import Button from 'components/common/Button';
 import BottomButtonPopover from 'components/common/BottomButtonPopover';
+import Breadcrumb from 'components/common/Breadcrumbs';
 import { tripObjectType } from './types';
 const Trip = ({
 	srcSet,
@@ -24,11 +25,18 @@ const Trip = ({
 }: tripObjectType) => {
 	return (
 		<div className="flex flex-col md:mx-24 shadow-lg md:shadow-none relative">
-			<FloatingButton
-				src={'cross.svg'}
-				srcSet={'cross.svg 640w, chevron-left.svg 1024w'}
-				alt={'cancel'}
-			/>
+			<div className="flex flex-col">
+				<FloatingButton
+					src={'cross.svg'}
+					srcSet={'cross.svg 640w, chevron-left.svg 1024w'}
+					alt={'cancel'}
+					text={
+						<Breadcrumb
+							breadcrumbs={['Home', 'Trips', `${country}, ${city}`]}
+						/>
+					}
+				/>
+			</div>
 			<HeaderImg srcSet={srcSet} country={country} />
 
 			<section className="mx-5 my-5">
