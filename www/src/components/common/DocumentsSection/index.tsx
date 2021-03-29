@@ -60,12 +60,18 @@ const DocumentsSection = ({
 			<Typography type="content" weight="semi-bold" size="14" variant="p">
 				{getContent(visaStatus)}
 			</Typography>
-			{['inProgress', 'attentionReq'].includes(visaStatus) &&
-				documents.map((document) => {
-					return (
-						<DocumentStatusCard {...document} visaStatus={visaStatus} />
-					);
-				})}
+			<div className="md:mt-10">
+				{['inProgress', 'attentionReq'].includes(visaStatus) &&
+					documents.map((document, index) => {
+						return (
+							<DocumentStatusCard
+								key={index}
+								{...document}
+								visaStatus={visaStatus}
+							/>
+						);
+					})}
+			</div>
 		</>
 	);
 };

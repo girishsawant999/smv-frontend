@@ -11,14 +11,14 @@ const Breadcrumbs = ({ breadcrumbs }: IBreadcrumbsProps) => {
 				return (
 					<Typography
 						key={index}
-						size="14"
+						size="10"
 						variant="span"
 						weight="regular">
 						{breadcrumb} •
 					</Typography>
 				);
 			})}
-			<Typography size="14" variant="span" weight="semi-bold">
+			<Typography size="10" variant="span" weight="semi-bold">
 				{breadcrumbs[breadcrumbs.length - 1]}
 			</Typography>
 		</>

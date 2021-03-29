@@ -11,6 +11,7 @@ import Button from 'components/common/Button';
 import BottomButtonPopover from 'components/common/BottomButtonPopover';
 import Breadcrumb from 'components/common/Breadcrumbs';
 import { tripObjectType } from './types';
+import styles from './Trip.module.css';
 const Trip = ({
 	srcSet,
 	status,
@@ -37,11 +38,11 @@ const Trip = ({
 					}
 				/>
 			</div>
-			<section className="md:relative md:top-40">
+			<section className="md:relative md:top-60">
 				<HeaderImg srcSet={srcSet} country={country} />
 			</section>
 
-			<section className="mx-5 my-5">
+			<section className="mx-5 my-5 md:absolute md:top-20 md:mx-0 md:w-full">
 				<CountryInfoCard
 					heading={`${country},${city}`}
 					subHeading={visaType}
@@ -49,69 +50,95 @@ const Trip = ({
 					status={status}
 				/>
 			</section>
+			<div
+				className={[
+					'md:relative md:top-72 md:w-full',
+					styles['grid-container']
+				].join(' ')}>
+				{['inProgress', 'attentionReq'].includes(status) ? (
+					<>
+						<section
+							className={[
+								'mx-5 my-5 md:mx-0',
+								styles['documents']
+							].join(' ')}>
+							<DocumentsSection
+								documents={documents}
+								visaStatus={status}
+							/>
+						</section>
 
-			{['inProgress', 'attentionReq'].includes(status) ? (
-				<>
-					<section className="mx-5 my-5">
-						<DocumentsSection
-							documents={documents}
-							visaStatus={status}
-						/>
-					</section>
+						<section
+							className={[
+								'mx-5 my-5 md:mx-0',
+								styles['travellers']
+							].join(' ')}>
+							<TravellersSection travellers={documents} />
+						</section>
+					</>
+				) : (
+					<>
+						<section
+							className={[
+								'mx-5 my-5 md:mx-0',
+								styles['travellers']
+							].join(' ')}>
+							<TravellersSection travellers={documents} />
+						</section>
+						<section
+							className={['mx-5 my-5', styles['documents']].join(' ')}>
+							<DocumentsSection
+								documents={documents}
+								date_of_document_submission={
+									date_of_document_submission
+								}
+								visaStatus={status}
+							/>
+						</section>
+					</>
+				)}
 
-					<section className="mx-5 my-5">
-						<TravellersSection travellers={documents} />
+				{response && (
+					<section
+						className={['mx-5 my-5 md:mx-0', styles['response']].join(
+							' '
+						)}>
+						<Response {...response} visaStatus={status} />
 					</section>
-				</>
-			) : (
-				<>
-					<section className="mx-5 my-5">
-						<TravellersSection travellers={documents} />
-					</section>
-					<section className="mx-5 my-5">
-						<DocumentsSection
-							documents={documents}
-							date_of_document_submission={date_of_document_submission}
-							visaStatus={status}
-						/>
-					</section>
-				</>
-			)}
+				)}
 
-			{response && (
-				<section className="mx-5 my-5">
-					<Response {...response} visaStatus={status} />
+				<section
+					className={['mx-5 my-5 mb-28 md:mx-0', styles['payment']].join(
+						' '
+					)}>
+					<PaymentSection amount={amount} />
 				</section>
-			)}
+				<FloatingMessageButton
+					className=""
+					variant="bottomRight"
+					position={
+						['approved', 'rejected'].includes(status)
+							? 'bottom-28 right-24'
+							: 'bottom-5 right-24'
+					}
+				/>
 
-			<section className="mx-5 my-5 mb-28">
-				<PaymentSection amount={amount} />
-			</section>
-			<FloatingMessageButton
-				className=""
-				variant="bottomRight"
-				position={
-					['approved', 'rejected'].includes(status)
-						? 'bottom-28'
-						: 'bottom-5'
-				}
-			/>
-
-			{['approved', 'rejected'].includes(status) && (
-				<section className="h-24 w-full">
-					<BottomButtonPopover>
-						<Button
-							onClick={() => {
-								console.log('downloading...');
-							}}
-							type="submit">
-							{status === 'rejected'
-								? 'Download rejection letter'
-								: 'Download visa'}
-						</Button>
-					</BottomButtonPopover>
-				</section>
-			)}
+				{['approved', 'rejected'].includes(status) && (
+					<section className="h-24 w-full">
+						<BottomButtonPopover>
+							<Button
+								onClick={() => {
+									console.log('downloading...');
+								}}
+								type="submit">
+								{status === 'rejected'
+									? 'Download rejection letter'
+									: 'Download visa'}
+							</Button>
+						</BottomButtonPopover>
+					</section>
+				)}
+			</div>
 		</div>
 	);
 };

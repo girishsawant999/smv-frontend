@@ -41,10 +41,17 @@ const DocumentStatusCard = ({
 	};
 
 	return (
-		<div className={styles.docStatusCard + ' px-5 py-5 my-5 cursor-pointer'}>
-			<div className="flex mb-5">
+		<div
+			className={
+				styles.docStatusCard + ' px-5 py-5 my-5 md:my-20 cursor-pointer'
+			}>
+			<div className="flex mb-5 md:mb-7">
 				<div className="w-6/12">
-					<Typography weight="extra-bold" size="20" variant="h4">
+					<Typography
+						weight="extra-bold"
+						size="20"
+						variant="h4"
+						sizes={[{ lg: '24' }]}>
 						{name}
 					</Typography>
 				</div>
@@ -70,7 +77,7 @@ const DocumentStatusCard = ({
 				}
 				color={getColorFromVisaType()}
 			/>
-			<div className="flex mt-3">
+			<div className="flex mt-3 md:mt-7">
 				<div className="w-4/12">
 					<Typography weight="semi-bold" size="16" variant="p">
 						{relation}

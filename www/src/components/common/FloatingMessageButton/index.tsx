@@ -14,10 +14,7 @@ const FloatingMessageButton = ({
 	position = 'bottom-5'
 }: IFloatingMessageButtonProps) => {
 	return (
-		<div
-			className={'fixed flex flex-col md:max-w-sm md:mx-auto w-full px-5 '.concat(
-				position
-			)}>
+		<div className={'fixed flex flex-col '.concat(position)}>
 			<button
 				className={className
 					.concat(
