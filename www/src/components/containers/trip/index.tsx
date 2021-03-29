@@ -37,7 +37,9 @@ const Trip = ({
 					}
 				/>
 			</div>
-			<HeaderImg srcSet={srcSet} country={country} />
+			<section className="md:relative md:top-40">
+				<HeaderImg srcSet={srcSet} country={country} />
+			</section>
 
 			<section className="mx-5 my-5">
 				<CountryInfoCard

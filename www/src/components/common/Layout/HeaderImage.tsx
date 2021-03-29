@@ -7,14 +7,12 @@ type IHeaderImgProps = {
 
 const HeaderImg = ({ country, srcSet }: IHeaderImgProps) => {
 	return (
-		<section className="md:relative md:top-40">
-			<Img
-				alt={'view of ' + country}
-				className={'w-full'}
-				srcSet={srcSet}
-				placeHolderBg={'#f5f4f5'}
-			/>
-		</section>
+		<Img
+			alt={'view of ' + country}
+			className={'w-full'}
+			srcSet={srcSet}
+			placeHolderBg={'#f5f4f5'}
+		/>
 	);
 };
 export default HeaderImg;
