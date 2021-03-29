@@ -4,7 +4,7 @@ import styles from './backButton.module.css';
 
 type IBackButtonProps = {
 	onClick: () => void;
-	className: string;
+	className?: string;
 };
 
 function BackButton({ onClick, className = '' }: IBackButtonProps) {
