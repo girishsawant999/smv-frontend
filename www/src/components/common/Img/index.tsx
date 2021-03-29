@@ -35,7 +35,7 @@ srcSet contains the various images to be loaded
 
 Img.propTypes = {};
 
-type srcSetType = {
+export type srcSetType = {
 	srcSet: string[];
 	media?: string;
 	sizes?: string;
@@ -63,20 +63,7 @@ function Img({
 	isFromAssets = true,
 	placeHolderBg = 'transparent'
 }: IImgProps) {
-	let _srcSet: (string | srcSetType)[] = srcSet;
-
-	if (isFromAssets) {
-		_srcSet = _srcSet.map((set_elem: string | srcSetType) => {
-			if (typeof set_elem === 'string') {
-				return baseLocation.concat(set_elem.trim());
-			} else {
-				set_elem.srcSet = set_elem.srcSet.map((src) => {
-					return baseLocation.concat(src.trim());
-				});
-				return set_elem;
-			}
-		});
-	}
+	const _srcSet: (string | srcSetType)[] = srcSet;
 
 	const getSourceElements = () => {
 		if (typeof _srcSet[0] === 'string') {
@@ -90,7 +77,13 @@ function Img({
 					<source
 						type={type}
 						media={set_elem.media}
-						srcSet={set_elem.srcSet.join(', ')}
+						srcSet={set_elem.srcSet
+							.map((src) => {
+								if (isFromAssets)
+									return baseLocation.concat(src.trim());
+								return src;
+							})
+							.join(', ')}
 						sizes={set_elem.sizes}
 					/>
 				);
