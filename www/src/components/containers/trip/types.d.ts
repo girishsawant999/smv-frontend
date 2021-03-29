@@ -1,9 +1,15 @@
 import { responseType } from 'components/common/Response';
-export type visaStatusType = 'inProgress' | 'rejected' | 'approved' | 'pending';
+import { srcSetType } from 'components/common/Img';
+export type visaStatusType =
+	| 'inProgress'
+	| 'inProcess'
+	| 'rejected'
+	| 'approved'
+	| 'attentionReq';
 export type tripObjectType = {
 	country: string;
 	city: string;
-	srcSet: string[];
+	srcSet: string[] | srcSetType[];
 	visaType: string;
 	dates: string;
 	status: visaStatusType;

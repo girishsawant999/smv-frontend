@@ -1,9 +1,16 @@
 .rejected {
 	color: #ea4848;
-	text-transform: capitalize;
 	padding-top: 11px;
 }
 
-.accepted {
+.approved {
 	color: #3cc39a;
+}
+
+.inProcess {
+	color: #ffb600;
+}
+
+.attentionReq {
+	color: #ea4848;
 }

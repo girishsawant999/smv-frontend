@@ -6,8 +6,14 @@
 }
 
 .filler {
-	background: #1a181b;
 	height: 100%;
 	border-radius: inherit;
 	transition: width 0.2s ease-in;
+}
+
+.red {
+	background: var(--text-color-red);
+}
+.black {
+	background: #1a181b;
 }

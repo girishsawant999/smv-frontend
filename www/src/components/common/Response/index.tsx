@@ -1,18 +1,27 @@
 import React from 'react';
 import Typography from 'components/common/Typography';
+import { visaStatusType } from 'components/containers/trip/types';
 
 export type responseType = {
 	text: string;
 	date: string;
+	visaStatus: visaStatusType;
 };
 
-const ResponseSection = ({ text, date }: responseType) => {
+const getResponseHeading = (visaStatus: visaStatusType): string => {
+	if (['inProcess', 'attentionReq'].includes(visaStatus)) {
+		return 'Expected Response';
+	}
+	return 'Response';
+};
+
+const ResponseSection = ({ text, date, visaStatus }: responseType) => {
 	return (
 		<>
 			<div className="flex flex-wrap my-3">
 				<div className="w-8/12">
 					<Typography weight="extra-bold" size="18" variant="h3">
-						Response
+						{getResponseHeading(visaStatus)}
 					</Typography>
 				</div>
 				<div className="w-4/12 text-right">
