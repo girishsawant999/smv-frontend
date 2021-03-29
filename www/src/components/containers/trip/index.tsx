@@ -23,8 +23,12 @@ const Trip = ({
 	amount
 }: tripObjectType) => {
 	return (
-		<div className="flex flex-col md:max-w-sm md:mx-auto shadow-lg relative">
-			<FloatingButton src={'cross.svg'} alt={'cancel'} />
+		<div className="flex flex-col md:mx-24 shadow-lg relative">
+			<FloatingButton
+				src={'cross.svg'}
+				srcSet={'cross.svg 640w, chevron-left.svg 1024w'}
+				alt={'cancel'}
+			/>
 			<HeaderImg srcSet={srcSet} country={country} />
 
 			<section className="mx-5 my-5">
@@ -36,10 +40,13 @@ const Trip = ({
 				/>
 			</section>
 
-			{status === 'inProgress' ? (
+			{['inProgress', 'attentionReq'].includes(status) ? (
 				<>
 					<section className="mx-5 my-5">
-						<DocumentsSection documents={documents} />
+						<DocumentsSection
+							documents={documents}
+							visaStatus={status}
+						/>
 					</section>
 
 					<section className="mx-5 my-5">
@@ -55,6 +62,7 @@ const Trip = ({
 						<DocumentsSection
 							documents={documents}
 							date_of_document_submission={date_of_document_submission}
+							visaStatus={status}
 						/>
 					</section>
 				</>
@@ -62,7 +70,7 @@ const Trip = ({
 
 			{response && (
 				<section className="mx-5 my-5">
-					<Response {...response} />
+					<Response {...response} visaStatus={status} />
 				</section>
 			)}
 
@@ -72,10 +80,14 @@ const Trip = ({
 			<FloatingMessageButton
 				className=""
 				variant="bottomRight"
-				position={response ? 'bottom-28' : 'bottom-5'}
+				position={
+					['approved', 'rejected'].includes(status)
+						? 'bottom-28'
+						: 'bottom-5'
+				}
 			/>
 
-			{response && (
+			{['approved', 'rejected'].includes(status) && (
 				<section className="h-24 w-full">
 					<BottomButtonPopover>
 						<Button
