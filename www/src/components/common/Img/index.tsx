@@ -67,7 +67,18 @@ function Img({
 
 	const getSourceElements = () => {
 		if (typeof _srcSet[0] === 'string') {
-			return <source type={type} srcSet={_srcSet.join(', ')} />;
+			return (
+				<source
+					type={type}
+					srcSet={_srcSet
+						.map((src) => {
+							if (typeof src === 'string') {
+								return baseLocation.concat(src.trim());
+							}
+						})
+						.join(', ')}
+				/>
+			);
 		} else {
 			return _srcSet.map((set_elem: srcSetType | string) => {
 				if (typeof set_elem === 'string') {
