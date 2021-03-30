@@ -79,11 +79,13 @@ function PhoneInputScreenComponent({
 					</div>
 				</div>
 				<div className="mt-8">
-					<a href="#" className="underline">
+					<span
+						className="underline cursor-pointer"
+						onClick={() => setpageState('social-signup')}>
 						<Typography weight="extra-bold" variant="h6" size="12">
 							or signup using a social account
 						</Typography>
-					</a>
+					</span>
 				</div>
 
 				<div className={commonStyles.lowerdiv}>
