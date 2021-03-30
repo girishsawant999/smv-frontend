@@ -118,8 +118,8 @@ const Trip = ({
 					variant="bottomRight"
 					position={
 						['approved', 'rejected'].includes(status)
-							? 'bottom-28 right-24'
-							: 'bottom-5 right-24'
+							? 'bottom-28 md:right-24'
+							: 'bottom-5 md:right-24'
 					}
 				/>
 
