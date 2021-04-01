@@ -1,4 +1,5 @@
 import { APIResponseType, fetchApi } from 'api';
+import debounce from 'lodash.debounce';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import CountryList from './components/CountryList';
@@ -25,8 +26,14 @@ function SearchMain({ suggestedCountries, mostPopularCountries }: ISearchMain) {
 		setResultCountries(searchedCountries);
 	};
 
+	const debouncedSave = debounce(() => getCountries(searchQuery), 1000);
+
 	useEffect(() => {
-		if (searchQuery) getCountries(searchQuery);
+		if (searchQuery) {
+			debouncedSave();
+		} else {
+			setResultCountries([]);
+		}
 	}, [searchQuery]);
 
 	return (
