@@ -23,6 +23,7 @@ function CountryInfo({ countryInfo }: ICountryInfoProps) {
 					</Typography>
 					<Typography
 						size="16"
+						sizes={[{ lg: '18' }]}
 						type="content"
 						weight="semi-bold"
 						variant="h3"

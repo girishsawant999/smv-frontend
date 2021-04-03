@@ -53,7 +53,11 @@ const Trip = ({
 			<div
 				className={[
 					'md:relative md:top-72 md:w-full',
-					styles['grid-container']
+					styles[
+						['inProgress', 'attentionReq'].includes(status)
+							? 'grid-container-card'
+							: 'grid-container-no-card'
+					]
 				].join(' ')}>
 				{['inProgress', 'attentionReq'].includes(status) ? (
 					<>
@@ -86,7 +90,10 @@ const Trip = ({
 							<TravellersSection travellers={documents} />
 						</section>
 						<section
-							className={['mx-5 my-5', styles['documents']].join(' ')}>
+							className={[
+								'mx-5 my-5 md:mx-0',
+								styles['documents']
+							].join(' ')}>
 							<DocumentsSection
 								documents={documents}
 								date_of_document_submission={
@@ -118,7 +125,7 @@ const Trip = ({
 					variant="bottomRight"
 					position={
 						['approved', 'rejected'].includes(status)
-							? 'bottom-28 md:right-24'
+							? 'bottom-28 md:bottom-36 md:right-24'
 							: 'bottom-5 md:right-24'
 					}
 				/>

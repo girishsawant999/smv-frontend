@@ -68,12 +68,17 @@
 	.size-14 {
 		font-size: 1.125rem;
 	}
+	.size-12 {
+		font-size: 1rem;
+	}
 	.size-10 {
 		font-size: 0.875rem;
 	}
-
 	.size-lg-24 {
 		font-size: 1.5rem;
+	}
+	.size-lg-18 {
+		font-size: 1.125rem;
 	}
 }
 

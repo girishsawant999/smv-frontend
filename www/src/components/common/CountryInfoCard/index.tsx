@@ -51,6 +51,7 @@ const CountryInfoCard = ({
 					<div className="w-4/12 text-right">
 						<Typography
 							size="12"
+							sizes={[{ lg: '18' }]}
 							weight="semi-bold"
 							variant="p"
 							className={'mb-1 pt-3 '.concat(styles[status])}>

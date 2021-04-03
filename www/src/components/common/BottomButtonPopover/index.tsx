@@ -9,7 +9,7 @@ type IBottomButtonPopover = {
 };
 const BottomButtonPopover = ({ children }: IBottomButtonPopover) => {
 	return (
-		<div className="fixed flex flex-col md:max-w-sm md:mx-auto w-full bottom-0 bg-white">
+		<div className="fixed left-0 flex flex-col w-full mx-auto md:mx-0 bottom-0 bg-white md:py-3">
 			<div className={'px-5 py-5 text-center '.concat(styles['btn-popover'])}>
 				{children}
 			</div>
