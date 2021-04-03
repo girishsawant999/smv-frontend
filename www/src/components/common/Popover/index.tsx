@@ -59,6 +59,7 @@ const Popover = ({ type, show, onClose, selector, children }: IPopoverProps) => 
 											src={'cross.svg'}
 											srcSet={'cross.svg 640w'}
 											alt={'cancel'}
+											iconHeight={16}
 										/>
 									</div>
 									{children}
