@@ -4,17 +4,16 @@ import React, { useEffect, useState } from 'react';
 import CountryList from './components/CountryList';
 import SearchInput from './components/SearchInputComp';
 import { CountryObject, IInputDataProps, IQueryObject, ISearchMain } from './types';
+import useDebounce from 'helpers/useDebounce';
 
 function SearchMain({ suggestedCountries, mostPopularCountries }: ISearchMain) {
-	const [searchQuery, setsearchQuery] = useState<string>('');
-	const [resultCountries, setResultCountries] = useState<Array<CountryObject>>([]);
 	const router = useRouter();
 	const query: IQueryObject = router.query;
-
-	useEffect(() => {
-		const _searchQuery = query.searchquery;
-		if (_searchQuery) setsearchQuery(_searchQuery);
-	}, [query.searchquery]);
+	const [searchQuery, setsearchQuery] = useState<string>(
+		query.searchquery ? query.searchquery : ''
+	);
+	const debouncedSearchQuery = useDebounce<string>(searchQuery, 1000);
+	const [resultCountries, setResultCountries] = useState<Array<CountryObject>>([]);
 
 	const getCountries = async (query: string) => {
 		const resCountries: APIResponseType<IInputDataProps> = await fetchApi<IInputDataProps>(
@@ -26,8 +25,12 @@ function SearchMain({ suggestedCountries, mostPopularCountries }: ISearchMain) {
 	};
 
 	useEffect(() => {
-		if (searchQuery) getCountries(searchQuery);
-	}, [searchQuery]);
+		if (debouncedSearchQuery) {
+			getCountries(debouncedSearchQuery);
+		} else {
+			setResultCountries([]);
+		}
+	}, [debouncedSearchQuery]);
 
 	return (
 		<>

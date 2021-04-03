@@ -5,6 +5,7 @@ import OtpScreen from 'components/containers/login/components/otpInputScreen';
 import PasswordInputScreen from 'components/containers/login/components/passwordInputScreen';
 import PhoneNumberInput from 'components/containers/login/components/phoneNumberInputScreen';
 import WelcomeScreen from 'components/containers/login/components/welcomeScreen';
+import SocialSignup from 'components/containers/login/components/socialSignup';
 import React, { useState } from 'react';
 import styles from './login.module.css';
 import { IName } from './types';
@@ -25,6 +26,12 @@ function Login() {
 						setpageState={setpageState}
 						phoneNumber={phoneNumber}
 						setphoneNumber={setphoneNumber}
+					/>
+				)}
+				{pageState === 'social-signup' && (
+					<SocialSignup
+						pageState={pageState}
+						setpageState={setpageState}
 					/>
 				)}
 				{pageState === 'otp-screen' && (
