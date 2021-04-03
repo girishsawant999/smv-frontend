@@ -28,6 +28,6 @@
 		height: 90%;
 		border-radius: 50px;
 		width: 75vw;
-		position: static;
+		position: relative;
 	}
 }
