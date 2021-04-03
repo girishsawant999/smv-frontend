@@ -1,4 +1,4 @@
-@media only screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
 	.grid-container-card {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
