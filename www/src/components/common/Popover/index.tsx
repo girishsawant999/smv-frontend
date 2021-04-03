@@ -53,12 +53,15 @@ const Popover = ({ type, show, onClose, selector, children }: IPopoverProps) => 
 										styles.popupdiv +
 										' flex flex-col items-center relative'
 									}
-									onClick={(e) => e.stopPropagation()}>
+									onClick={(e) => {
+										e.stopPropagation();
+									}}>
 									<div className="flex flex-col absolute top-0 right-24 hidden md:block">
 										<FloatingButton
 											src={'cross.svg'}
 											srcSet={'cross.svg 640w'}
 											alt={'cancel'}
+											onClick={onClose}
 											iconHeight={16}
 										/>
 									</div>
