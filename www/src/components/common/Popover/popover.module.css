@@ -23,8 +23,11 @@
 	pointer-events: none;
 }
 
-@media all and (min-width: 1024px) {
+@media all and (min-width: 768px) {
 	.popupdiv {
-		height: auto;
+		height: 90%;
+		border-radius: 50px;
+		width: 75vw;
+		position: static;
 	}
 }

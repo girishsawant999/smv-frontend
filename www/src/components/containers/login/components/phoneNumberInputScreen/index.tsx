@@ -32,7 +32,7 @@ function PhoneInputScreenComponent({
 		<>
 			<form
 				onSubmit={requestOTP}
-				className="flex flex-col h-full items-center max-w-sm relative w-full">
+				className="flex flex-col h-full items-center relative max-w-md">
 				<Emotes
 					srcSet={[
 						'emote-smiling/emote-smiling.png',
@@ -40,7 +40,7 @@ function PhoneInputScreenComponent({
 						'emote-smiling/emote-smiling@3x.png 3x'
 					]}
 				/>
-				<div className="mx-10 max-w-sm text-center">
+				<div className="mx-10 text-center">
 					<Typography
 						weight="extra-bold"
 						variant="h1"
@@ -56,7 +56,7 @@ function PhoneInputScreenComponent({
 						Enter your mobile number
 					</Typography>
 				</div>
-				<div className="px-4 max-w-sm w-full">
+				<div className="px-4 w-full flex items-center justify-center">
 					<div className={Styles.phoneNumberInputContainer}>
 						<span>
 							<Img
