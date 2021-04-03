@@ -52,9 +52,21 @@ router.get('/:id', (req, res) => {
 			country: 'Australia',
 			city: 'Victoria',
 			srcSet: [
-				'country/country.png',
-				'country/country@2x.png 2x',
-				'country/country@3x.png 3x'
+				{
+					media: '(min-width: 768px)',
+					srcSet: [
+						'country/country-web.png 640w',
+						'country/country-web@2x.png 1024w'
+					],
+					sizes: '33.3vw'
+				},
+				{
+					srcSet: [
+						'country/country.png',
+						'country/country@2x.png 2x',
+						'country/country@3x.png 3x'
+					]
+				}
 			],
 			visaType: '90 days tourist visa',
 			dates: '15-16 May 2021',
@@ -91,9 +103,21 @@ router.get('/:id', (req, res) => {
 			country: 'Australia',
 			city: 'Victoria',
 			srcSet: [
-				'country/country.png',
-				'country/country@2x.png 2x',
-				'country/country@3x.png 3x'
+				{
+					media: '(min-width: 768px)',
+					srcSet: [
+						'country/country-web.png 640w',
+						'country/country-web@2x.png 1024w'
+					],
+					sizes: '33.3vw'
+				},
+				{
+					srcSet: [
+						'country/country.png',
+						'country/country@2x.png 2x',
+						'country/country@3x.png 3x'
+					]
+				}
 			],
 			visaType: '90 days tourist visa',
 			dates: '15-16 May 2021',
@@ -130,9 +154,21 @@ router.get('/:id', (req, res) => {
 			country: 'Australia',
 			city: 'Victoria',
 			srcSet: [
-				'country/country.png',
-				'country/country@2x.png 2x',
-				'country/country@3x.png 3x'
+				{
+					media: '(min-width: 768px)',
+					srcSet: [
+						'country/country-web.png 640w',
+						'country/country-web@2x.png 1024w'
+					],
+					sizes: '33.3vw'
+				},
+				{
+					srcSet: [
+						'country/country.png',
+						'country/country@2x.png 2x',
+						'country/country@3x.png 3x'
+					]
+				}
 			],
 			visaType: '90 days tourist visa',
 			dates: '15-16 May 2021',
@@ -169,9 +205,21 @@ router.get('/:id', (req, res) => {
 			country: 'Australia',
 			city: 'Victoria',
 			srcSet: [
-				'country/country.png',
-				'country/country@2x.png 2x',
-				'country/country@3x.png 3x'
+				{
+					media: '(min-width: 768px)',
+					srcSet: [
+						'country/country-web.png 640w',
+						'country/country-web@2x.png 1024w'
+					],
+					sizes: '33.3vw'
+				},
+				{
+					srcSet: [
+						'country/country.png',
+						'country/country@2x.png 2x',
+						'country/country@3x.png 3x'
+					]
+				}
 			],
 			visaType: '90 days tourist visa',
 			dates: '15-16 May 2021',
