@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
+import FloatingButton from 'components/common/FloatingButtons';
 
 import styles from './popover.module.css';
 
@@ -53,6 +54,13 @@ const Popover = ({ type, show, onClose, selector, children }: IPopoverProps) => 
 										' flex flex-col items-center relative'
 									}
 									onClick={(e) => e.stopPropagation()}>
+									<div className="flex flex-col absolute top-0 right-24 hidden md:block">
+										<FloatingButton
+											src={'cross.svg'}
+											srcSet={'cross.svg 640w'}
+											alt={'cancel'}
+										/>
+									</div>
 									{children}
 								</div>
 							</div>,
