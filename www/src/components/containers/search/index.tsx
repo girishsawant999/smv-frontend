@@ -16,12 +16,16 @@ function SearchMain({ suggestedCountries, mostPopularCountries }: ISearchMain) {
 	const [resultCountries, setResultCountries] = useState<Array<CountryObject>>([]);
 
 	const getCountries = async (query: string) => {
-		const resCountries: APIResponseType<IInputDataProps> = await fetchApi<IInputDataProps>(
-			`api/v1/ums/countries/list?name=${query}`
-		);
-		const searchedCountries: Array<CountryObject> =
-			(resCountries.data && resCountries.data.data) || [];
-		setResultCountries(searchedCountries);
+		try {
+			const resCountries: APIResponseType<IInputDataProps> = await fetchApi<IInputDataProps>(
+				`api/v1/ums/countries/list?name=${query}`
+			);
+			const searchedCountries: Array<CountryObject> =
+				(resCountries.data && resCountries.data.data) || [];
+			setResultCountries(searchedCountries);
+		} catch (err) {
+			setResultCountries([]);
+		}
 	};
 
 	useEffect(() => {
