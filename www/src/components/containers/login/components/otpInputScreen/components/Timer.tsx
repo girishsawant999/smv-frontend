@@ -8,9 +8,10 @@ function Timer({ selectedTimer, onTimerEnd }: ITimer) {
 	useEffect(() => setTimer(selectedTimer), [selectedTimer]);
 
 	useEffect(() => {
+		let _timer: ReturnType<typeof setTimeout>;
 		let _seconds = timer.minutes * 60 + timer.seconds - 1;
 		if (_seconds > 0) {
-			setTimeout(
+			_timer = setTimeout(
 				() =>
 					setTimer({
 						minutes: parseInt(String(_seconds / 60)),
@@ -21,6 +22,9 @@ function Timer({ selectedTimer, onTimerEnd }: ITimer) {
 		} else {
 			onTimerEnd();
 		}
+		return () => {
+			clearTimeout(_timer);
+		};
 	}, [timer]);
 
 	return (

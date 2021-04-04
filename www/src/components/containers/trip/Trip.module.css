@@ -1,0 +1,33 @@
+@media all and (min-width: 768px) {
+	.grid-container-card {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 0.5fr 1fr 0.5fr;
+		gap: 0px 10%;
+		grid-template-areas:
+			'documents travellers'
+			'documents payment'
+			'response .';
+	}
+	.grid-container-no-card {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 0px 10%;
+		grid-template-areas:
+			'documents travellers'
+			'response payment';
+	}
+	.documents {
+		grid-area: documents;
+	}
+	.travellers {
+		grid-area: travellers;
+	}
+	.payment {
+		grid-area: payment;
+	}
+	.response {
+		grid-area: response;
+	}
+}

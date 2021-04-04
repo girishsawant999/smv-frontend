@@ -1,13 +1,29 @@
 import React from 'react';
 import Typography from 'components/common/Typography';
 import styles from './CountryInfoCard.module.css';
+import { visaStatusType } from 'components/containers/trip/types';
 
 type ICoutryInfoProps = {
 	heading?: string;
 	subHeading?: string;
 	date?: string;
 	content?: string;
-	status?: string;
+	status?: visaStatusType;
+};
+
+const getStatusText = (status: visaStatusType): string => {
+	switch (status) {
+		case 'inProgress':
+			return '';
+		case 'inProcess':
+			return 'In process';
+		case 'rejected':
+			return 'Rejected';
+		case 'approved':
+			return 'Approved';
+		case 'attentionReq':
+			return 'Attention required';
+	}
 };
 
 const CountryInfoCard = ({
@@ -35,12 +51,11 @@ const CountryInfoCard = ({
 					<div className="w-4/12 text-right">
 						<Typography
 							size="12"
+							sizes={[{ lg: '18' }]}
 							weight="semi-bold"
 							variant="p"
-							className={'mb-1 capitalize pt-3 '.concat(
-								styles[status]
-							)}>
-							{status}
+							className={'mb-1 pt-3 '.concat(styles[status])}>
+							{getStatusText(status)}
 						</Typography>
 					</div>
 				)}

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Typography from '../../../common/Typography';
 import Img from '../../../common/Img';
 import { useRouter } from 'next/router';
+import Login from 'components/containers/login';
 
 function JoinTheClub() {
 	const router = useRouter();
+	const [popoverIsOpen, setIsOpen] = useState(false);
 
 	const goToLogin = (e: React.MouseEvent<HTMLElement>) => {
 		e.preventDefault();
@@ -13,11 +15,17 @@ function JoinTheClub() {
 
 	const goToSignup = (e: React.MouseEvent<HTMLElement>) => {
 		e.preventDefault();
-		router.push('/login');
+		setIsOpen(true);
 	};
 
 	return (
 		<div>
+			<Login
+				show={popoverIsOpen}
+				onClose={() => {
+					setIsOpen(false);
+				}}
+			/>
 			<div className="relative">
 				<div className="absolute right-0 -top-10 w-34 xsm:w-38.25 xmd:w-60 xmd:right-16 mb-4 ">
 					<Img

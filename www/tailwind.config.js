@@ -10,10 +10,20 @@ module.exports = {
 				manrope: ['Manrope'],
 				sequel: ['Sequel-76']
 			},
+			fontSize: {
+				xs: '0.625rem',
+				sm: '0.75rem',
+				tiny: '0.875rem',
+				base: '1rem',
+				lg: '1.125rem',
+				xl: '1.25rem',
+				'2xl': '1.5rem'
+			},
 			minWidth: {
 				10: '2.5rem'
 			},
 			backgroundColor: {
+				'bg-gray-200': '#f5f4f5',
 				'#FFFFFF': '#FFFFFF',
 				'#1A181B': '#1A181B',
 				'#4E4851': '#4E4851',

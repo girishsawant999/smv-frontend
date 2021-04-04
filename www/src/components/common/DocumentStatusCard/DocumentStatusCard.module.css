@@ -6,6 +6,10 @@
 	box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.07), 0 0 10px 0 rgba(0, 0, 0, 0.07);
 }
 
-.status {
+.inProgress {
 	color: #ffb600;
+}
+
+.attentionReq {
+	color: var(--text-color-red);
 }

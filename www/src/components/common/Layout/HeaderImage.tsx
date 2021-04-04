@@ -1,20 +1,18 @@
 import React from 'react';
-import Img from 'components/common/Img/index';
+import Img, { srcSetType } from 'components/common/Img/index';
 type IHeaderImgProps = {
 	country: string;
-	srcSet: string[];
+	srcSet: string[] | srcSetType[];
 };
 
 const HeaderImg = ({ country, srcSet }: IHeaderImgProps) => {
 	return (
-		<section>
-			<Img
-				alt={'view of ' + country}
-				className={'w-full'}
-				srcSet={srcSet}
-				placeHolderBg={'#f5f4f5'}
-			/>
-		</section>
+		<Img
+			alt={'view of ' + country}
+			className={'w-full'}
+			srcSet={srcSet}
+			placeHolderBg={'#f5f4f5'}
+		/>
 	);
 };
 export default HeaderImg;

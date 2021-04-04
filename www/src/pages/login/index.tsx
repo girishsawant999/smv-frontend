@@ -8,7 +8,12 @@ function LoginMain() {
 	return (
 		<>
 			<Head title="Login" desc="LoginPage of Stamp My Visa" />
-			<Login />;
+			<Login
+				show={true}
+				onClose={() => {
+					null;
+				}}
+			/>
 		</>
 	);
 }

@@ -4,11 +4,12 @@ import styles from './ProgressBar.module.css';
 
 type IProgressBarProps = {
 	percent: number;
+	color: string;
 };
-const ProgressBar = ({ percent }: IProgressBarProps) => {
+const ProgressBar = ({ percent, color }: IProgressBarProps) => {
 	return (
 		<div className={styles.progressBar}>
-			<Filler percent={percent} />
+			<Filler percent={percent} color={color} />
 		</div>
 	);
 };

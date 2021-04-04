@@ -10,3 +10,9 @@
 	font-weight: 800;
 	font-size: 0.75rem;
 }
+
+@media all and (min-width: 1024px) {
+	.button {
+		font-size: 0.875rem;
+	}
+}
