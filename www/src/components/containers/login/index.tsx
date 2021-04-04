@@ -11,15 +11,19 @@ import styles from './login.module.css';
 import { IName } from './types';
 
 Login.propTypes = {};
+type ILoginProps = {
+	show: boolean;
+	onClose: () => void;
+};
 
-function Login() {
+function Login({ show, onClose }: ILoginProps) {
 	const [pageState, setpageState] = useState<string>('phone-input');
 	const [phoneNumber, setphoneNumber] = useState('');
 	const [name, setname] = useState<IName>({ first: '', last: '' });
 
 	return (
 		<div className={styles.logindiv}>
-			<Popover type="large">
+			<Popover type="large" show={show} selector="body" onClose={onClose}>
 				{pageState === 'phone-input' && (
 					<PhoneNumberInput
 						pageState={pageState}
