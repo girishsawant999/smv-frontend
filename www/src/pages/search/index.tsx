@@ -4,7 +4,7 @@ import Head from 'components/common/Head';
 import { fetchApi, APIResponseType } from 'api';
 import { CountryObject, IInputDataProps } from 'components/containers/search/types';
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 	try {
 		const ressuggestedCountries: APIResponseType<IInputDataProps> = await fetchApi<IInputDataProps>(
 			'api/v1/ums/countries/list?tags=SUGGESTED'
