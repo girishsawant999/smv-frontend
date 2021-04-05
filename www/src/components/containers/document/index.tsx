@@ -1,11 +1,13 @@
 import FloatingMessageButton from 'components/common/FloatingMessageButton';
+import Popover from 'components/common/Popover';
 import Typography from 'components/common/Typography';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MainCard from './components/mainCard';
 
 const data = {
 	name: 'Atul Khola',
 	status: 'Yet to start',
+	visaStatus: 'inProgress',
 	numOfCompletedDocs: 2,
 	totalNumOfDocs: 15,
 	relation: 'Me',
@@ -65,14 +67,42 @@ const data = {
 };
 
 function DocumentUpload({}) {
-	const onClickUpload = () => {};
+	const [show, setshow] = useState(false);
+	const onClickUpload = () => {
+		setshow(true);
+	};
+
+	const onClose = () => {
+		setshow(false);
+	};
+
+	useEffect(() => {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				const id = entry.target.getAttribute('id');
+				const ele = document.querySelector(`a[href="#${id}"]`);
+				if (entry.isIntersecting) {
+					ele && ele.classList.add('active');
+				} else {
+					ele && ele.classList.remove('active');
+				}
+			});
+		});
+
+		document.querySelectorAll('.documentSections[id]').forEach((section) => {
+			observer.observe(section);
+		});
+	}, []);
+
 	return (
 		<>
 			<div className="sticky top-0 bg-white">
 				<div className="px-5 pt-5">
 					<MainCard data={data} />
 				</div>
-				<div className="flex overflow-x-auto overflow-y-hidden bg-#F5F4F5 my-auto px-5 py-3">
+				<div
+					id="labels-container"
+					className="flex overflow-x-auto overflow-y-hidden bg-#F5F4F5 my-auto px-5 py-3">
 					{data.documentsRequired &&
 						data.documentsRequired.map(({ label }) => (
 							<a
@@ -89,12 +119,13 @@ function DocumentUpload({}) {
 				</div>
 			</div>
 
-			<div className="px-5 overflow-auto">
+			<div id="main-container" className="px-5 overflow-auto">
 				{data.documentsRequired &&
 					data.documentsRequired.map(({ label, documents }, index) => (
 						<>
 							<div
-								className="mt-10 mb-5"
+								key={index}
+								className="mt-10 mb-5 documentSections"
 								id={`${label.replace(/\s/g, '')}`}>
 								<Typography
 									weight="extra-bold"
@@ -157,6 +188,10 @@ function DocumentUpload({}) {
 				variant="bottomRight"
 				position="bottom-5"
 			/>
+
+			<Popover type="large" show={show} selector="body" onClose={onClose}>
+				Test
+			</Popover>
 		</>
 	);
 }

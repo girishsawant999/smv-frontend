@@ -12,6 +12,7 @@ export type IDocumentStatusCardProps = {
 	numOfCompletedDocs: number;
 	totalNumOfDocs: number;
 	visaStatus: visaStatusType;
+	removeShadow?: boolean;
 };
 
 const DocumentStatusCard = ({
@@ -20,7 +21,8 @@ const DocumentStatusCard = ({
 	relation,
 	numOfCompletedDocs,
 	totalNumOfDocs,
-	visaStatus
+	visaStatus,
+	removeShadow = false
 }: IDocumentStatusCardProps) => {
 	const getStatusText = (): string => {
 		if (visaStatus === 'inProgress' && status === 'notStarted') {
@@ -43,7 +45,8 @@ const DocumentStatusCard = ({
 	return (
 		<div
 			className={
-				styles.docStatusCard + ' px-5 py-5 my-5 md:my-20 cursor-pointer'
+				(!removeShadow && styles.docStatusCard) +
+				' px-5 py-5 my-5 md:my-20 cursor-pointer'
 			}>
 			<div className="flex mb-5 md:mb-7">
 				<div className="w-6/12">
